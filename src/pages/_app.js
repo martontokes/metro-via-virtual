@@ -1,5 +1,6 @@
 import styles from 'styles/global.css'
 import contentStyles from 'styles/welcomeScreen.css'
+import menu from 'styles/menu.css'
 import { Montserrat, Noto_Sans_HK } from 'next/font/google'
 
 const montserrat = Montserrat({ subsets: ['latin']});

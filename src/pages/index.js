@@ -6,7 +6,6 @@ export default function Home() {
 
     <>
       <App />
-      <div id="bg"></div>
     </>
 
   )

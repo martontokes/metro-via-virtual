@@ -27,24 +27,6 @@ standard margin and padding
 
   }
 
-  
-#bg {
-
-    background-image: url("/bg.png");
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    background-size: cover;
-    pointer-events: none;
-    z-index: -50;
-    opacity: 0.45;
-    background-position: center;
-
-  }
-
-
 * {
 
     padding: 0px;

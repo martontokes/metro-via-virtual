@@ -11,18 +11,29 @@ export default function App({ Component, pageProps }) {
   return (
 
     <>
-    <style jsx global>{`
-        .montserrat {
-          font-family: ${montserrat.style.fontFamily};
-        }
 
-        .notoSansHk {
-          font-family: ${notoSansHk.style.fontFamily};
+      <style jsx global>
+      
+        {
+    
+          `
+            .montserrat {
+              font-family: ${montserrat.style.fontFamily};
+            }
+
+            .notoSansHk {
+              font-family: ${notoSansHk.style.fontFamily};
+            }
+          `
         }
-      `}</style>
+      
+      </style>
+
       <Component {...pageProps} />
+
     </>
 
   )
+  
 }
 

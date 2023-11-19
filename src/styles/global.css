@@ -27,6 +27,8 @@ standard margin and padding
 
   }
 
+
+
 * {
 
     padding: 0px;
@@ -38,9 +40,19 @@ standard margin and padding
   }
 
 
+
 #exhibition {
 
   transition: opacity 1s;
   display: flex;
+
+}
+
+
+
+button {
+
+  border: none;
+  background-color: transparent;
 
 }

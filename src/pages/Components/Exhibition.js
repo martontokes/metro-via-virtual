@@ -12,7 +12,7 @@ export default function Exhibition({site}) {
       <Header site={site} />
       <Menu site={site} />
 
-      <div id="content">
+      <div id="content" className="montserrat">
       <Content site={site}/>
       </div>
 

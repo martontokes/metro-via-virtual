@@ -22,7 +22,6 @@ standard margin and padding
 
 :root {
 
-    font-size: 16.68px;
     background-color: black;
 
   }
@@ -34,7 +33,6 @@ standard margin and padding
     padding: 0px;
     margin: 0px;
     color: white;
-    font-family: 'Montserrat', sans-serif;
     font-weight: 400;
     
   }

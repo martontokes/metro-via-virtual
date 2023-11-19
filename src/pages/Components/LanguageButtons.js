@@ -13,7 +13,7 @@ export default function LanguageButtons({ site }) {
       ) : (
 
         <>
-        <button id="toEnglish" className="languageButton" onClick={() => {site.setLanguage('english');}}>english</button>
+        <button id="toEnglish" className="languageButton montserrat" onClick={() => {site.setLanguage('english');}}>english</button>
         </>
 
       )}

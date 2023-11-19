@@ -19,6 +19,19 @@ standard margin and padding
 
 /*   "Global styles"   */
 
+@media screen and (max-width: 576px) {
+
+  :root {
+    font-size: 10px;
+    margin: 0px 24px;
+  }
+
+  p {
+    font-size: 16px;
+  }
+
+
+}
 
 :root {
 

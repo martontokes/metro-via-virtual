@@ -1,7 +1,6 @@
 /* 
 
 'Global stylesheet' - this sheet is responsible for standard formatting applied throughout the whole of the webpage.
-Stylesheets responsible for styling parts of the webpage individually may be found in the styles/local folder.
 Besides importing the fonts the site uses, it configures values for the following properties:
 
 root element font size
@@ -43,6 +42,7 @@ standard margin and padding
     pointer-events: none;
     z-index: -50;
     opacity: 0.45;
+    background-position: center;
 
   }
 

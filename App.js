@@ -1,7 +1,7 @@
 import { React, useState, useEffect } from 'react';
 
-import WelcomeScreen from '@/WelcomeScreen';
-import Exhibition from '@/Exhibition';
+import WelcomeScreen from 'components/WelcomeScreen';
+import Exhibition from 'components/Exhibition';
 
 
 export default function App() {

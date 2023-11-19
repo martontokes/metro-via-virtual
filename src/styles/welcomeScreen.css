@@ -1,0 +1,16 @@
+
+
+/* These styles are applied to the content of the welcome screen */
+/* All welcome screen IDs start with the "wcs" prefix */
+
+
+#wcsOuterContainer {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+
+}
+

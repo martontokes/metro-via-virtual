@@ -74,6 +74,8 @@ export default function Menu({site}) {
               about the curator
             </button>
 
+            <h3 id="artworks-heading-menu" className="montserrat">artworks</h3>
+
             <button onClick={() => menuItemClick(3)} 
             className="menubutton engMenuButton montserrat">
               Autosave: Redoubt

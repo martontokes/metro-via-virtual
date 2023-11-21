@@ -6,6 +6,7 @@ export default function Document() {
 
     <Html lang="en">
         <Head />
+        <title>metro via virtual</title>
         <Main />
         <NextScript />
     </Html>

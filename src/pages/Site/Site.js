@@ -10,11 +10,6 @@ import setViewOnResize from "/modules/setViewOnResize.mjs"
 export default function Site({site}) {
 
     const [view, setView] = useState('');
-
-    useEffect(() => {
-      setViewOnResize(setView);
-      window.addEventListener('resize', () => {setViewOnResize(setView)});
-    }, []);
  
     return (
       

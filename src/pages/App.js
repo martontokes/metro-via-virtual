@@ -7,7 +7,7 @@ export default function App() {
 
   const [isWelcomeScreenOn, toggleWelcomeScreen] = useState(true);
   const [language, setLanguage] = useState('');
-  const [activePage, setActivePage] = useState(''); // string
+  const [activePage, setActivePage] = useState('');
 
   const site = { language, setLanguage, activePage, setActivePage, toggleWelcomeScreen };
 

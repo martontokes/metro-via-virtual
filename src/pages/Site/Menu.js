@@ -2,9 +2,9 @@ import { useState, useEffect } from "react";
 
 export default function Menu({site}) {
 
-  // const [activeMenu, setActiveMenu] = useState(0);
-  // const [menu, setMenu] = useState([]);
-  // const [toggledFirstChange, toggleFirstChange] = useState(false);
+  const [activeMenu, setActiveMenu] = useState(0);
+  const [menu, setMenu] = useState([]);
+  const [toggledFirstChange, toggleFirstChange] = useState(false);
 
 
 
@@ -59,17 +59,17 @@ export default function Menu({site}) {
 
           <>
 
-            <button onClick={() => menuItemClick(0)} 
+            <button onClick={() => menuItemClick('statement')} 
             className="menubutton engMenuButton montserrat activeMenuButton">
               curatorial statement
             </button>
 
-            <button onClick={() => menuItemClick(1)} 
+            <button onClick={() => menuItemClick('essay')} 
             className="menubutton engMenuButton montserrat">
               essay about the exhibition
             </button>
 
-            <button onClick={() => menuItemClick(2)} 
+            <button onClick={() => menuItemClick('curator')} 
             className="menubutton engMenuButton montserrat menubreakpoint">
               about the curator
             </button>

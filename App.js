@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 
-import WelcomeScreen from 'components/WelcomeScreen/WelcomeScreen';
-import Exhibition from 'components/Exhibition';
+import WelcomeScreen from 'pages/WelcomeScreen/WelcomeScreen';
+import Exhibition from 'pages/Exhibition/Exhibition';
 
 export default function App() {
 

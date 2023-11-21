@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 
 import WelcomeScreen from 'pages/WelcomeScreen/WelcomeScreen';
-import Exhibition from 'pages/Exhibition/Exhibition';
+import Site from 'pages/Site/Site';
 
 export default function App() {
 
@@ -15,7 +15,7 @@ export default function App() {
 
     <>
 
-      { isWelcomeScreenOn ? <WelcomeScreen site={site} /> : <Exhibition site={site} /> }
+      { isWelcomeScreenOn ? <WelcomeScreen site={site} /> : <Site site={site} /> }
 
     </>
 

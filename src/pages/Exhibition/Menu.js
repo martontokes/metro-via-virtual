@@ -2,9 +2,9 @@ import { useState, useEffect } from "react";
 
 export default function Menu({site}) {
 
-  const [activeMenu, setActiveMenu] = useState(0);
-  const [menu, setMenu] = useState([]);
-  const [toggledFirstChange, toggleFirstChange] = useState(false);
+  // const [activeMenu, setActiveMenu] = useState(0);
+  // const [menu, setMenu] = useState([]);
+  // const [toggledFirstChange, toggleFirstChange] = useState(false);
 
 
 

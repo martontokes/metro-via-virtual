@@ -4,9 +4,8 @@ export default function Illumination() {
 
     useEffect(() => {
         
-        const intervalId = setInterval(buddhachanger, 4200);
-
-        // Clear the interval when the component unmounts or when you don't need it anymore
+        // Start slideshow on mounting
+        const intervalId = setInterval(illuminationSlideshow, 4200);
         return () => clearInterval(intervalId);
 
     }, []);
@@ -14,7 +13,7 @@ export default function Illumination() {
     return (
 
         <>
-        <div id="content_">
+        <div id="content">
         <IlluminationDescription />
         <IlluminationContent />
         </div>
@@ -78,39 +77,36 @@ function IlluminationContent() {
     )
 }
 
-const buddhachanger = (function () {
+const illuminationSlideshow = (function () {
 
         let counter = 2;
         let isCountingUpwards = true;
 
         return function () {
-            const currentBuddhaElement = document.getElementById(`buddha${counter}`);
 
-        if (isCountingUpwards) {
-            currentBuddhaElement.style.opacity = 1;
-            console.log(`buddha${counter} opacity to 1`);
-            counter += 1;
-            console.log(`counter is now ${counter}`);
-            if (counter == 6) {
-                isCountingUpwards = false;
-                counter = 5;
-            }
+        const currentBuddhaElement = document.getElementById(`buddha${counter}`);
 
-        } else {
-            currentBuddhaElement.style.opacity = 0;
-            console.log(`buddha${counter} opacity to 0`);
-            counter -= 1;
-            console.log(`counter is now ${counter}`);
+            if (isCountingUpwards) {
+
+                currentBuddhaElement.style.opacity = 1;
+                counter += 1;
+
+                if (counter == 6) {
+                    isCountingUpwards = false;
+                    counter = 5;
+                }
+
+            } 
             
-            if (counter == 1) {
-                isCountingUpwards = true;
-                counter = 2;
+            else {
+
+                currentBuddhaElement.style.opacity = 0;
+                counter -= 1;
+                if (counter == 1) {
+                    isCountingUpwards = true;
+                    counter = 2;
+                }
             }
-        }
-
-
-
-
 
         }
     })

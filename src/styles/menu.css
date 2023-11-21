@@ -1,1 +1,54 @@
+#desktopMenu {
+    opacity: 0;
+    transition: opacity 1s;
+    position: fixed;
+  }
+
+  #menu {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .menubutton {
+    color: #b4b4b4 !important;
+    margin: 0;
+    padding: 0;
+    border: none;
+    background: none;
+    color: inherit;
+    font-size: 15.63px;
+    font-family: inherit;
+    padding: 20px 0px;
+    text-decoration: underline;
+    text-decoration-color: rgba(255,255,255,0);
+    text-underline-offset: 4px !important;
+    text-decoration-thickness: 0.0001px;
+    transition: font-size 0.005s ease-in-out;
+    height: 60px;
+  }
+  
+
+  .menubutton {
+    text-align: left;
+    padding-left: 72px !important;
+    font-weight: 400 !important;
+  }
+
+  
+  .activeMenuButton {
+    color: white !important;
+    text-decoration-color: rgba(255,255,255,0.75);
+    font-size: 16.68px;
+  }
+
+  
+.menubutton.engMenuButton:hover {
+    color: white !important;
+    font-size: 16.68px;
+    margin: 0;
+    border: none;
+    background: none;
+    color: inherit;
+    transition: color 0.2s ease-in-out;
+  }
 

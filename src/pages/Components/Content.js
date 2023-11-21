@@ -15,6 +15,8 @@ import IlluminationZh from "components/Artworks/IlluminationZh"
 
 export default function Content({site}) {
 
+  const router = useRouter();
+
     if (site.language === 'english') {
 
         switch (site.activePage) {

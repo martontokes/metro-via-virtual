@@ -59,44 +59,44 @@ export default function Menu({site}) {
 
           <>
 
-            <button onClick={() => menuItemClick('statement')} 
+            <button onClick={() => menuItemClick('Statement')} 
             className="menubutton engMenuButton montserrat activeMenuButton">
               curatorial statement
             </button>
 
-            <button onClick={() => menuItemClick('essay')} 
+            <button onClick={() => menuItemClick('Essay')} 
             className="menubutton engMenuButton montserrat">
               essay about the exhibition
             </button>
 
-            <button onClick={() => menuItemClick('curator')} 
+            <button onClick={() => menuItemClick('Curator')} 
             className="menubutton engMenuButton montserrat menubreakpoint">
               about the curator
             </button>
 
             <h3 id="artworks-heading-menu" className="montserrat">artworks</h3>
 
-            <button onClick={() => menuItemClick(3)} 
+            <button onClick={() => menuItemClick('Autosave')} 
             className="menubutton engMenuButton montserrat">
               Autosave: Redoubt
             </button>
 
-            <button onClick={() => menuItemClick(4)} 
+            <button onClick={() => menuItemClick('Confidential')} 
             className="menubutton engMenuButton montserrat">
               Confidential Records: Dual Metropolitans
             </button>
 
-            <button onClick={() => menuItemClick(5)} 
+            <button onClick={() => menuItemClick('Illumination')} 
             className="menubutton engMenuButton montserrat">
               Illumination
             </button>
 
-            <button onClick={() => menuItemClick(6)} 
+            <button onClick={() => menuItemClick('Butterflies')} 
             className="menubutton engMenuButton montserrat">
               Butterflies on the Wheel
             </button>
 
-            <button onClick={() => menuItemClick(7)} 
+            <button onClick={() => menuItemClick('Domestik')} 
             className="menubutton engMenuButton montserrat">
               Domestik/Publik
             </button>

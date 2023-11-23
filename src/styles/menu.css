@@ -27,6 +27,13 @@
     height: 60px;
   }
   
+  #artworks-heading-menu {
+    font-size: 12px;
+    opacity: 80%;
+    padding-left: 40px;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
 
   .menubutton {
     text-align: left;

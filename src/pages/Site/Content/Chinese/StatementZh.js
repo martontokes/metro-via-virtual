@@ -1,4 +1,4 @@
-export default function CuratorialZh() {
+export default function StatementZh() {
     
     return (
         <>

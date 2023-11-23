@@ -9,7 +9,7 @@ export default function Content({site}) {
     <>
       <div id="content" className="montserrat">
         
-        { router.query[site.page] }
+        { router.query[site.activePage] }
        
       </div>
     </>

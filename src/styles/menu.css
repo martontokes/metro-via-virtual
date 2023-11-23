@@ -1,9 +1,3 @@
-#desktopMenu {
-    opacity: 0;
-    transition: opacity 1s;
-    position: fixed;
-  }
-
   #menu {
     display: flex;
     flex-direction: column;
@@ -30,7 +24,7 @@
   #artworks-heading-menu {
     font-size: 12px;
     opacity: 80%;
-    padding-left: 40px;
+    padding-left: px;
     padding-top: 1rem;
     padding-bottom: 1rem;
   }
@@ -45,7 +39,6 @@
   .activeMenuButton {
     color: white !important;
     text-decoration-color: rgba(255,255,255,0.75);
-    font-size: 16.68px;
   }
 
   

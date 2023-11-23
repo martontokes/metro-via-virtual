@@ -1,5 +1,5 @@
 import Header from "./Header"
-import Menu from "./Menu"
+import Menu from "./Menu/Menu"
 import Content from "./Content"
 import LanguageButtons from "./LanguageButtons"
 

@@ -1,6 +1,6 @@
-export default function menuItemClick({pageName}) {
+export default function menuItemClick(site, pageName) {
 
-  console.log("button clicked");
+  console.log(pageName);
   console.log(site);
 
 }

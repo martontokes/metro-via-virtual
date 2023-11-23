@@ -10,44 +10,44 @@ export default function Menu({site}) {
 
           <>
 
-            <button onClick={() => menuItemClick('Statement')} 
+            <button onClick={() => menuItemClick(site, 'Statement')} 
             className={`menubutton montserrat ${site.activePage === "Statement" ? "activeMenuButton" : ""}`}>
               curatorial statement
             </button>
 
-            <button onClick={() => menuItemClick('Essay')} 
+            <button onClick={() => menuItemClick(site, 'Essay')} 
             className={`menubutton montserrat ${site.activePage === "Essay" ? "activeMenuButton" : ""}`}>
               essay about the exhibition
             </button>
 
-            <button onClick={() => menuItemClick('Curator')} 
+            <button onClick={() => menuItemClick(site, 'Curator')} 
             className={`menubutton montserrat ${site.activePage === "Curator" ? "activeMenuButton" : ""}`}>
               about the curator
             </button>
 
             <h3 id="artworks-heading-menu" className="montserrat">artworks</h3>
 
-            <button onClick={() => menuItemClick('Autosave')} 
+            <button onClick={() => menuItemClick(site, 'Autosave')} 
             className={`menubutton montserrat ${site.activePage === "Autosave" ? "activeMenuButton" : ""}`}>
               Autosave: Redoubt
             </button>
 
-            <button onClick={() => menuItemClick('Confidential')} 
+            <button onClick={() => menuItemClick(site, 'Confidential')} 
             className={`menubutton montserrat ${site.activePage === "Confidential" ? "activeMenuButton" : ""}`}>
               Confidential Records: Dual Metropolitans
             </button>
 
-            <button onClick={() => menuItemClick('Illumination')} 
+            <button onClick={() => menuItemClick(site, 'Illumination')} 
             className={`menubutton montserrat ${site.activePage === "Illumination" ? "activeMenuButton" : ""}`}>
               Illumination
             </button>
 
-            <button onClick={() => menuItemClick('Butterflies')} 
+            <button onClick={() => menuItemClick(site, 'Butterflies')} 
             className={`menubutton montserrat ${site.activePage === "Butterflies" ? "activeMenuButton" : ""}`}>
               Butterflies on the Wheel
             </button>
 
-            <button onClick={() => menuItemClick('Domestik')} 
+            <button onClick={() => menuItemClick(site, 'Domestik')} 
             className={`menubutton montserrat ${site.activePage === "Domestik" ? "activeMenuButton" : ""}`}>
               Domestik/Publik
             </button>

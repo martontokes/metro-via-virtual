@@ -4,7 +4,7 @@ export default function Curator() {
 
         <>
         
-        <div id="description">
+        <div id="description" style={{display: "block"}}>
         <h3>About the Curator</h3>
         <p><b>Zeng Hong</b><br /> is an academic, curator and visual artist.<br /><br />
         <a className="curatorEmail" style={{marginTop: '24px'}} href="mailto:hong.zeng@yale.edu">hong.zeng@yale.edu</a><br></br>

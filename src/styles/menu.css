@@ -1,3 +1,4 @@
+
   #menu {
     display: flex;
     flex-direction: column;
@@ -52,3 +53,31 @@
     transition: color 0.2s ease-in-out;
   }
 
+
+
+
+@media screen and (max-width: 852px) {
+  
+  #menu {
+    display: none;
+  }
+
+}
+
+
+@media screen and (min-width: 853px) and (max-width: 1279) {
+
+  #menu {
+    display: none;
+  }
+
+}
+  
+
+@media screen and (min-width: 1280px) {
+
+  #menu {
+    display: flex;
+  }
+
+}

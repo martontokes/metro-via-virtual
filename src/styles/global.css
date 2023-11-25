@@ -54,6 +54,15 @@ button {
   display: none !important;
 }
 
-.opacity0 {
-  opacity: 0;
+#bg {
+  display: block;
+  position: fixed;
+  z-index: -6;
+  background-image: url('/bg.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 100vw;
+  height: 100vh;
+  opacity: 1;
+  transition: opacity 2s ease-in-out;
 }

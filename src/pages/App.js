@@ -15,8 +15,10 @@ export default function App() {
 
     <>
 
-      { isWelcomeScreenOn ? <WelcomeScreen site={site} /> : <Site site={site} /> }
+      <bg id="bg"></bg>
 
+      { isWelcomeScreenOn ? <WelcomeScreen site={site} /> : <Site site={site} /> }
+      
     </>
 
   )

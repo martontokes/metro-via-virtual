@@ -53,3 +53,7 @@ button {
 .invisible {
   display: none !important;
 }
+
+.opacity0 {
+  opacity: 0;
+}

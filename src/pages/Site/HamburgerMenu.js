@@ -5,6 +5,7 @@ export default function Header({site}) {
     document.getElementById("menu").classList.toggle("menuVisible");
     window.scrollTo(0, 0);
     document.getElementById("content").classList.toggle("invisible");
+    document.getElementById("burgerImg").classList.toggle("burgerOff");
 
   }
 
@@ -12,7 +13,7 @@ export default function Header({site}) {
 
     <>
 
-      <button onClick={toggleMenu} id="hamburgerMenu"><img src="/burgermenu.svg"></img></button>
+      <button onClick={toggleMenu} id="hamburgerMenu"><img id="burgerImg" src="/burgermenu.svg"></img></button>
 
     </>
   );

@@ -23,6 +23,10 @@
   right: 25px;
 }
 
+.burgerOff {
+  content: url('/x.svg') !important;
+}
+
 
 @media screen and (max-width: 852px) {
 

@@ -1,0 +1,12 @@
+#paginator {
+  position: fixed;
+  bottom: 0px;
+  width: 100%;
+  height: 200px;
+  background-color: black;
+  z-index: 5;
+}
+
+.paginatorCircle {
+  color: white;
+}

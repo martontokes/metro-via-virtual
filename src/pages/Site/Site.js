@@ -3,6 +3,9 @@ import Content from "./Content"
 import LanguageButtons from "./LanguageButtons"
 import Header from "./Header"
 import Paginator from "./Paginator"
+import MobileContent from "./MobileContent"
+
+import { isMobile } from "react-device-detect"
 
 export default function Site({site}) {
  
@@ -14,8 +17,9 @@ export default function Site({site}) {
       <div id="menuContainer">
         <Menu site={site} />
       </div>
+      { isMobile ? <MobileContent site={site} /> : null }
       <div id="content">
-        <Content site={site}/>
+      { isMobile ? null : <Content site={site} /> }
       </div>
       <Paginator site={site} />
       <LanguageButtons site={site} />

@@ -1,0 +1,31 @@
+#swipeController {
+    position: absolute;
+}
+
+.mobile1 {
+    left: 0px;
+}
+
+.mobile2 {
+left: 200%;    
+}
+
+.mobile3 {
+left: 300%;    
+}
+
+.mobile4 {
+left: 400%;    
+}
+
+.mobile5 {
+left: 500%;    
+}
+
+.mobile6 {
+left: 600%;    
+}
+
+.mobile7 {
+left: 700%;    
+}

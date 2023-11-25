@@ -3,10 +3,8 @@
   top: 0;
   left: 0;
   z-index: 3;
-}
-
-#logoContainer {
-  padding-left: 36px;
+  background-color: black;
+  width: 100%;
 }
 
 #headerTitle {
@@ -16,10 +14,29 @@
 
 #headerSubtitle {
   font-size: 1rem;
+  padding-bottom: 32px;
+}
+
+#hamburgerMenu {
+  position: fixed;
+  top: 50px;
+  right: 25px;
 }
 
 
 @media screen and (max-width: 852px) {
+
+  #headerTitle {
+    font-size: 1.2rem;
+ }
+
+  #headerSubtitle {
+  font-size: 12.34px;
+ }
+
+ #logoContainer {
+  padding-left: 16px;
+}
 
 }
 

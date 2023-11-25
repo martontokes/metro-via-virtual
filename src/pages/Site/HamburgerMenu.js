@@ -12,7 +12,7 @@ export default function Header({site}) {
 
     <>
 
-      <button onClick={toggleMenu} id="burgerMenu"><img src="/burgermenu.svg"></img></button>
+      <button onClick={toggleMenu} id="hamburgerMenu"><img src="/burgermenu.svg"></img></button>
 
     </>
   );

@@ -27,8 +27,6 @@ standard margin and padding
 
   }
 
-
-
 * {
 
     padding: 0px;
@@ -38,16 +36,12 @@ standard margin and padding
     
   }
 
-
-
 #exhibition {
 
   transition: opacity 1s;
   display: flex;
 
 }
-
-
 
 button {
 
@@ -56,14 +50,6 @@ button {
 
 }
 
-@media screen and (max-width: 852px) {
-  
-}
-
-@media screen and (min-width: 853px) and (max-width: 1279) {
-  
-}
-
-@media screen and (min-width: 1280px) {
-  
+.invisible {
+  display: none !important;
 }

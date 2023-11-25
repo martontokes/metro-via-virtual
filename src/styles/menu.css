@@ -63,6 +63,11 @@
   
   #menu {
     display: none;
+    position: absolute;
+    padding-top: 80px;
+    width: 100%;
+    background-color: black;
+    z-index: 2;
   }
 
 }

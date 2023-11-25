@@ -4,7 +4,7 @@ return (
 
 <>
 
-<div id="content_">
+
 <div id="description">
 <h3>Curatorial statement</h3>
 <div>
@@ -20,7 +20,7 @@ Hung-fan Bookstore.<br /><br />1997
 </p>
 </div>
 </div>
-</div>
+
 
 </>
 

@@ -8,12 +8,14 @@ export default function Site({site}) {
     return (
       
     <>      
-
+      <div id="exhibitionFrame">
       <Header site={site} />
       <Menu site={site} />
-      <Content site={site}/>
+      <div id="content">
+        <Content site={site}/>
+      </div>
       <LanguageButtons site={site} />
-
+      </div>
     </>
 
     )

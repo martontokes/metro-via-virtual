@@ -4,6 +4,8 @@
     flex-direction: column;
   }
 
+
+
   .menubutton {
     color: #b4b4b4 !important;
     margin: 0;
@@ -51,6 +53,7 @@
     background: none;
     color: inherit;
     transition: color 0.2s ease-in-out;
+
   }
 
 
@@ -76,28 +79,21 @@
 
 @media screen and (min-width: 1280px) {
 
-  #headerTitle {
-    position: absolute;
-    top: 64px;
-    left: 64px;
-    font-size: 1.5rem;
-  }
-
-  #headerSubtitle {
-    position: absolute;
-    top: 104px;
-    left: 64px;
-    font-size: 1.1rem;
-  }
-
   #menu {
-    display: inline-flex;
-    justify-content: center;
-    height: 100vh;
+    position: absolute;
+    top: 160px;
   }
 
   #content {
-    display: inline-flex;
+    position: absolute;
+    left: 392.483px;
+    margin: 64px;
   }
 
+}
+
+.menuVisible {
+
+    display: flex !important;
+    
 }

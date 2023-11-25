@@ -13,10 +13,8 @@ export default function Illumination() {
     return (
 
         <>
-        <div id="content">
         <IlluminationDescription />
         <IlluminationContent />
-        </div>
         </>
 
     )

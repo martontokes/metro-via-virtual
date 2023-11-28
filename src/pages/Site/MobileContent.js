@@ -30,13 +30,15 @@ export default function Content({site}) {
   // 
   // swipe: scrollTo. setPaginator. scrollUp
 
+  function touchMove(event);
+
   if (site.language == 'english') {
 
   return (
   
     <>
 
-    <div id="contentContainer" touchStart={} touchMove={} touchEnd={}>
+    <div id="contentContainer" touchMove={(event) => {touchMove(event)}}>
             <div className="mobile1 mobileContentPage">
             <Statement />
             </div>

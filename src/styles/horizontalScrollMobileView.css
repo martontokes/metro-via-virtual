@@ -1,14 +1,12 @@
-#__next {
-    overflow-x: scroll;
-}
-
 #contentContainer {
- 
     overflow-x: scroll;
 }
 
 .mobileContentPage {
-
+    width: 100%;
+    position: absolute;
+    top: 0px;
+    margin-top: 120px;
 }
 
 .mobile1 {
@@ -16,31 +14,29 @@
 }
 
 .mobile2 {
-    position: absolute;
     left: 100%;
-    width: 100%;
 }
 
 .mobile3 {
-  
+    left: 200%;
 }
 
 .mobile4 {
-  
+    left: 300%;  
 }
 
 .mobile5 {
-
+    left: 400%;
 }
 
 .mobile6 {
-  
+    left: 500%;  
 }
 
 .mobile7 {
-  
+    left: 600%;  
 }
 
 .mobile8 {
-
+    left: 700%;
 } 

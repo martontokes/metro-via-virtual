@@ -7,7 +7,7 @@ return (
 
     <>
 
-<div id="content_">
+
     <div id="description">
     <h3>On the Role of <br />Symbol Alienation in Art</h3>
     <div>
@@ -21,7 +21,6 @@ return (
     </p>
     <p className="quotation2">Sharon Xiaorong Liu</p>
     <p className="quotation3">April 26, 2022</p><br /><br /><br />
-    </div>
     </div>
     </div>
     

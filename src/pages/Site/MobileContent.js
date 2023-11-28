@@ -15,59 +15,40 @@ import IlluminationZh from "./Content/Chinese/Artworks/IlluminationZh"
 
 export default function Content({site}) {
 
-  function touchStart(event) {
-
-  }
-
-  function touchMove(event) {
-    document.getElementById("swipeController").style.left = event.touches[0].screenX + "px";
-    console.log(document.getElementById("swipeController").style.left);
-  
-  }
-
-  function touchEnd(event) {
-
-  }
-
-
   if (site.language == 'english') {
 
   return (
   
-  <>
-    <div id="swipeController"
-    onTouchStart={(event) => touchStart(event)}
-    onTouchMove={(event) => touchMove(event)}
-    onTouchEnd={(event) => touchEnd(event)} >
-
-
-          <div className="mobile1 mobileContentPage">
-          <Statement />
-          </div>
-          <div className="mobile2 mobileContentPage">
-          <Essay />
-          </div>
-          <div className="mobile3 mobileContentPage">
-          <Curator />
-          </div>
-          <div className="mobile4 mobileContentPage">
-          <Autosave />
-          </div>
-          <div className="mobile5 mobileContentPage">
-          <Confidential />
-          </div>
-          <div className="mobile6 mobileContentPage">
-          <Illumination />
-          </div>
-          <div className="mobile7 mobileContentPage">
-          <Butterflies />
-          </div>
-          <div className="mobile8 mobileContentPage">
-          <Domestik />
-          </div>
+    <>
+    <div id="contentContainer">
+            <div className="mobile1 mobileContentPage">
+            <Statement />
+            </div>
+            <div className="mobile2 mobileContentPage">
+            <Essay />
+            </div>
+            <div className="mobile3 mobileContentPage">
+            <Curator />
+            </div>
+            <div className="mobile4 mobileContentPage">
+            <Autosave />
+            </div>
+            <div className="mobile5 mobileContentPage">
+            <Confidential />
+            </div>
+            <div className="mobile6 mobileContentPage">
+            <Illumination />
+            </div>
+            <div className="mobile7 mobileContentPage">
+            <Butterflies />
+            </div>
+            <div className="mobile8 mobileContentPage">
+            <Domestik />
+            </div>
       </div>
 
-  </>
+    </>
+
   )
 
   } else {
@@ -75,7 +56,7 @@ export default function Content({site}) {
   return (
 
   <>
-      <div id="swipeController">
+      <div id="swipeContainer">
           <div className="mobile1">
           <StatementZh />
           </div>

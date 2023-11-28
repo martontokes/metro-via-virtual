@@ -1,16 +1,19 @@
 #contentContainer {
-    overflow-x: scroll;
+
+
 }
+
 
 .mobileContentPage {
     width: 100%;
     position: absolute;
     top: 0px;
     margin-top: 120px;
+    display: none;
 }
 
 .mobile1 {
-
+    display: block;
 }
 
 .mobile2 {

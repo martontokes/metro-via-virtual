@@ -12,14 +12,19 @@ import Statement from './Content/English/Statement'
 import StatementZh from "./Content/Chinese/StatementZh"
 import Illumination from "./Content/English/Artworks/Illumination"
 import IlluminationZh from "./Content/Chinese/Artworks/IlluminationZh"
+import { useEffect } from "react"
 
 export default function Content({site}) {
+
+
+
 
   if (site.language == 'english') {
 
   return (
   
     <>
+
     <div id="contentContainer">
             <div className="mobile1 mobileContentPage">
             <Statement />

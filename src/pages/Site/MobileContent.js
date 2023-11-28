@@ -12,11 +12,23 @@ import Statement from './Content/English/Statement'
 import StatementZh from "./Content/Chinese/StatementZh"
 import Illumination from "./Content/English/Artworks/Illumination"
 import IlluminationZh from "./Content/Chinese/Artworks/IlluminationZh"
-import { useEffect } from "react"
+import { useState } from "react"
 
-import swipeFunctions from "../../../modules/swipeFunctions.mjs"
+import {swipeFunctions, pageStringToNum} from "../../../modules/swipeFunctions.mjs"
 
 export default function Content({site}) {
+
+  useState(() => {
+    
+  }, [[], site.activePage]);
+
+  // touchEnd: check if threshold value for swiping page was exceeded by x movement's result. swipe to next page if yes, move back current if no.
+  //  turn display to none for all pages but actual.
+  //
+  // touchStart: turn display to block for neighbour divs of the actual page. start recording x movement //
+  // touchMove: calculate x movement. // 
+  // 
+  // swipe: scrollTo. setPaginator. scrollUp
 
   if (site.language == 'english') {
 
@@ -24,7 +36,7 @@ export default function Content({site}) {
   
     <>
 
-    <div id="contentContainer">
+    <div id="contentContainer" touchStart={} touchMove={} touchEnd={}>
             <div className="mobile1 mobileContentPage">
             <Statement />
             </div>

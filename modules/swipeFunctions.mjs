@@ -1,13 +1,24 @@
 const swipeFunctions = {
 
     touchStart: function() {
-    }
+    },
     touchEnd: function() {
-    }
+    },
     touchMove: function() {
-    }
+    },
     swipe: function() {
-    }
-}
+    },
+};
 
-export default swipeFunctions;
+const pageStringToNum = {
+    Statement: 1,
+    Essay: 2,
+    Curator: 3,
+    Autosave: 4,
+    Confidential: 5,
+    Illumination: 6,
+    Butterflies: 7,
+    Domestik: 8,
+};
+
+export { pageStringToNum, swipeFunctions };

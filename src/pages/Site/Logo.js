@@ -16,7 +16,7 @@ export default function Logo({site}) {
       ) : (
 
         <>
-          <div id="headerTextContainer">
+          <div id="logoContainer">
             <h1 id="headerTitle" className="noto">虛擬都會</h1>
             <h2 id="headerSubtitle" className="noto">來自香港的線上展覽</h2>
           </div>

@@ -8,21 +8,15 @@ import MobileContent from "./MobileContent"
 import { isMobile } from "react-device-detect"
 
 export default function Site({site}) {
- 
     return (
-      
-    <>      
-
+      <>      
         <Header site={site} />
         <Menu site={site} />
-      { isMobile ? <MobileContent site={site} /> : null }
-      { isMobile ? null : <Content site={site} /> }
-      <Paginator site={site} />
-      <LanguageButtons site={site} />
-
-    </>
-
+        { isMobile ? <MobileContent site={site} /> : null }
+        { isMobile ? null : <Content site={site} /> }
+        <Paginator site={site} />
+        <LanguageButtons site={site} />
+      </>
     )
-
 }
 

@@ -29,8 +29,24 @@ export default function Content({site}) {
   // touchMove: calculate x movement. // 
   // 
   // swipe: scrollTo. setPaginator. scrollUp
+  let touchstartx;
+  let touchendx;
 
-  function touchMove(event);
+  function touchStart(e) {
+    touchstartx = e.touches[0].clientX;
+
+  }
+
+  function touchMove(e) {
+    touchendx = event.touches[0].clientX;
+    console.log(touchendx);
+  };
+
+  function touchEnd() {
+    console.log(`Start: ${touchstartx}`);
+    console.log(`End: ${touchendx}`);
+  }
+
 
   if (site.language == 'english') {
 
@@ -38,7 +54,7 @@ export default function Content({site}) {
   
     <>
 
-    <div id="contentContainer" touchMove={(event) => {touchMove(event)}}>
+    <div id="contentContainer" onTouchStart={(e) => {touchStart(e)}} onTouchMove={(e) => {touchMove(e)}} onTouchEnd={(e) => {touchEnd(e)}}>
             <div className="mobile1 mobileContentPage">
             <Statement />
             </div>

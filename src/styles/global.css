@@ -36,13 +36,6 @@ standard margin and padding
     
   }
 
-#exhibition {
-
-  transition: opacity 1s;
-  display: flex;
-
-}
-
 button {
 
   border: none;

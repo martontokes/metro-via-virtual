@@ -1,5 +1,9 @@
 #swipeController {
-    position: absolute;
+position: absolute;
+width: 700%;
+left: 0px;
+overflow-x: hidden;
+
 }
 
 .mobileContentPage {
@@ -34,3 +38,7 @@ left: 500%;
 .mobile7 {
 left: 600%;    
 }
+
+.mobile8 {
+    left: 700%;
+} 

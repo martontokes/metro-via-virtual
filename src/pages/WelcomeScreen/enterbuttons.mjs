@@ -1,7 +1,6 @@
 export function enterSite(site) {
 
     document.getElementById("wcsInnerContainer").style.opacity = 0;
-    document.getElementById("bg").style.opacity = 0.3;
 
     setTimeout(() => {
         site.setLanguage("english");
@@ -14,7 +13,6 @@ export function enterSite(site) {
 export function enterSiteZh(site) {
 
     document.getElementById("wcsInnerContainer").style.opacity = 0;
-    document.getElementById("bg").style.opacity = 0.3;
 
     setTimeout(() => {
         site.setLanguage("chinese");

@@ -14,10 +14,9 @@ import Illumination from "./Content/English/Artworks/Illumination"
 import IlluminationZh from "./Content/Chinese/Artworks/IlluminationZh"
 import { useEffect } from "react"
 
+import swipeFunctions from "../../../modules/swipeFunctions.mjs"
+
 export default function Content({site}) {
-
-
-
 
   if (site.language == 'english') {
 

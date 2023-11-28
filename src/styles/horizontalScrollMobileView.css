@@ -2,30 +2,35 @@
     position: absolute;
 }
 
+.mobileContentPage {
+position: absolute;
+top: 0px;
+}
+
 .mobile1 {
-    left: 0px;
+left: 0px;
 }
 
 .mobile2 {
-left: 200%;    
+left: 100%;    
 }
 
 .mobile3 {
-left: 300%;    
+left: 200%;    
 }
 
 .mobile4 {
-left: 400%;    
+left: 300%;    
 }
 
 .mobile5 {
-left: 500%;    
+left: 400%;    
 }
 
 .mobile6 {
-left: 600%;    
+left: 500%;    
 }
 
 .mobile7 {
-left: 700%;    
+left: 600%;    
 }

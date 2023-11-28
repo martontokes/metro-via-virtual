@@ -4,11 +4,8 @@ export default function Autosave() {
     return (
 
         <>
-        <div id="content_">
         <AutosaveDescription />
         <AutosaveContent />
-        </div>
-
         </>
         
      )

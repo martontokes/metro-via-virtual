@@ -1,4 +1,4 @@
-export default function Curatorial() {
+export default function Statement() {
 
 return (
 

@@ -15,43 +15,64 @@ import IlluminationZh from "./Content/Chinese/Artworks/IlluminationZh"
 
 export default function Content({site}) {
 
-  if (site.activePage == 'english') {
+  function touchStart(event) {
 
-  return 
+  }
+
+  function touchMove(event) {
+    document.getElementById("swipeController").style.left = event.touches[0].screenX + "px";
+    console.log(document.getElementById("swipeController").style.left);
+  
+  }
+
+  function touchEnd(event) {
+
+  }
+
+
+  if (site.language == 'english') {
+
+  return (
   
   <>
-    <div id="swipeController">
-          <div className="mobile1">
+    <div id="swipeController"
+    onTouchStart={(event) => touchStart(event)}
+    onTouchMove={(event) => touchMove(event)}
+    onTouchEnd={(event) => touchEnd(event)} >
+
+
+          <div className="mobile1 mobileContentPage">
           <Statement />
           </div>
-          <div className="mobile2">
+          <div className="mobile2 mobileContentPage">
           <Essay />
           </div>
-          <div className="mobile3">
+          <div className="mobile3 mobileContentPage">
           <Curator />
           </div>
-          <div className="mobile4">
+          <div className="mobile4 mobileContentPage">
           <Autosave />
           </div>
-          <div className="mobile5">
+          <div className="mobile5 mobileContentPage">
           <Confidential />
           </div>
-          <div className="mobile6">
+          <div className="mobile6 mobileContentPage">
           <Illumination />
           </div>
-          <div className="mobile7">
+          <div className="mobile7 mobileContentPage">
           <Butterflies />
           </div>
-          <div className="mobile8">
+          <div className="mobile8 mobileContentPage">
           <Domestik />
           </div>
       </div>
 
   </>
+  )
 
   } else {
 
-  return
+  return (
 
   <>
       <div id="swipeController">
@@ -76,7 +97,7 @@ export default function Content({site}) {
       </div>
   </>
 
-
+)
   }
 
 

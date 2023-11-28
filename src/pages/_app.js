@@ -5,6 +5,7 @@ import languageButton from 'styles/languageButton.css'
 import welcomeScreen from 'styles/welcomeScreen.css'
 import content from 'styles/content.css'
 import paginator from 'styles/paginator.css'
+import horizontalScrollMobileView from 'styles/horizontalScrollMobileView.css'
 
 import illumination from 'styles/content/illumination.css'
 

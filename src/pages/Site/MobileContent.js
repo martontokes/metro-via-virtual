@@ -31,6 +31,7 @@ export default function Content({site}) {
   // swipe: scrollTo. setPaginator. scrollUp
   let touchstartx;
   let touchendx;
+  let touchMovement;
 
   function touchStart(e) {
     touchstartx = e.touches[0].clientX;
@@ -38,13 +39,18 @@ export default function Content({site}) {
   }
 
   function touchMove(e) {
-    touchendx = event.touches[0].clientX;
+    touchendx = e.touches[0].clientX;
     console.log(touchendx);
   };
 
   function touchEnd() {
-    console.log(`Start: ${touchstartx}`);
-    console.log(`End: ${touchendx}`);
+    if (touchstartx > touchendx) {
+      touchMovement = touchstartx - touchendx;
+      console.log(`to right: ${touchMovement}`);
+    } else if (touchendx > touchstartx) {
+      touchMovement = touchendx - touchstartx;
+      console.log(`to left ${touchMovement}`);
+    }
   }
 
 

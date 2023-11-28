@@ -7,7 +7,7 @@ export default function Logo({site}) {
       {site.language === 'english' ? (
 
         <>
-          <div id="logoContainer">
+          <div id="headerTextContainer">
             <h1 id="headerTitle" className="montserrat">metro via virtual</h1>
             <h2 id="headerSubtitle" className="montserrat">a virtual exhibition from Hong Kong</h2>
           </div>
@@ -16,7 +16,7 @@ export default function Logo({site}) {
       ) : (
 
         <>
-          <div id="logoContainer">
+          <div id="headerTextContainer">
             <h1 id="headerTitle" className="noto">虛擬都會</h1>
             <h2 id="headerSubtitle" className="noto">來自香港的線上展覽</h2>
           </div>

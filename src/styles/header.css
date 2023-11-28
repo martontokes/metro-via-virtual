@@ -1,30 +1,37 @@
 #header {
-  position: fixed;
-  top: 0;
-  left: 0;
+  position: static;
+  width: 100%;
   z-index: 60;
   background-color: black;
-  width: 100%;
+  display: flex;
+  align-items: center;
 }
 
 #headerTitle {
-    padding-top: 24px;
     font-size: 1.44rem;
+    margin-top: 16px;
 }
 
 #headerSubtitle {
   font-size: 1.2rem;
-  padding-bottom: 16px;
+  margin-bottom: 16px;
 }
 
 #hamburgerMenu {
   position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  right: 20px;
+  right: 25px;
   width: 50px;
   height: 50px;
 }
+
+#hamburgerMenu img {
+  width: 32px;
+  height: 32px;
+ }
+
+ #headerTextContainer {
+  margin-left: 24px;
+ }
 
 @media screen and (max-width: 852px) {
 
@@ -36,9 +43,6 @@
   font-size: 12.34px;
  }
 
- #logoContainer {
-  padding-left: 16px;
-}
 
 }
 

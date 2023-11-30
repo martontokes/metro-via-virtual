@@ -12,14 +12,13 @@ import Statement from './Content/English/Statement';
 import StatementZh from "./Content/Chinese/StatementZh";
 import Illumination from "./Content/English/Artworks/Illumination";
 import IlluminationZh from "./Content/Chinese/Artworks/IlluminationZh";
-import { useState } from "react";
 
 export default function Content({ site }) {
-  useState(() => {}, [[], site.activePage]);
 
   let touchstartx;
   let touchendx;
   let touchMovement;
+  let scrollPos;
 
   function touchStart(e) {
     touchstartx = e.touches[0].clientX;
@@ -34,6 +33,7 @@ export default function Content({ site }) {
     if (touchstartx > touchendx) {
       touchMovement = touchstartx - touchendx;
       console.log(`to right: ${touchMovement}`);
+      window.scrollTo({left: 920,});
     } else if (touchendx > touchstartx) {
       touchMovement = touchendx - touchstartx;
       console.log(`to left ${touchMovement}`);

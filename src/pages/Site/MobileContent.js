@@ -15,57 +15,32 @@ import IlluminationZh from "./Content/Chinese/Artworks/IlluminationZh";
 
 export default function Content({ site }) {
 
-  let touchstartx;
-  let touchendx;
-  let touchMovement;
-  let scrollPos;
-
-  function touchStart(e) {
-    touchstartx = e.touches[0].clientX;
-  }
-
-  function touchMove(e) {
-    touchendx = e.touches[0].clientX;
-    console.log(touchendx);
-  }
-
-  function touchEnd() {
-    if (touchstartx > touchendx) {
-      touchMovement = touchstartx - touchendx;
-      console.log(`to right: ${touchMovement}`);
-      window.scrollTo({left: 920,});
-    } else if (touchendx > touchstartx) {
-      touchMovement = touchendx - touchstartx;
-      console.log(`to left ${touchMovement}`);
-    }
-  }
-
   if (site.language === 'english') {
     return (
       <>
-        <div id="contentContainer" onTouchStart={(e) => { touchStart(e) }} onTouchMove={(e) => { touchMove(e) }} onTouchEnd={(e) => { touchEnd(e) }}>
-          <div className="mobile1 mobileContentPage">
+        <div className="content-container">
+          <div className="page">
             <Statement />
           </div>
-          <div className="mobile2 mobileContentPage">
+          <div className="page">
             <Essay />
           </div>
-          <div className="mobile3 mobileContentPage">
+          <div className="page">
             <Curator />
           </div>
-          <div className="mobile4 mobileContentPage">
+          <div className="page">
             <Autosave />
           </div>
-          <div className="mobile5 mobileContentPage">
+          <div className="page">
             <Confidential />
           </div>
-          <div className="mobile6 mobileContentPage">
+          <div className="page">
             <Illumination />
           </div>
-          <div className="mobile7 mobileContentPage">
+          <div className="page">
             <Butterflies />
           </div>
-          <div className="mobile8 mobileContentPage">
+          <div className="page">
             <Domestik />
           </div>
         </div>
@@ -74,23 +49,23 @@ export default function Content({ site }) {
   } else {
     return (
       <>
-        <div id="swipeContainer">
-          <div className="mobile1">
+        <div className="content-container">
+          <div className="page">
             <StatementZh />
           </div>
-          <div className="mobile2">
+          <div className="page">
             <AutosaveZh />
           </div>
-          <div className="mobile3">
+          <div className="page">
             <ConfidentialZh />
           </div>
-          <div className="mobile4">
+          <div className="page">
             <IlluminationZh />
           </div>
-          <div className="mobile5">
+          <div className="page">
             <ButterfliesZh />
           </div>
-          <div className="mobile6">
+          <div className="page">
             <DomestikZh />
           </div>
         </div>

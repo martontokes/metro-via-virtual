@@ -14,7 +14,7 @@ export default function Site({site}) {
         <Menu site={site} />
         { isMobile ? <MobileContent site={site} /> : null }
         { isMobile ? null : <Content site={site} /> }
-        <Paginator site={site} />
+
         <LanguageButtons site={site} />
       </>
     )

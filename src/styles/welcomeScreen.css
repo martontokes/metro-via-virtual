@@ -10,6 +10,53 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    height: 100vh;
+    height: 100%;
+    width: 100vw;
+}
+
+#wcsInnerContainer {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    position: relative;
+}
+
+@media screen and (max-width: 320px) {
+
+    #wcsExhibitionEnglishHeader {
+        font-size: 28.83px;
+    }
+
+    #wcsExhibitionEnglishSubheader {
+        font-size: 12.64px;
+    }
+
+    #wcsEnterButtonEnglish {
+        width: 100%;
+        border: solid 1px grey;
+        border-radius: 200px;
+        height: 50.52px;
+        margin-top: 20px;
+        font-size: 13.89px;
+    }
+
+    #wcsExhibitionChineseHeader {
+        font-size: 28.81px;
+        margin-top: 37.9px;
+    }
+
+    #wcsExhibitionChineseSubheader {
+        font-size: 13.89px;
+    }
+
+    #wcsEnterButtonChinese {
+        width: 100%;
+        border: solid 1px grey;
+        border-radius: 200px;
+        height: 50.52px;
+        margin-top: 20px;
+        font-size: 11.58px;
+    }
 
 }

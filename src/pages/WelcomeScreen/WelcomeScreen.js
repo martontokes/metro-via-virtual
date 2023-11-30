@@ -1,9 +1,10 @@
+import { useEffect } from "react";
 import { enterSite, enterSiteZh } from "./enterbuttons";
+
 
 export default function WelcomeScreen({site}) {
 
     return (
-
     <>
         <div id="wcsOuterContainer">
           <div id="wcsInnerContainer">

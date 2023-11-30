@@ -12,7 +12,7 @@ export default function Document() {
 
 <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
         <Head />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0"></meta>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" ></meta>
         <title>metro via virtual</title>
         <Main />
         <NextScript />

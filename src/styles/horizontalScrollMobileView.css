@@ -1,11 +1,11 @@
 .swiper-pagination {
     position: fixed !important;
     bottom: 0px !important;
- height: 50px;
- background-color: black;
-display: flex;
-align-items: center;
-justify-content: center;
+    height: 50px;
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .swiper {

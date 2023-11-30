@@ -34,7 +34,8 @@ export default function Content({ site }) {
       pagination={{ clickable: true }}
       scrollbar={{ draggable: true }}
       onSwiper={(swiper) => console.log(swiper)}
-      onSlideChange={() => console.log('slide change')}
+      onSlideChange={(swiper) => console.log(swiper)}
+      autoHeight={true}
     >
           <SwiperSlide>
             <Statement />
@@ -69,7 +70,7 @@ export default function Content({ site }) {
         <Swiper
       spaceBetween={50}
       slidesPerView={3}
-      onSlideChange={() => console.log('slide change')}
+      onSlideChange={(swiper) => console.log(swiper)}
       onSwiper={(swiper) => console.log(swiper)}
     >
           <SwiperSlide>

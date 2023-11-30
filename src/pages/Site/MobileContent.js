@@ -14,7 +14,7 @@ import Illumination from "./Content/English/Artworks/Illumination";
 import IlluminationZh from "./Content/Chinese/Artworks/IlluminationZh";
 
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Navigation, Pagination } from 'swiper/modules';
+import { Pagination } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
@@ -27,10 +27,9 @@ export default function Content({ site }) {
       <>
         <Swiper
       // install Swiper modules
-      modules={[Navigation, Pagination]}
+      modules={[Pagination]}
       spaceBetween={50}
       slidesPerView={1}
-      navigation
       pagination={{ clickable: true }}
       scrollbar={{ draggable: true }}
       onSwiper={(swiper) => console.log(swiper)}

@@ -8,6 +8,7 @@ align-items: center;
 justify-content: center;
 }
 
-.swiper-pagination-bullet {
-
+.swiper {
+    position: fixed;
+    top: 80px;
 }

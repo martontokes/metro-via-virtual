@@ -68,7 +68,7 @@ export default function Content({ site }) {
       <>
         <Swiper
       spaceBetween={50}
-      slidesPerView={3}
+      slidesPerView={1}
       onSlideChange={(swiper) => console.log(swiper)}
       onSwiper={(swiper) => console.log(swiper)}
     >

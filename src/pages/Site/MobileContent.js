@@ -13,62 +13,84 @@ import StatementZh from "./Content/Chinese/StatementZh";
 import Illumination from "./Content/English/Artworks/Illumination";
 import IlluminationZh from "./Content/Chinese/Artworks/IlluminationZh";
 
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Navigation, Pagination } from 'swiper/modules';
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
+
+
 export default function Content({ site }) {
 
   if (site.language === 'english') {
     return (
       <>
-        <div className="content-container">
-          <div className="page">
+        <Swiper
+      // install Swiper modules
+      modules={[Navigation, Pagination]}
+      spaceBetween={50}
+      slidesPerView={1}
+      navigation
+      pagination={{ clickable: true }}
+      scrollbar={{ draggable: true }}
+      onSwiper={(swiper) => console.log(swiper)}
+      onSlideChange={() => console.log('slide change')}
+    >
+          <SwiperSlide>
             <Statement />
-          </div>
-          <div className="page">
+            </SwiperSlide>
+          <SwiperSlide>
             <Essay />
-          </div>
-          <div className="page">
+          </SwiperSlide>
+          <SwiperSlide>
             <Curator />
-          </div>
-          <div className="page">
+          </SwiperSlide>
+          <SwiperSlide>
             <Autosave />
-          </div>
-          <div className="page">
+          </SwiperSlide>
+          <SwiperSlide>
             <Confidential />
-          </div>
-          <div className="page">
+          </SwiperSlide>
+          <SwiperSlide>
             <Illumination />
-          </div>
-          <div className="page">
+          </SwiperSlide>
+          <SwiperSlide>
             <Butterflies />
-          </div>
-          <div className="page">
+          </SwiperSlide>
+          <SwiperSlide>
             <Domestik />
-          </div>
-        </div>
+          </SwiperSlide>
+          </Swiper>
       </>
     );
   } else {
     return (
       <>
-        <div className="content-container">
-          <div className="page">
+        <Swiper
+      spaceBetween={50}
+      slidesPerView={3}
+      onSlideChange={() => console.log('slide change')}
+      onSwiper={(swiper) => console.log(swiper)}
+    >
+          <SwiperSlide>
             <StatementZh />
-          </div>
-          <div className="page">
+          </SwiperSlide>
+          <SwiperSlide>
             <AutosaveZh />
-          </div>
-          <div className="page">
+          </SwiperSlide>
+          <SwiperSlide>
             <ConfidentialZh />
-          </div>
-          <div className="page">
+          </SwiperSlide>
+          <SwiperSlide>
             <IlluminationZh />
-          </div>
-          <div className="page">
+          </SwiperSlide>
+          <SwiperSlide>
             <ButterfliesZh />
-          </div>
-          <div className="page">
+          </SwiperSlide>
+          <SwiperSlide>
             <DomestikZh />
-          </div>
-        </div>
+          </SwiperSlide>
+        </Swiper>
       </>
     );
   }

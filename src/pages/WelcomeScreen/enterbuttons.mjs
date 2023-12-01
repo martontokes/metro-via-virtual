@@ -6,9 +6,6 @@ export function enterSite(site) {
         site.setLanguage("english");
         site.toggleWelcomeScreen(false);
         site.setActivePage("Statement");
-        setTimeout(() => {
-          document.getElementById("exhibition").style.opacity = 1;
-        }, 50);
       }, 1000)
 
   }

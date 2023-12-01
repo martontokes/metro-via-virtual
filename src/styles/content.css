@@ -1,11 +1,15 @@
+.swiper {
+    position: fixed;
+    top: 64px;
+}
+
 h3 {
     font-size: 16px;
-    padding-bottom: 8px;
+    padding-bottom: 4px;
 }
 
 h4 {
     font-size: 14px;
-    padding-bottom: 4px
 }
 
 a {

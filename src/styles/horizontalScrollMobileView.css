@@ -8,8 +8,12 @@
     justify-content: center;
 }
 
-
-
 .swiper-pagination {
     color: black;
+}
+
+#butterfliesToFullscreenButton {
+    position: fixed;
+    top: 50px;
+    right: 50px;
 }

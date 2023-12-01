@@ -29,37 +29,37 @@
     }
 
     #wcsExhibitionEnglishSubheader {
-        font-size: 12.64px;
+        font-size: 14.22px;
     }
 
     #wcsEnterButtonEnglish {
-        width: 96%;
-        border: solid 1px grey;
+        width: 100%;
+        border: solid 1px rgb(50,50,50);
         border-radius: 200px;
-        height: 52.71px;
+        height: 57px;
         margin-top: 20px;
-        font-size: 14.05px;
+        font-size: 16px;
     }
 
     #wcsExhibitionChineseHeader {
         font-size: 28.81px;
         margin-top: 39.81px;
-        font-weight: 300;
+        font-weight: 400;
     }
 
     #wcsExhibitionChineseSubheader {
         font-size: 16px;
-        font-weight: 300;
+        font-weight: 400;
     }
 
     #wcsEnterButtonChinese {
-        width: 96%;
-        border: solid 1px grey;
+        width: 100%;
+        border: solid 1px rgb(50,50,50);
         border-radius: 200px;
-        height: 52.71px;
+        height: 57px;
         margin-top: 20px;
-        font-size: 16px;
-        font-weight: 100;
+        font-size: 18px;
+        font-weight: 400;
     }
 
 }

@@ -35,6 +35,13 @@ export default function Content({ site }) {
       onSwiper={(swiper) => console.log(swiper)}
       onSlideChange={(swiper) => console.log(swiper)}
       autoHeight={true}
+      style={{
+        "--swiper-pagination-color": "white",
+        "--swiper-pagination-bullet-inactive-color": "rgb(50,50,50)",
+        "--swiper-pagination-bullet-inactive-opacity": "1",
+        "--swiper-pagination-bullet-size": "8px",
+        "--swiper-pagination-bullet-horizontal-gap": "6px"
+      }}
     >
           <SwiperSlide>
             <Statement />

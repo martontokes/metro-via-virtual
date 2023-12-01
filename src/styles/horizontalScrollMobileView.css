@@ -12,3 +12,7 @@
     position: fixed;
     top: 80px;
 }
+
+.swiper-pagination {
+    color: black;
+}

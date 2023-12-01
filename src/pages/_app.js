@@ -24,7 +24,7 @@ export default function App({ Component, pageProps }) {
         {
     
           `
-            .montserrat {
+            * {
               font-family: ${montserrat.style.fontFamily};
             }
 

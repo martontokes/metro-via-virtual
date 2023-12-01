@@ -17,8 +17,8 @@ function AutosaveDescription() {
     return (
 
         <>
-        <div>
-  <div>
+
+  <div id="description">
     <h3>Autosave: Redoubt (2018)</h3>
     <div>
       <div><h4>Andrew Luk</h4><a href="https://www.andrewluk.com" target="_blank">www.andrewluk.com</a></div>
@@ -32,7 +32,7 @@ function AutosaveDescription() {
     <br /><br /> Alexis Mailles produces hybrid installations that border the frontiers of Arte Povera and cyberpunk styles by using digital and analogue techniques. He has exhibited worldwide, including the M21 Museum (Shanghai), the 18th Street Art Center (Los Angeles), the Digital Art Center (Taipei), and Espace C.O.N.S.O.L.E (Paris). 
     <br /><br /> Peter Nelson is a visual artist and academic working at the intersection of landscape theory and computer games. Originally trained in painting and drawing, Nelson currently produces exhibitions across a number of media, from painting and drawing, to animation, 3D printed sculpture and interactive game-based systems. He has held numerous group and solo exhibitions, including projects with HanArt TZ Gallery (Hong Kong), The National Palace Museum (Taiwan), The Sichuan Fine Art Academy Museum (Chongqing) and the K11 Art Foundation (Hong Kong). He is an Assistant Professor at Hong Kong Baptist University.</p>
   </div>
-</div>
+
 
         </>
 

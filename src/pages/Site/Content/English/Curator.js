@@ -6,7 +6,7 @@ export default function Curator() {
         
         <div id="description" style={{display: "block"}}>
         <h3>About the Curator</h3>
-        <p><b>Zeng Hong</b><br /> is an academic, curator and visual artist.<br /><br />
+        <p>Zeng Hong is an academic, curator and visual artist.<br /><br />
         <a className="curatorEmail" style={{marginTop: '24px'}} href="mailto:hong.zeng@yale.edu">hong.zeng@yale.edu</a><br></br>
         <a className="curatorEmail" href="mailto:zenghong0808@gmail.com">zenghong0808@gmail.com</a><br /><br />
           She is the Yale-China Arts Fellow in 2020, funded by the Council on East Asian Studies at Yale University.<br /><br />

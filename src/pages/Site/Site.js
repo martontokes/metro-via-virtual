@@ -8,11 +8,13 @@ import { isMobile } from "react-device-detect"
 
 export default function Site({site}) {
     return (
-      <>      
+      <>
+      <div id="exhibition">      
         <Header site={site} />
         <Menu site={site} />
         { isMobile ? <MobileContent site={site} /> : null }
         { isMobile ? null : <Content site={site} /> }
+        </div>
       </>
     )
 }

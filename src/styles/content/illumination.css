@@ -3,6 +3,18 @@
 /* These styles are applied to the content of the welcome screen */
 /* All welcome screen IDs start with the "wcs" prefix */
 
+#buddhacontainer {
+    position: relative;
+    top: 1px;
+    height: 640px;
+}
+
+.buddha {
+    
+    position: absolute;
+    top: 0px;
+    transition: opacity 3s;
+}
 
 img {
 

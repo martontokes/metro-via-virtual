@@ -47,25 +47,28 @@ export default function Content({ site }) {
             <Statement />
             </SwiperSlide>
           <SwiperSlide>
-            <Essay />
+          <Confidential />
           </SwiperSlide>
           <SwiperSlide>
+          <Illumination />
+          </SwiperSlide>
+          <SwiperSlide>
+          <Butterflies />
+
+          </SwiperSlide>
+          <SwiperSlide>
+          <Domestik />
+          </SwiperSlide>
+          <SwiperSlide>
+          <Autosave />
+          </SwiperSlide>
+          <SwiperSlide>
+          <Essay />
+
+          </SwiperSlide>
+          <SwiperSlide>
+
             <Curator />
-          </SwiperSlide>
-          <SwiperSlide>
-            <Autosave />
-          </SwiperSlide>
-          <SwiperSlide>
-            <Confidential />
-          </SwiperSlide>
-          <SwiperSlide>
-            <Illumination />
-          </SwiperSlide>
-          <SwiperSlide>
-            <Butterflies />
-          </SwiperSlide>
-          <SwiperSlide>
-            <Domestik />
           </SwiperSlide>
           </Swiper>
       </>

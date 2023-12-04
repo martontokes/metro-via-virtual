@@ -27,12 +27,14 @@
 
     #wcsExhibitionEnglishHeader {
         font-size: 28.83px;
+        font-weight: 500;
     }
 
     #wcsExhibitionEnglishSubheader {
         font-size: 13.33px;
-        opacity: 0.64;
+        opacity: 1;
         padding-top: 1px;
+        font-weight: 400;
     }
 
     #wcsEnterButtonEnglish {
@@ -45,10 +47,14 @@
 
     }
 
+    #wcsEnterButtonEnglish span {
+        font-weight: 500 !important;
+    }
+
     #wcsExhibitionChineseHeader {
         font-size: 28.81px;
         margin-top: 39.81px;
-        font-weight: 300;
+        font-weight: 400;
         letter-spacing: 0.2rem;
         position: relative;
         left: 0.1rem;
@@ -57,8 +63,8 @@
 
     #wcsExhibitionChineseSubheader {
         font-size: 16px;
-        font-weight: 300;
-        opacity: 0.64;
+        font-weight: 400;
+        opacity: 1;
         letter-spacing: 0.2rem;
         position: relative;
         left: 0.1rem;
@@ -71,7 +77,7 @@
         height: 57px;
         margin-top: 22px;
         font-size: 16px;
-        font-weight: 300;
+        font-weight: 400;
 
     }
 

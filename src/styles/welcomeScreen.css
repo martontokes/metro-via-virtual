@@ -34,7 +34,7 @@
         font-size: 13.33px;
         opacity: 1;
         padding-top: 1px;
-        font-weight: 400;
+        font-weight: 500;
     }
 
     #wcsEnterButtonEnglish {
@@ -63,7 +63,7 @@
 
     #wcsExhibitionChineseSubheader {
         font-size: 16px;
-        font-weight: 400;
+        font-weight: 500;
         opacity: 1;
         letter-spacing: 0.2rem;
         position: relative;
@@ -77,8 +77,10 @@
         height: 57px;
         margin-top: 22px;
         font-size: 16px;
-        font-weight: 400;
+    }
 
+    #wcsEnterButtonChinese span {
+        font-weight: 500;
     }
 
 }

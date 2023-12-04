@@ -13,12 +13,15 @@ export default function Butterflies() {
 
     }
 
+    const attachClickHandler = () => {
+      document.getElementById("butterfliesToFullscreenButton").addEventListener('click', () => {
+
+      })
+    }
+
     function displayVideo() {
 
       document.getElementById("butterfliesFrame").style.opacity = 1;
-      document.getElementById("manual").style.opacity = 1;
-      setTimeout(() => { document.getElementById("manual").style.opacity = 0; }, 12000);
-    
     }
 
     function closeFullscreen() {
@@ -41,7 +44,6 @@ export default function Butterflies() {
             <button id="butterfliesToFullscreenButton" style={{width: "50px", height: "50px"}} onClick={toFullscreen}>ButterfliesToFullscreen</button>
             <div id="butterfliesExperience">
             <button onClick={closeFullscreen}></button>
-            <p id="manual" style={{textAlign: "center"}}>Click and drag the image to look around Wong's living room. <br />You may move closer to objects by scrolling.</p>
             { isFullscreen ? butterfliesFrame : <></>  }         
           </div>
         </div>

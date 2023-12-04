@@ -31,7 +31,7 @@
     </script>
     <script type="text/javascript">
         var tour;
-
+      
         function loadTour() {
             if (tour) return;
 
@@ -303,6 +303,15 @@
             -moz-transition: opacity 0.5s;
             -o-transition: opacity 0.5s;
         }
+
+        div[id="18"] {
+    width: 1200px !important;
+}
+
+div[id="19"] {
+    display: none;
+    opacity: 0;
+}
     </style>
 
 </head>
@@ -336,9 +345,7 @@
         background-color: black;
     }
 
-    #13 {
-        background-color: black;
-    }
+
 
     * {
         font-family: 'Urbanist', sans-serif !important;
@@ -401,6 +408,7 @@
     var windowToCheck;
     var divElement;
 
+
     var checkExist = setInterval(function () {
         divElement = document.querySelector(`div[id="13"]`);
         if (divElement) {
@@ -409,11 +417,12 @@
             enableVideoText = document.querySelector('div[id="13"] span');
             yesText.setAttribute("id", "yesText");
             noText.setAttribute("id", "noText");
-            yesText.textContent = 'Yes';
-            noText.textContent = 'No';
-            enableVideoText.textContent = 'Enable video?';
+            yesText.textContent = '';
+            noText.textContent = '';
+            enableVideoText.textContent = '';
             makeWindowVisible();
             userManual();
+            document.querySelector(`div[id="18"]`).click();
             clearInterval(checkExist);
         }
     }, 1000);

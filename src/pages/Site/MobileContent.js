@@ -13,18 +13,27 @@ import StatementZh from "./Content/Chinese/StatementZh";
 import Illumination from "./Content/English/Artworks/Illumination";
 import IlluminationZh from "./Content/Chinese/Artworks/IlluminationZh";
 
+import Loader from "./Loader";
+
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Pagination } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 
+import { useState } from "react";
+
 
 export default function Content({ site }) {
+
+  const [hasLoaded, setLoaded] = useState(false);
+
+
 
   if (site.language === 'english') {
     return (
       <>
+  
         <Swiper
       // install Swiper modules
       modules={[Pagination]}
@@ -32,9 +41,10 @@ export default function Content({ site }) {
       slidesPerView={1}
       pagination={{ clickable: true }}
       scrollbar={{ draggable: true }}
-      onSwiper={(swiper) => console.log(swiper)}
+      onSwiper={(swiper) => {swiper.updateAutoHeight(1)}}
       onSlideChange={(swiper) => console.log(swiper)}
       autoHeight={true}
+      
       style={{
         "--swiper-pagination-color": "white",
         "--swiper-pagination-bullet-inactive-color": "rgb(50,50,50)",
@@ -43,35 +53,42 @@ export default function Content({ site }) {
         "--swiper-pagination-bullet-horizontal-gap": "6px"
       }}
     >
+
           <SwiperSlide>
-            <Statement />
+          {({ isActive, isNext, isPrev }) => (
+      (isActive || isNext || isPrev) ? <Statement /> : null )}
+            </SwiperSlide>
+
+          <SwiperSlide>
+          {({ isActive, isNext, isPrev }) => (
+      (isActive || isNext || isPrev) ? <Confidential /> : null)}
             </SwiperSlide>
           <SwiperSlide>
-          <Confidential />
-          </SwiperSlide>
-          <SwiperSlide>
-          <Illumination />
-          </SwiperSlide>
-          <SwiperSlide>
-          <Butterflies />
-
-          </SwiperSlide>
-          <SwiperSlide>
-          <Domestik />
-          </SwiperSlide>
-          <SwiperSlide>
-          <Autosave />
-          </SwiperSlide>
-          <SwiperSlide>
-          <Essay />
-
-          </SwiperSlide>
-          <SwiperSlide>
-
-            <Curator />
-          </SwiperSlide>
+          {({ isActive, isNext, isPrev }) => (
+      (isActive || isNext || isPrev) ? <Illumination /> : null)}
+            </SwiperSlide>
+            <SwiperSlide>
+          {({ isActive, isNext, isPrev }) => (
+      (isActive || isNext || isPrev) ? <Butterflies /> : null)}
+            </SwiperSlide>
+            <SwiperSlide>
+          {({ isActive, isNext, isPrev }) => (
+      (isActive || isNext || isPrev) ? <Domestik /> : null)}
+            </SwiperSlide>
+            <SwiperSlide>
+          {({ isActive, isNext, isPrev }) => (
+      (isActive || isNext || isPrev) ? <Autosave /> : null)}
+            </SwiperSlide>
+            <SwiperSlide>
+          {({ isActive, isNext, isPrev }) => (
+      (isActive || isNext || isPrev) ? <Essay /> : null)}
+            </SwiperSlide>
+            <SwiperSlide>
+          {({ isActive, isNext, isPrev }) => (
+      (isActive || isNext || isPrev) ? <Curator /> : null)}
+            </SwiperSlide>
           </Swiper>
-      </>
+   </>
     );
   } else {
     return (

@@ -12,6 +12,11 @@ export default function Site({site}) {
 
   useEffect(() => {
     document.getElementById("exhibition").style.opacity = 1;
+
+    window.addEventListener("load", (event) => {
+      console.log("page is fully loaded");
+    });
+    
   }, []);
 
     return (

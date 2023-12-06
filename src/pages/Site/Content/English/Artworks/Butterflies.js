@@ -3,7 +3,7 @@ import { useState, useEffect } from "react"
 export default function Butterflies() {
 
     const [isFullscreen, setFullscreen] = useState(false);
-    const butterfliesFrame = (<iframe id="butterfliesFrame" frameBorder="no" onLoad={displayVideo} src="/english/butterflies_en.htm"></iframe>);
+    const butterfliesFrame = (<iframe id="butterfliesFrame" frameBorder="no" onLoad={displayVideo} src="/butterflies/0104b/index.htm"></iframe>);
 
     const toFullscreen = () => {
 

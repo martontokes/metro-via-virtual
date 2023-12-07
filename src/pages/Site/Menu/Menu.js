@@ -5,7 +5,8 @@ export default function Menu({site}) {
   return (
 
     <div id="menuContainer">
-    <div id="menu">
+
+      <div id="menu">
 
         {site.language === 'english' ? (
 
@@ -92,7 +93,8 @@ export default function Menu({site}) {
 
         )}
 
-      </div>
+        </div>
+        
       </div>
 
   );

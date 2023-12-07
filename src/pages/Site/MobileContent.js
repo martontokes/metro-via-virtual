@@ -28,12 +28,12 @@ export default function Content({ site }) {
 
   const [hasLoaded, setLoaded] = useState(false);
 
-
-
   if (site.language === 'english') {
+
     return (
+      
       <>
-  
+
         <Swiper
       // install Swiper modules
       modules={[Pagination]}
@@ -51,8 +51,7 @@ export default function Content({ site }) {
         "--swiper-pagination-bullet-inactive-opacity": "1",
         "--swiper-pagination-bullet-size": "8px",
         "--swiper-pagination-bullet-horizontal-gap": "6px"
-      }}
-    >
+      }}>
 
           <SwiperSlide>
           {({ isActive, isNext, isPrev }) => (
@@ -89,16 +88,20 @@ export default function Content({ site }) {
             </SwiperSlide>
           </Swiper>
    </>
+
     );
+
   } else {
+
     return (
+
       <>
+      
         <Swiper
       spaceBetween={50}
       slidesPerView={1}
       onSlideChange={(swiper) => console.log(swiper)}
-      onSwiper={(swiper) => console.log(swiper)}
-    >
+      onSwiper={(swiper) => console.log(swiper)}>
           <SwiperSlide>
             <StatementZh />
           </SwiperSlide>
@@ -119,6 +122,7 @@ export default function Content({ site }) {
           </SwiperSlide>
         </Swiper>
       </>
+
     );
   }
 }

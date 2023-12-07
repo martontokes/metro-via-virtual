@@ -8,11 +8,8 @@
     justify-content: center;
 }
 
-.swiper-pagination {
-    color: black;
-}
-
 .swiper-pagination-bullet-active {
+    background: white !important;
 }
 
 #butterfliesToFullscreenButton {

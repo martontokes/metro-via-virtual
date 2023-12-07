@@ -5,7 +5,7 @@ export default function Autosave() {
 
         <>
 
-  <div id="description">
+  <div id="artwork_page">
  
     <h3>Autosave: Redoubt (2018)</h3>
     <div className="artistsBox">

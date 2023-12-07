@@ -3,12 +3,18 @@ import Logo from "./Logo";
 import HamburgerMenu from "./HamburgerMenu";
 
 export default function Header({ site }) {
+
   return (
+
     <>
+
       <div id="header">
         <Logo site={site} />
         <HamburgerMenu site={site} />
       </div>
+      
     </>
+
   );
+
 }

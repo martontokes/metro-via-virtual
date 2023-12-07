@@ -12,6 +12,9 @@
     color: black;
 }
 
+.swiper-pagination-bullet-active {
+}
+
 #butterfliesToFullscreenButton {
     position: fixed;
     top: 50px;

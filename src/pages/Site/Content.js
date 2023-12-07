@@ -15,7 +15,7 @@ import IlluminationZh from "./Content/Chinese/Artworks/IlluminationZh"
 
 export default function Content({site}) {
 
-    if (site.language === 'english') {
+  if (site.language === 'english') {
 
         switch (site.activePage) {
 
@@ -30,7 +30,7 @@ export default function Content({site}) {
 
         }
 
-} else {
+  } else {
     
         switch (site.activePage) {
 
@@ -41,7 +41,6 @@ export default function Content({site}) {
             case 'ButterfliesZh': return ( <ButterfliesZh /> );
             case 'DomestikZh': return ( <DomestikZh /> );
 
-          }
-      }
-
+        }
+    }
 }

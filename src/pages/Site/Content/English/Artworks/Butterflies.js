@@ -7,7 +7,7 @@ export default function Butterflies() {
     return (
       
       <>
-          <div id="description">
+          <div id="artwork_page">
             <h3>Butterflies on the Wheel (2020)</h3>
             <div className="artistsBox">
             <h4>Elaine Wong</h4>

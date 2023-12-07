@@ -1,9 +1,9 @@
 export default function Loader() {
 
-return (
+  return (
 
-  <>
- <div id="loaderContainer"><div id="loader"></div></div>
-  </>
-)
+      <>
+        <div id="loaderContainer"><div id="loader"></div></div>
+      </>
+  )
 }

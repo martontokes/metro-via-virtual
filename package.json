@@ -12,6 +12,7 @@
     "deploy": "gh-pages -d build"
   },
   "dependencies": {
+    "@egjs/react-view360": "^4.0.0-beta.7",
     "jquery": "^3.7.1",
     "next": "^13.5.6",
     "react": "^18.2.0",

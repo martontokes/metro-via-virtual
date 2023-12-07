@@ -65,7 +65,7 @@ button {
 }
 
 iframe {
-  pointer-events: none;
+/*  pointer-events: none; */
 }
 
 #loaderContainer {

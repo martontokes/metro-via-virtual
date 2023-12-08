@@ -4,7 +4,7 @@ export default function Confidential() {
 
     <>
 
-      <div id="description">
+      <div id="artwork_page">
         <h3>Confidential Records: <br />Dual Metropolitans (2016 - 2018)</h3>
         <div className="artistsBox" style={{marginBottom: "0px"}}>
           <h4>Vvzela Kook</h4>
@@ -14,6 +14,7 @@ export default function Confidential() {
         <iframe id="confidentialiframe"
           src="https://player.vimeo.com/video/297653544?h=4ccbbb86fe"
           width={"100%"}
+          frameBorder={0}
           allow="autoplay; fullscreen; picture-in-picture"
           allowFullScreen="true"/>
 

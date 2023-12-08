@@ -1,12 +1,8 @@
 export function enterSite(site) {
 
-    document.getElementById("wcsOuterContainer").style.opacity = 0;
-
-    setTimeout(() => {
         site.setLanguage("english");
         site.toggleWelcomeScreen(false);
         site.setActivePage("Statement");
-      }, 1000)
 
   }
 

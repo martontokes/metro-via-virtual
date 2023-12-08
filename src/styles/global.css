@@ -66,6 +66,8 @@ button {
 
 iframe {
 /*  pointer-events: none; */
+padding: 0;
+margin: 0;
 }
 
 #loaderContainer {
@@ -90,3 +92,4 @@ iframe {
 }
 
 @keyframes s2 {to{transform: rotate(1turn)}}
+

@@ -9,7 +9,7 @@
 }
 
 .swiper-pagination-bullet-active {
-    background: white !important;
+    background-color: rgb(200,200,200) !important;
 }
 
 #butterfliesToFullscreenButton {

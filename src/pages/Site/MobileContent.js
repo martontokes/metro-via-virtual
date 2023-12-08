@@ -42,16 +42,23 @@ export default function Content({ site }) {
       pagination={{ clickable: true }}
       scrollbar={{ draggable: true }}
       onSwiper={(swiper) => {swiper.updateAutoHeight(1)}}
-      onSlideChange={() => {}}
+      onResize={() => {
+        document.querySelector('.swiper-slide-active').querySelector(".placeholder").style.height = 0 + "px";
+        scrollTo({top: 0,})
+      }}
       autoHeight={true}
 
       // readjust the height of the neighbouring swiper element's first placeholder divs to prevent scrollTop // 
 
       onTouchStart={(swiper) => {
 
-        console.log(window.scrollY)
-        document.querySelector('.swiper-slide-next').querySelector(".placeholder").style.height = window.scrollY + "px";  
+        if (document.querySelector('.swiper-slide-prev')) {
+        document.querySelector('.swiper-slide-prev').querySelector(".placeholder").style.height = window.scrollY + "px";
+        }
 
+        if (document.querySelector('.swiper-slide-next')) {
+        document.querySelector('.swiper-slide-next').querySelector(".placeholder").style.height = window.scrollY + "px";  
+        }
 
 
       }}

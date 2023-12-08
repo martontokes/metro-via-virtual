@@ -3,7 +3,7 @@ export default function Curator() {
   return (
 
     <>
-            
+    <div id="placeholder8" className="placeholder"></div>        
     <div id="artwork_page" style={{display: "block"}}>
 
       <h3>About the Curator</h3>

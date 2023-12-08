@@ -5,7 +5,8 @@ export default function Essay() {
     return (
 
             <>
-
+            
+            <div id="placeholder7" className="placeholder"></div>
             <div id="artwork_page">
                 <h3>On the Role of <br />Symbol Alienation in Art</h3>
                     <div>

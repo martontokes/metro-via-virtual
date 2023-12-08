@@ -42,8 +42,19 @@ export default function Content({ site }) {
       pagination={{ clickable: true }}
       scrollbar={{ draggable: true }}
       onSwiper={(swiper) => {swiper.updateAutoHeight(1)}}
-      onSlideChange={(swiper) => console.log(swiper)}
+      onSlideChange={() => {}}
       autoHeight={true}
+
+      // readjust the height of the neighbouring swiper element's first placeholder divs to prevent scrollTop // 
+
+      onTouchStart={(swiper) => {
+
+        console.log(window.scrollY)
+        document.querySelector('.swiper-slide-next').querySelector(".placeholder").style.height = window.scrollY + "px";  
+
+
+
+      }}
       
       style={{
         "--swiper-pagination-color": "white",
@@ -54,34 +65,42 @@ export default function Content({ site }) {
       }}>
 
           <SwiperSlide>
+
           {({ isActive, isNext, isPrev }) => (
       (isActive || isNext || isPrev) ? <Statement /> : null )}
             </SwiperSlide>
 
           <SwiperSlide>
+
           {({ isActive, isNext, isPrev }) => (
       (isActive || isNext || isPrev) ? <Confidential /> : null)}
             </SwiperSlide>
           <SwiperSlide>
+
           {({ isActive, isNext, isPrev }) => (
       (isActive || isNext || isPrev) ? <Illumination /> : null)}
             </SwiperSlide>
             <SwiperSlide>
+
           {({ isActive, isNext, isPrev }) => (
       (isActive || isNext || isPrev) ? <Butterflies /> : null)}
             </SwiperSlide>
+
             <SwiperSlide>
           {({ isActive, isNext, isPrev }) => (
       (isActive || isNext || isPrev) ? <Domestik /> : null)}
             </SwiperSlide>
             <SwiperSlide>
+
           {({ isActive, isNext, isPrev }) => (
       (isActive || isNext || isPrev) ? <Autosave /> : null)}
             </SwiperSlide>
             <SwiperSlide>
+
           {({ isActive, isNext, isPrev }) => (
       (isActive || isNext || isPrev) ? <Essay /> : null)}
             </SwiperSlide>
+
             <SwiperSlide>
           {({ isActive, isNext, isPrev }) => (
       (isActive || isNext || isPrev) ? <Curator /> : null)}

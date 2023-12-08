@@ -5,6 +5,7 @@ export default function Autosave() {
 
         <>
 
+  <div id="placeholder6" className="placeholder"></div>
   <div id="artwork_page">
  
     <h3>Autosave: Redoubt (2018)</h3>

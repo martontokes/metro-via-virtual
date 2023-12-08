@@ -4,6 +4,7 @@ export default function Confidential() {
 
     <>
 
+      <div id="placeholder2" className="placeholder"></div>
       <div id="artwork_page">
         <h3>Confidential Records: <br />Dual Metropolitans (2016 - 2018)</h3>
         <div className="artistsBox" style={{marginBottom: "0px"}}>

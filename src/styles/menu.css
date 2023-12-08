@@ -2,6 +2,7 @@
   #menu {
     display: inline-flex;
     flex-direction: column;
+    margin-top: 32px;
   }
 
 
@@ -13,7 +14,7 @@
     border: none;
     background: none;
     color: inherit;
-    font-size: 15.63px;
+    font-size: 12.63px;
     font-family: inherit;
     padding: 20px 0px;
     text-decoration: underline;
@@ -24,17 +25,31 @@
     height: 60px;
   }
   
-  #artworks-heading-menu {
+  #artworks-header-in-mobile-menu {
     font-size: 12px;
     opacity: 80%;
-    padding-left: 48px;
-    padding-top: 4rem;
+    padding-left: 24px;
+    padding-top: 36px;
     padding-bottom: 1rem;
+    font-weight: 400;
+    opacity: 0.5;
   }
+
+  .topmostLowerMenuItemOnMobile {
+    margin-top: 32px;
+  }
+
+  .LowestLowerMenuItemOnMobile {
+    margin-bottom: 64px;
+  }
+
+.artworksmenubutton {
+  padding-left: 56px !important;
+}
 
   .menubutton {
     text-align: left;
-    padding-left: 72px !important;
+    padding-left: 24px;
     font-weight: 400 !important;
   }
 

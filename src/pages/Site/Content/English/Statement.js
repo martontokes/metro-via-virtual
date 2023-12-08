@@ -3,6 +3,7 @@ export default function Statement() {
     return (
 
         <>
+
         <div id="placeholder1" className="placeholder"></div>
         <div id="artwork_page">
             <h3>Curatorial statement</h3>

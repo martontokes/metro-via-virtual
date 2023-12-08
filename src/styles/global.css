@@ -37,6 +37,7 @@ standard margin and padding
 
   body {
     height: 100%;
+
   }
 
 * {
@@ -59,10 +60,6 @@ button {
   display: none !important;
 }
 
-#exhibition {
-  opacity: 0;
-  transition: opacity 1s;
-}
 
 iframe {
 /*  pointer-events: none; */

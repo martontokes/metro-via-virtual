@@ -46,7 +46,6 @@ export default function Content({ site }) {
       scrollbar={{ draggable: true }}
       onSwiper={(swiper) => {swiper.updateAutoHeight(1)}}
       passiveListeners={true}
-
       longSwiper={false}
       onSlideChangeTransitionEnd={() => {
           scrollTo({top: 0,})
@@ -83,6 +82,12 @@ export default function Content({ site }) {
       (isActive || isNext || isPrev) ? <Statement /> : null )}
             </SwiperSlide>
 
+            <SwiperSlide>
+
+{({ isActive, isNext, isPrev }) => (
+(isActive || isNext || isPrev) ? <Essay /> : null)}
+  </SwiperSlide>
+
           <SwiperSlide>
 
           {({ isActive, isNext, isPrev }) => (
@@ -107,11 +112,6 @@ export default function Content({ site }) {
 
           {({ isActive, isNext, isPrev }) => (
       (isActive || isNext || isPrev) ? <Autosave /> : null)}
-            </SwiperSlide>
-            <SwiperSlide>
-
-          {({ isActive, isNext, isPrev }) => (
-      (isActive || isNext || isPrev) ? <Essay /> : null)}
             </SwiperSlide>
 
             <SwiperSlide>

@@ -1,8 +1,17 @@
 export function enterSite(site) {
 
-        site.setLanguage("english");
-        site.toggleWelcomeScreen(false);
-        site.setActivePage("Statement");
+  document.getElementById("wcsOuterContainer").style.opacity = 0;
+
+    setTimeout(() => {
+      site.setLanguage("english");
+      site.toggleWelcomeScreen(false);
+      site.setActivePage("Statement");
+      setTimeout(() => {
+        document.getElementById("exhibition").style.opacity = 1;
+      }, 50);
+    }, 1000)
+
+
 
   }
 

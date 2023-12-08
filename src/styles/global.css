@@ -61,7 +61,10 @@ button {
 }
 
 
-
+#exhibition {
+  opacity: 0;
+  transition: opacity 1s;
+}
 
 iframe {
 /*  pointer-events: none; */

@@ -40,15 +40,17 @@ export default function Content({ site }) {
         <Swiper
       // install Swiper modules
       modules={[Pagination]}
-      spaceBetween={50}
+      spaceBetween={0}
       slidesPerView={1}
       pagination={{ clickable: true }}
       scrollbar={{ draggable: true }}
       onSwiper={(swiper) => {swiper.updateAutoHeight(1)}}
-      onResize={() => {
-        scrollTo({top: 0,})
-        document.querySelector('.swiper-slide-active').querySelector(".placeholder").style.height = 0 + "px";
+      passiveListeners={true}
 
+      longSwiper={false}
+      onSlideChangeTransitionEnd={() => {
+          scrollTo({top: 0,})
+          document.querySelector('.swiper-slide-active').querySelector(".placeholder").style.height = 0 + "px";  
       }}
       autoHeight={true}
 

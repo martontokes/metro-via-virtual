@@ -6,6 +6,7 @@ import welcomeScreen from 'styles/welcomeScreen.css'
 import content from 'styles/content.css'
 import paginator from 'styles/paginator.css'
 import horizontalScrollMobileView from 'styles/horizontalScrollMobileView.css'
+import scrollbar from 'styles/scrollbar.css'
 
 import illumination from 'styles/content/illumination.css'
 

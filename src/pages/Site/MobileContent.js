@@ -27,6 +27,9 @@ import { useState } from "react";
 export default function Content({ site }) {
 
   const [hasLoaded, setLoaded] = useState(false);
+ 
+  // Swiper object responsible for the swiping behaviour //
+
 
   if (site.language === 'english') {
 
@@ -43,8 +46,9 @@ export default function Content({ site }) {
       scrollbar={{ draggable: true }}
       onSwiper={(swiper) => {swiper.updateAutoHeight(1)}}
       onResize={() => {
-        document.querySelector('.swiper-slide-active').querySelector(".placeholder").style.height = 0 + "px";
         scrollTo({top: 0,})
+        document.querySelector('.swiper-slide-active').querySelector(".placeholder").style.height = 0 + "px";
+
       }}
       autoHeight={true}
 

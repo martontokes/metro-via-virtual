@@ -95,7 +95,7 @@ export default function Content({ site }) {
           <SwiperSlide>
 
           {({ isActive, isNext, isPrev }) => (
-      (isActive || isNext || isPrev) ? <Confidential /> : null)}
+      (isActive || isNext || isPrev) ? <Confidential swiper={swiper} /> : null)}
             </SwiperSlide>
           <SwiperSlide>
 
@@ -110,12 +110,12 @@ export default function Content({ site }) {
 
             <SwiperSlide>
           {({ isActive, isNext, isPrev }) => (
-      (isActive || isNext || isPrev) ? <Domestik /> : null)}
+      (isActive || isNext || isPrev) ? <Domestik swiper={swiper} /> : null)}
             </SwiperSlide>
             <SwiperSlide>
 
           {({ isActive, isNext, isPrev }) => (
-      (isActive || isNext || isPrev) ? <Autosave /> : null)}
+      (isActive || isNext || isPrev) ? <Autosave swiper={swiper} /> : null)}
             </SwiperSlide>
 
             <SwiperSlide>

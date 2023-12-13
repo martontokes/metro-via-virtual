@@ -29,7 +29,7 @@ export default function Content({ site }) {
 
   const [hasLoaded, setLoaded] = useState(false);
   const [displayManual, setDisplayManual] = useState(true);
- 
+  const [swiper, setSwiper] = useState(null);
   // Swiper object responsible for the swiping behaviour //
 
 
@@ -46,7 +46,7 @@ export default function Content({ site }) {
       slidesPerView={1}
       pagination={{ clickable: true }}
       scrollbar={{ draggable: true }}
-      onSwiper={(swiper) => {swiper.updateAutoHeight(1)}}
+      onSwiper={(swiper) => {swiper.updateAutoHeight(1); setSwiper(swiper)}}
       passiveListeners={true}
       longSwiper={false}
       onSlideChangeTransitionEnd={() => {
@@ -55,6 +55,7 @@ export default function Content({ site }) {
           document.querySelector('.swiper-slide-active').querySelector(".placeholder").style.height = 0 + "px";  
       }}
       autoHeight={true}
+      // swiper.activeIndex //
 
       // readjust the height of the neighbouring swiper element's first placeholder divs to prevent scrollTop // 
 
@@ -104,7 +105,7 @@ export default function Content({ site }) {
             <SwiperSlide>
 
           {({ isActive, isNext, isPrev }) => (
-      (isActive || isNext || isPrev) ? <Butterflies /> : null)}
+      (isActive || isNext || isPrev) ? <Butterflies swiper={swiper} /> : null)}
             </SwiperSlide>
 
             <SwiperSlide>

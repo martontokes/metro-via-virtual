@@ -44,8 +44,9 @@ padding-top: 24px;
 }
 
 .quotation {
-    font-size: 8px;
+    font-size: 12px;
     line-height: 2;
+    margin-bottom: 16px;
 }
 
 .asLast {
@@ -72,6 +73,12 @@ padding-top: 24px;
 
 #manual {
     opacity: 0;
+}
+
+#swipeRightFlex {
+    display: flex;
+    justify-content: center;
+    max-height: 56px;
 }
 
 

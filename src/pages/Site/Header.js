@@ -10,7 +10,7 @@ export default function Header({ site }) {
 
       <div id="header">
         <Logo site={site} />
-        <HamburgerMenu site={site} />
+
       </div>
       
     </>

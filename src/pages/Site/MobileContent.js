@@ -12,6 +12,7 @@ import Statement from './Content/English/Statement';
 import StatementZh from "./Content/Chinese/StatementZh";
 import Illumination from "./Content/English/Artworks/Illumination";
 import IlluminationZh from "./Content/Chinese/Artworks/IlluminationZh";
+import SwipeManual from "./swipeManual";
 
 import Loader from "./Loader";
 
@@ -27,6 +28,7 @@ import { useState } from "react";
 export default function Content({ site }) {
 
   const [hasLoaded, setLoaded] = useState(false);
+  const [displayManual, setDisplayManual] = useState(true);
  
   // Swiper object responsible for the swiping behaviour //
 
@@ -48,6 +50,7 @@ export default function Content({ site }) {
       passiveListeners={true}
       longSwiper={false}
       onSlideChangeTransitionEnd={() => {
+          setDisplayManual(false);
           scrollTo({top: 0,})
           document.querySelector('.swiper-slide-active').querySelector(".placeholder").style.height = 0 + "px";  
       }}
@@ -84,9 +87,9 @@ export default function Content({ site }) {
 
             <SwiperSlide>
 
-{({ isActive, isNext, isPrev }) => (
-(isActive || isNext || isPrev) ? <Essay /> : null)}
-  </SwiperSlide>
+          {({ isActive, isNext, isPrev }) => (
+          (isActive || isNext || isPrev) ? <Essay /> : null)}
+            </SwiperSlide>
 
           <SwiperSlide>
 
@@ -119,6 +122,7 @@ export default function Content({ site }) {
       (isActive || isNext || isPrev) ? <Curator /> : null)}
             </SwiperSlide>
           </Swiper>
+          <SwipeManual displayManual={displayManual} setDisplayManual={setDisplayManual} />
    </>
 
     );

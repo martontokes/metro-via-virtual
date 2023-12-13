@@ -1,0 +1,7 @@
+#swipeManualContainer {
+  position: fixed;
+  bottom: 50px;
+  background-color: black;
+  z-index: 1500;
+  padding: 24px 24px;
+}

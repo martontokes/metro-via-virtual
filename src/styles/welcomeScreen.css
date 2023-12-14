@@ -34,7 +34,7 @@
         font-weight: 500;
         line-height: 2rem;
         position: relative;
-        left: 56px;
+        left: 40px;
     }
 
     #wcsExhibitionEnglishSubheader {
@@ -45,7 +45,7 @@
         width: 100%;
         text-align: left;
         position: relative;
-        left: 56px;
+        left: 40px;
     }
 
     #wcsEnterButtonEnglish {
@@ -53,7 +53,7 @@
         border: solid 1.4px rgba(255,255,255, 0.25);
         border-radius: 200px;
         height: 57.49px;
-        margin-top: 36px;
+        margin-top: 32px;
         font-size: 14.05px;
         align-self: center;
         background-color: black;
@@ -73,7 +73,7 @@
         font-weight: 400;
         letter-spacing: 0.2rem;
         position: relative;
-        left: 56px;
+        left: 40px;
     }
 
     #wcsExhibitionChineseSubheader {
@@ -82,7 +82,7 @@
         opacity: 1;
         letter-spacing: 0.2rem;
         position: relative;
-        left: 56px;
+        left: 40px;
         padding-top: 6.45px;
 
     }
@@ -92,7 +92,7 @@
         border: solid 1.4px rgba(255,255,255, 0.25);
         border-radius: 200px;
         height: 57.49px;
-        margin-top: 23.61px;
+        margin-top: 32px;
         font-size: 15px;
         align-self: center;
 

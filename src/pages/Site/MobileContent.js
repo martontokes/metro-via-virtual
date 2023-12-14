@@ -45,33 +45,26 @@ export default function Content({ site }) {
       spaceBetween={0}
       slidesPerView={1}
       pagination={{ clickable: true }}
-      scrollbar={{ draggable: true }}
+      scrollbar={{ draggable: true, hide: true, }}
       onSwiper={(swiper) => {swiper.updateAutoHeight(1); setSwiper(swiper)}}
       passiveListeners={true}
-      longSwiper={false}
       onSlideChangeTransitionEnd={() => {
           setDisplayManual(false);
-          scrollTo({top: 0,});
-          document.querySelector('.swiper-slide-active').querySelector(".placeholder").style.height = 0 + "px";  
+
       }}
       autoHeight={true}
-      // swiper.activeIndex //
-
-      // readjust the height of the neighbouring swiper element's first placeholder divs to prevent scrollTop // 
-
-      onTouchStart={(swiper) => {
-
-        if (document.querySelector('.swiper-slide-prev')) {
-        document.querySelector('.swiper-slide-prev').querySelector(".placeholder").style.height = window.scrollY + "px";
-        }
-
-        if (document.querySelector('.swiper-slide-next')) {
-        document.querySelector('.swiper-slide-next').querySelector(".placeholder").style.height = window.scrollY + "px";  
-        }
-
+      onDragStart={() => {
 
       }}
-      
+      onSliderFirstMove={(swiper) => {
+        document.querySelector(".swiper-slide-active").classList.add("scrollbarHidden");
+        document.querySelector(".swiper-slide-next").scrollTop = 0;
+
+      }}
+      onSlideResetTransitionEnd={(swiper) => {
+        console.log("slide reset transition end!");
+        document.querySelector(".swiper-slide-active").classList.remove("scrollbarHidden");    
+      }}
       style={{
         "--swiper-pagination-color": "white",
         "--swiper-pagination-bullet-inactive-color": "rgb(50,50,50)",

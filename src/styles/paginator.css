@@ -5,10 +5,14 @@
   width: 100%;
   padding: 16px 5px;
   background-color: black;
-  z-index: 5;
+  z-index: 10;
   display: grid;
   place-items: center;
 
+}
+
+.swiper-pagination {
+  z-index: 10;
 }
 
 #paginatorCircleContainer {
@@ -25,6 +29,10 @@
   margin: 5px;
   background-color: white;
   border-radius: 50px;
-  z-index: 8;
+  z-index: 11;
 
+}
+
+.swiper-pagination-bullet {
+  z-index: 10;
 }

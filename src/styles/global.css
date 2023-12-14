@@ -72,7 +72,16 @@ padding: 0;
 margin: 0;
 }
 
-.swiper-slide-active {
+.swiper {
+  overflow-y: clip;
+}
+
+.swiper-slide {
+  overflow-y: scroll;
+  height: 60vh !important;
+}
+
+body, #__next, :root {
   overflow-y: clip;
 }
 

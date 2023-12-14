@@ -51,7 +51,7 @@ export default function Content({ site }) {
       longSwiper={false}
       onSlideChangeTransitionEnd={() => {
           setDisplayManual(false);
-          scrollTo({top: 0,})
+          scrollTo({top: 0,});
           document.querySelector('.swiper-slide-active').querySelector(".placeholder").style.height = 0 + "px";  
       }}
       autoHeight={true}

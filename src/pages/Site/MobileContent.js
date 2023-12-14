@@ -22,7 +22,7 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 
 export default function Content({ site }) {
@@ -31,6 +31,12 @@ export default function Content({ site }) {
   const [displayManual, setDisplayManual] = useState(true);
   const [swiper, setSwiper] = useState(null);
   // Swiper object responsible for the swiping behaviour //
+
+  useEffect(() => {
+
+
+
+  }, []);
 
 
   if (site.language === 'english') {
@@ -46,13 +52,13 @@ export default function Content({ site }) {
       slidesPerView={1}
       pagination={{ clickable: true }}
       scrollbar={{ draggable: true, hide: true, }}
-      onSwiper={(swiper) => {swiper.updateAutoHeight(1); setSwiper(swiper)}}
+      onSwiper={(swiper) => {swiper.updateAutoHeight(1); setSwiper(swiper);}}
       passiveListeners={true}
       onSlideChangeTransitionEnd={() => {
           setDisplayManual(false);
-
       }}
       autoHeight={true}
+      onInit={() => { document.querySelector(".swiper-slide").style.height = window.innerHeight - 147 + "px"; }}
       onDragStart={() => {
 
       }}

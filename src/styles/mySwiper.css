@@ -1,0 +1,15 @@
+
+.swiper {
+  overflow-y: hidden;
+}
+
+.swiper-slide {
+  overflow-y: scroll;
+  position: fixed;
+  
+}
+
+.swiper {
+
+
+}

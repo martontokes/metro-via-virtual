@@ -8,6 +8,7 @@ import paginator from 'styles/paginator.css'
 import horizontalScrollMobileView from 'styles/horizontalScrollMobileView.css'
 import scrollbar from 'styles/scrollbar.css'
 import swipeManual from 'styles/swipeManual.css'
+import mySwiper from 'styles/mySwiper.css'
 
 import illumination from 'styles/content/illumination.css'
 

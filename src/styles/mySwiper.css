@@ -1,15 +1,15 @@
 
 .swiper {
-  overflow-y: hidden;
+  overflow-y: clip;
+  position: fixed;
+  top: 97px;
+}
+
+.swiper-wrapper {
+  overflow-y: clip;
 }
 
 .swiper-slide {
   overflow-y: scroll;
   position: fixed;
-  
-}
-
-.swiper {
-
-
 }

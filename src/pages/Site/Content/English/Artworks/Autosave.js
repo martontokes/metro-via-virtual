@@ -21,10 +21,11 @@ export default function Autosave({swiper}) {
     <br /><br /> Alexis Mailles produces hybrid installations that border the frontiers of Arte Povera and cyberpunk styles by using digital and analogue techniques. He has exhibited worldwide, including the M21 Museum (Shanghai), the 18th Street Art Center (Los Angeles), the Digital Art Center (Taipei), and Espace C.O.N.S.O.L.E (Paris). 
     <br /><br /> Peter Nelson is a visual artist and academic working at the intersection of landscape theory and computer games. Originally trained in painting and drawing, Nelson currently produces exhibitions across a number of media, from painting and drawing, to animation, 3D printed sculpture and interactive game-based systems. He has held numerous group and solo exhibitions, including projects with HanArt TZ Gallery (Hong Kong), The National Palace Museum (Taiwan), The Sichuan Fine Art Academy Museum (Chongqing) and the K11 Art Foundation (Hong Kong). He is an Assistant Professor at Hong Kong Baptist University.</p>
     {(swiper.activeIndex == 6) ? <>
-    <iframe className='autosaveVid asFirst' src="https://www.youtube.com/embed/XvERO-f8wfE" allowFullScreen={true} frameBorder="no"></iframe>
-    <iframe className='autosaveVid' src="https://www.youtube.com/embed/XvERO-f8wfE" allowFullScreen={true} frameBorder="no"></iframe>
-    <iframe className='autosaveVid' src="https://www.youtube.com/embed/S1zhsv44qlU" allowFullScreen={true} frameBorder="no"></iframe>
-    <iframe className='autosaveVid asLast' src="https://www.youtube.com/embed/hW2qJiNeotc" allowFullScreen={true} frameBorder="no"></iframe>
+    <div className="autosaveVidContainer">
+    <iframe className='autosaveVid asFirst' allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" src="https://www.youtube.com/embed/XvERO-f8wfE" allowFullScreen={true} frameBorder="no"></iframe></div>
+    <iframe className='autosaveVid' allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" src="https://www.youtube.com/embed/XvERO-f8wfE" allowFullScreen={true} frameBorder="no"></iframe>
+    <iframe className='autosaveVid' allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" src="https://www.youtube.com/embed/S1zhsv44qlU" allowFullScreen={true} frameBorder="no"></iframe>
+    <iframe className='autosaveVid asLast' allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" src="https://www.youtube.com/embed/hW2qJiNeotc" allowFullScreen={true} frameBorder="no"></iframe>
     </> : null}
   </div>
 

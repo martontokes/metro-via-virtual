@@ -55,7 +55,7 @@
         height: 57.49px;
         margin-top: 32px;
         font-size: 14.05px;
-        align-self: center;
+        margin-left: 40px;
         background-color: black;
     }
 
@@ -69,7 +69,7 @@
 
     #wcsExhibitionChineseHeader {
         font-size: 25.64px;
-        margin-top: 54px;
+        margin-top: 40px;
         font-weight: 400;
         letter-spacing: 0.2rem;
         position: relative;
@@ -94,7 +94,7 @@
         height: 57.49px;
         margin-top: 32px;
         font-size: 15px;
-        align-self: center;
+        margin-left: 40px;
 
     }
 

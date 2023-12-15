@@ -32,11 +32,12 @@ export default function Content({ site }) {
   const [swiper, setSwiper] = useState(null);
   // Swiper object responsible for the swiping behaviour //
 
-  useEffect(() => {
-
-
-
-  }, []);
+  function resizeSwiperContent() {
+    let slides = document.querySelectorAll(".swiper-slide");
+    for (let i = 0; i < slides.length; i++) {
+      slides[i].style.height = window.innerHeight - 147 + "px";
+    }
+  }
 
 
   if (site.language === 'english') {
@@ -51,20 +52,25 @@ export default function Content({ site }) {
       spaceBetween={0}
       slidesPerView={1}
       pagination={{ clickable: true }}
-      scrollbar={{ draggable: true, hide: true, }}
-      onSwiper={(swiper) => {swiper.updateAutoHeight(1); setSwiper(swiper);}}
+
+      onSwiper={(swiper) => {swiper.updateAutoHeight(1); setSwiper(swiper); }}
       passiveListeners={true}
       onSlideChangeTransitionEnd={() => {
           setDisplayManual(false);
       }}
+
+      onInit={() => { resizeSwiperContent() }}
+      // document.querySelector("swiper-slide").style.height = window.innerHeight - 147 + "px";
+
       autoHeight={true}
-      onInit={() => { document.querySelector(".swiper-slide").style.height = window.innerHeight - 147 + "px"; }}
       onDragStart={() => {
 
       }}
-      onSliderFirstMove={(swiper) => {
+      onSliderMove={(swiper) => {
+        console.log("Transition started!");
         document.querySelector(".swiper-slide-active").classList.add("scrollbarHidden");
         document.querySelector(".swiper-slide-next").scrollTop = 0;
+        document.querySelector(".swiper-slide-prev").scrollTop = 0;
 
       }}
       onSlideResetTransitionEnd={(swiper) => {

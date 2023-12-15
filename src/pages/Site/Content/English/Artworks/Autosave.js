@@ -7,6 +7,12 @@ export default function Autosave({swiper}) {
   const [hasLoaded, setLoaded] = useState(0);
 
   useEffect(() => {
+
+
+
+  }, []);
+
+  useEffect(() => {
     console.log("state change");
     if (hasLoaded == 4) {
       document.querySelector(".pageWithLoader").style.opacity = 1;
@@ -35,8 +41,8 @@ export default function Autosave({swiper}) {
     <br /><br /> Peter Nelson is a visual artist and academic working at the intersection of landscape theory and computer games. Originally trained in painting and drawing, Nelson currently produces exhibitions across a number of media, from painting and drawing, to animation, 3D printed sculpture and interactive game-based systems. He has held numerous group and solo exhibitions, including projects with HanArt TZ Gallery (Hong Kong), The National Palace Museum (Taiwan), The Sichuan Fine Art Academy Museum (Chongqing) and the K11 Art Foundation (Hong Kong). He is an Assistant Professor at Hong Kong Baptist University.</p>
     {(swiper.activeIndex == 6) ? <>
     <div className="autosaveVidContainer">
-    <iframe className='autosaveVid asFirst' src="https://www.youtube.com/embed/XvERO-f8wfE" allowFullScreen={true} frameBorder="no"></iframe>
-    <p style={{fontSize: "10px"}}>Note: Swiping is not possible by dragging your finger over the videos. Drag the screen outside the videos frames to continue.</p>
+    <iframe className='autosaveVid asFirst' src="https://www.youtube.com/embed/I3Mr4dbVDy4?si=Voew6fKp45B9FeWl" allowFullScreen={true} frameBorder="no"></iframe>
+    <p>Note: Swiping is not possible by dragging your finger over the video - swipe outside the video frame to proceed.</p>
     <iframe className='autosaveVid' src="https://www.youtube.com/embed/XvERO-f8wfE" allowFullScreen={true} frameBorder="no"></iframe>
     <iframe className='autosaveVid' src="https://www.youtube.com/embed/S1zhsv44qlU" allowFullScreen={true} frameBorder="no"></iframe>
     <iframe onLoad={() => {setLoaded(4)}} className='autosaveVid asLast' src="https://www.youtube.com/embed/hW2qJiNeotc" allowFullScreen={true} frameBorder="no"></iframe>

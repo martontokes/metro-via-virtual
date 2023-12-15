@@ -69,8 +69,11 @@ export default function Content({ site }) {
       onSliderMove={(swiper) => {
         console.log("Transition started!");
         document.querySelector(".swiper-slide-active").classList.add("scrollbarHidden");
-        document.querySelector(".swiper-slide-next").scrollTop = 0;
-        document.querySelector(".swiper-slide-prev").scrollTop = 0;
+
+        if (document.querySelector(".swiper-slide-next")) { 
+        document.querySelector(".swiper-slide-next").scrollTop = 0; }
+        if (document.querySelector(".swiper-slide-prev")) {
+        document.querySelector(".swiper-slide-prev").scrollTop = 0; }
 
       }}
       onSlideResetTransitionEnd={(swiper) => {

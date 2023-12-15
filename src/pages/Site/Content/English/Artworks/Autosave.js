@@ -1,12 +1,19 @@
+import { useState } from "react"
+import Loader from "pages/Site/Loader";
+import triggerLoaded from "modules/triggerLoaded.mjs";
+
 export default function Autosave({swiper}) {
+
+  const [hasLoaded, setLoaded] = useState(false);
+
 
 
     return (
 
         <>
 
-  <div id="placeholder6" className="placeholder"></div>
-  <div id="artwork_page">
+      { (hasLoaded) ? null : <Loader /> }
+  <div id="artwork_page" className="pageWithLoader">
  
     <h3>Autosave: Redoubt (2018)</h3>
     <div className="artistsBox">
@@ -22,10 +29,11 @@ export default function Autosave({swiper}) {
     <br /><br /> Peter Nelson is a visual artist and academic working at the intersection of landscape theory and computer games. Originally trained in painting and drawing, Nelson currently produces exhibitions across a number of media, from painting and drawing, to animation, 3D printed sculpture and interactive game-based systems. He has held numerous group and solo exhibitions, including projects with HanArt TZ Gallery (Hong Kong), The National Palace Museum (Taiwan), The Sichuan Fine Art Academy Museum (Chongqing) and the K11 Art Foundation (Hong Kong). He is an Assistant Professor at Hong Kong Baptist University.</p>
     {(swiper.activeIndex == 6) ? <>
     <div className="autosaveVidContainer">
-    <iframe className='autosaveVid asFirst' allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" src="https://www.youtube.com/embed/XvERO-f8wfE" allowFullScreen={true} frameBorder="no"></iframe></div>
-    <iframe className='autosaveVid' allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" src="https://www.youtube.com/embed/XvERO-f8wfE" allowFullScreen={true} frameBorder="no"></iframe>
-    <iframe className='autosaveVid' allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" src="https://www.youtube.com/embed/S1zhsv44qlU" allowFullScreen={true} frameBorder="no"></iframe>
-    <iframe className='autosaveVid asLast' allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" src="https://www.youtube.com/embed/hW2qJiNeotc" allowFullScreen={true} frameBorder="no"></iframe>
+    <iframe onLoad={triggerLoaded} className='autosaveVid asFirst' src="https://www.youtube.com/embed/XvERO-f8wfE" allowFullScreen={true} frameBorder="no"></iframe>
+    <iframe onLoad={triggerLoaded} className='autosaveVid' src="https://www.youtube.com/embed/XvERO-f8wfE" allowFullScreen={true} frameBorder="no"></iframe>
+    <iframe onLoad={triggerLoaded} className='autosaveVid' src="https://www.youtube.com/embed/S1zhsv44qlU" allowFullScreen={true} frameBorder="no"></iframe>
+    <iframe onLoad={triggerLoaded} className='autosaveVid asLast' src="https://www.youtube.com/embed/hW2qJiNeotc" allowFullScreen={true} frameBorder="no"></iframe>
+    </div>
     </> : null}
   </div>
 

@@ -23,3 +23,6 @@ export default function Butterflies({swiper}) {
 
 }
 
+function ButterfliesPlayer() {
+  
+}

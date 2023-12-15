@@ -8,7 +8,7 @@ export default function Essay() {
 
             <div id="placeholder7" className="placeholder"></div>
             <div id="artwork_page">
-                <h3>On the Role of <br />Symbol Alienation in Art</h3>
+                <h3>On the Role of <br />Symbol Alienation in Art</h3><p style={{fontStyle: "italic"}}>An essay about the exhibition</p><br />
                     <div>
                     <p>Cities are built upon people’s individual and collective memories, which are themselves shaped by various visual and auditory symbols. In people’s memories of Hong Kong, cultural symbols including pedestrian crossings from Hong Kong TV drama, cramped fast-food restaurants in Wong Kar-Wai’s films, and Cantonese music comprise an alternate reality of the city. These symbols have designated contexts and meanings. However, new media art sometimes rearranges the contexts of symbols to give mobility to thoughts. In this online exhibition Metro Via Virtual, five groups of artists employ imageries of Hong Kong in their artworks to recreate locality. Being detached from reality and impressionistic, the cultural symbols in these artworks are allowed to take on a life of their own and create a complex and plural interpretation of Hong Kong.
                     <br /><br />In this exhibition, some artists’ previous experience outside of Hong Kong help them observe subtle things about Hong Kong that local people tend to ignore. All five groups of artists combine knowledge from philosophy, media archaeology, video game design and technological development with art practice. They look at the local history, myth, religion, and demographics of Hong Kong, analyze it methodically, and create new media works about Hong Kong that are intricate and participatory.

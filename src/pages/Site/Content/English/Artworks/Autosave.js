@@ -18,13 +18,14 @@ export default function Autosave({swiper}) {
         <>
 
       { (hasLoaded == 4) ? null : <Loader /> }
+      
   <div id="artwork_page" className="pageWithLoader">
- 
+    
     <h3>Autosave: Redoubt (2018)</h3>
     <div className="artistsBox">
-      <div className="artistItem"><h4>Andrew Luk</h4><a href="https://www.andrewluk.com" target="_blank">www.andrewluk.com</a></div>
-      <div className="artistItem"><h4>Alexis Mailles</h4><a href="https://www.alexismailles.com" target="_blank">www.alexismailles.com</a></div>
-      <div className="artistItem"><h4>Peter Nelson</h4><a href="https://www.peteracnelson.com" target="_blank">www.peteracnelson.com</a></div>
+    <div className="artistItem"><h4>Andrew Luk</h4><a href="https://www.andrewluk.com" target="_blank">www.andrewluk.com</a></div>
+    <div className="artistItem"><h4>Alexis Mailles</h4><a href="https://www.alexismailles.com" target="_blank">www.alexismailles.com</a></div>
+    <div className="artistItem"><h4>Peter Nelson</h4><a href="https://www.peteracnelson.com" target="_blank">www.peteracnelson.com</a></div>
     </div>
     <div>
     </div>

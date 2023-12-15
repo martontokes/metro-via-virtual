@@ -108,17 +108,18 @@ export default function Content({ site }) {
           <SwiperSlide>
 
           {({ isActive, isNext, isPrev }) => (
+      (isActive || isNext || isPrev) ? <Domestik swiper={swiper} /> : null)}
+
+            </SwiperSlide>
+            <SwiperSlide>
+
+          {({ isActive, isNext, isPrev }) => (
       (isActive || isNext || isPrev) ? <Illumination /> : null)}
             </SwiperSlide>
-            <SwiperSlide>
 
+            <SwiperSlide>
           {({ isActive, isNext, isPrev }) => (
       (isActive || isNext || isPrev) ? <Butterflies swiper={swiper} /> : null)}
-            </SwiperSlide>
-
-            <SwiperSlide>
-          {({ isActive, isNext, isPrev }) => (
-      (isActive || isNext || isPrev) ? <Domestik swiper={swiper} /> : null)}
             </SwiperSlide>
             <SwiperSlide>
 

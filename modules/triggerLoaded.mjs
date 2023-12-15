@@ -11,7 +11,8 @@ const triggerLoaded = (function()
       console.log("counter incremented");
       if (x == 4) {
         console.log("setting to block");
-        document.querySelector(".pageWithLoader").style.display = "block";
+        document.querySelector(".pageWithLoader").style.opacity = 1;
+        setLoaded(false);
       }
 
   }

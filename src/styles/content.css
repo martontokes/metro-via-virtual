@@ -37,11 +37,11 @@ a {
 }
 
 .pageWithLoader {
-    display: none;
+    opacity: 0;
 }
 
 .autosaveVid {
-    width: 80%;
+
 margin-top: 56px;
 
 
@@ -49,6 +49,12 @@ margin-top: 56px;
 
 .quotation {
     font-size: 12px;
+    line-height: 2;
+    margin-bottom: 16px;
+}
+
+.quotation2 {
+ 
     line-height: 2;
     margin-bottom: 16px;
 }

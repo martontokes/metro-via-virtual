@@ -42,7 +42,6 @@ export default function Autosave({swiper}) {
     {(swiper.activeIndex == 6) ? <>
     <div className="autosaveVidContainer">
     <iframe className='autosaveVid asFirst' src="https://www.youtube.com/embed/I3Mr4dbVDy4?si=Voew6fKp45B9FeWl" allowFullScreen={true} frameBorder="no"></iframe>
-    <p>Note: Swiping is not possible by dragging your finger over the video - swipe outside the video frame to proceed.</p>
     <iframe className='autosaveVid' src="https://www.youtube.com/embed/XvERO-f8wfE" allowFullScreen={true} frameBorder="no"></iframe>
     <iframe className='autosaveVid' src="https://www.youtube.com/embed/S1zhsv44qlU" allowFullScreen={true} frameBorder="no"></iframe>
     <iframe className='autosaveVid asLast' src="https://www.youtube.com/embed/hW2qJiNeotc" allowFullScreen={true} frameBorder="no"></iframe>

@@ -3,6 +3,13 @@ import { useEffect, useState } from "react";
 export default function Illumination() {
 
     useEffect(() => {
+
+        window.addEventListener("resize", () => {
+            let buddhaimages = document.querySelectorAll(".buddha");
+            for (let i = 0; i < buddhaimages.length; i++) {
+                buddhaimages[i].style.height = document.querySelector(".swiper-wrapper");
+            }
+        });
         
     // Start slideshow on mounting
     const intervalId = setInterval(illuminationSlideshow, 1000);
@@ -25,7 +32,7 @@ export default function Illumination() {
             <br />    
             <p> Lit by warm natural light, the benign face of Buddha is the image Hong Kong aims to achieve via the many Buddha statues in the city. In contrast, inspired by the faces of people on the streets as they stare in concentration at their phones, the demonic look of Buddha lit by cold screen light mirrors an unflattering persona we often encounter/perform online through anonymous identity. The animation is made in collaboration with Sandu Cojocari.
             <br /><br />Kat Suryna is an international figurative artist with a background in academic philosophy. She follows the tradition of Russian academic drawing and painting, in which she was formally instructed. Her work has been exhibited in Estonia, Hungary, Austria, and Hong Kong. Her art focuses on the human body, organic patterns in nature, and architectural narratives.</p>
-            <div id="buddhacontainer">
+            <div id="buddhacontainer" style={{height: document.querySelector(".swiper-wrapper").style.height}}>
                 <img className="buddha" id="buddha1" src="/1.png" ></img>
                 <img className="buddha" id="buddha2" src="/2.png" ></img>
                 <img className="buddha" id="buddha3" src="/3.png" ></img>

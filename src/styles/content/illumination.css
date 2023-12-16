@@ -4,16 +4,17 @@
 /* All welcome screen IDs start with the "wcs" prefix */
 
 #buddhacontainer {
-    position: relative;
-    top: 1px;
-    height: 640px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 16px;
 }
 
 .buddha {
-    
+    height: 90%;
     position: absolute;
-    top: 0px;
     transition: opacity 3s;
+
 }
 
 img {

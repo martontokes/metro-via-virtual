@@ -6,7 +6,6 @@ export default function Statement() {
 
         <div id="placeholder1" className="placeholder"></div>
         <div id="artwork_page">
-            {/* <p style={{paddingBottom: "48px", fontSize: "11.2355555556px", fontWeight: "600", textAlign:"left"}}>You may proceed through the exhibition by swiping, or by tapping the arrow buttons at the bottom of the screen.</p> */}
             <h3>Curatorial statement</h3>
             <div>
                 <p id="curatorial">
@@ -15,8 +14,7 @@ export default function Statement() {
                 <br /><br />Andrew Luk, Alexis Mailles, and Peter Nelson recreated the WWII bunkers and tunnels in Kowloon Peninsula to allow game players to immerse themselves in a historical site. <br /><br />Vvzela Kook’s animation presents the myth of a survived, hidden underground Kowloon Walled City, reigned by artificial intelligence. <br /><br />Kat Suryna’s pastel delineated the spiritual spaces she experienced in Hong Kong by way of a demonic online persona that looms in the transformation of Buddha’s face. <br /><br />Elaine Wong projected the moving image of cityscape onto her own living room as broken-down frames in 360° panorama, commenting on the fragmentation of city space as a result of spatial capitalization as well as gendered demarcation. <br /><br />Also reflecting on the division of the public/domestic, Riar Rizaldi mixed the soundscape of Victoria Park on Sunday, where Indonesian domestic workers enjoy their weekly day off, with composed noise of household utensils, to virtually ‘suture’ these women workers’ separated worlds.
                 </p>
                 <p className="quotation"><br />
-                * Shih Shu-ching<br />City of the Queen: A Novel of Colonial Hong Kong
-                Hung-fan Bookstore. | 1997
+                * Shih Shu-ching: "City of the Queen: A Novel of Colonial Hong Kong"<br />1997&nbsp; |&nbsp; Hung-fan Bookstore
                 <br /><br /><br />
                 </p>
             </div>

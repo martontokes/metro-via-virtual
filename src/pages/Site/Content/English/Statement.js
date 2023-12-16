@@ -6,7 +6,7 @@ export default function Statement() {
 
         <div id="placeholder1" className="placeholder"></div>
         <div id="artwork_page">
-            <p style={{paddingBottom: "48px", fontSize: "11.2355555556px", fontWeight: "600", textAlign:"left"}}>You may proceed through the exhibition by swiping, or by tapping the arrow buttons at the bottom of the screen.</p>
+            {/* <p style={{paddingBottom: "48px", fontSize: "11.2355555556px", fontWeight: "600", textAlign:"left"}}>You may proceed through the exhibition by swiping, or by tapping the arrow buttons at the bottom of the screen.</p> */}
             <h3>Curatorial statement</h3>
             <div>
                 <p id="curatorial">

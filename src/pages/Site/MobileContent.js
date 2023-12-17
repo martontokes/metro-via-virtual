@@ -47,7 +47,7 @@ export default function Content({ site }) {
 
         <Swiper
       // install Swiper modules
-      modules={[Pagination]}
+
       spaceBetween={0}
       slidesPerView={1}
       pagination={{ clickable: false }}
@@ -60,9 +60,9 @@ export default function Content({ site }) {
       onInit={() => { resizeSwiperContent() }}
       // document.querySelector("swiper-slide").style.height = window.innerHeight - 147 + "px";
 
-      onReachEnd={() => {document.getElementById("buttonRight").style.display = "none";}}
-      onReachBeginning={() => {document.getElementById("buttonLeft").style.display = "none";}}
-      onFromEdge={() => {document.getElementById("buttonRight").style.display = "block"; document.getElementById("buttonLeft").style.display = "block";}}
+      // onReachEnd={() => {document.getElementById("buttonRight").style.display = "none";}}
+      // onReachBeginning={() => {document.getElementById("buttonLeft").style.display = "none";}}
+      // onFromEdge={() => {document.getElementById("buttonRight").style.display = "block"; document.getElementById("buttonLeft").style.display = "block";}}
 
       autoHeight={true}
       onDragStart={() => {
@@ -133,11 +133,11 @@ export default function Content({ site }) {
           {({ isActive, isNext, isPrev }) => (
       (isActive || isNext || isPrev) ? <Curator /> : null)}
             </SwiperSlide>
-          <button id="buttonLeft" style={{zIndex: "5000", display: "none", position: "fixed", bottom: "0px", width: (window.screen.width - 160) / 2, height: "64px"}} onClick={() => swiper.slidePrev()}><div className="navbutton" style={{width: "100%", height: "100%", display: "grid", placeItems: "center", backgroundColor: "rgba(255,255,255,0)"}}><img src="/arrowLeft.svg" style={{height: "20px", width: "40px"}}></img></div></button>
-          <button id="buttonRight" style={{zIndex: "5000", position: "fixed", bottom: "0px", right: "0px", width: (window.screen.width - 160) / 2, height: "64px"}} onClick={() => swiper.slideNext()}><div className="navbutton"  style={{width: "100%", height: "100%", display: "grid", placeItems: "center", backgroundColor: "rgba(255,255,255,0)"}}><img src="/arrowRight.svg" style={{height: "20px", width: "40px"}}></img></div></button>
+          {/* <button id="buttonLeft" style={{zIndex: "5000", display: "none", position: "fixed", bottom: "0px", width: (window.screen.width - 160) / 2, height: "64px"}} onClick={() => swiper.slidePrev()}><div className="navbutton" style={{width: "100%", height: "100%", display: "grid", placeItems: "center", backgroundColor: "rgba(255,255,255,0)"}}><img src="/arrowLeft.svg" style={{height: "20px", width: "40px"}}></img></div></button>
+          <button id="buttonRight" style={{zIndex: "5000", position: "fixed", bottom: "0px", right: "0px", width: (window.screen.width - 160) / 2, height: "64px"}} onClick={() => swiper.slideNext()}><div className="navbutton"  style={{width: "100%", height: "100%", display: "grid", placeItems: "center", backgroundColor: "rgba(255,255,255,0)"}}><img src="/arrowRight.svg" style={{height: "20px", width: "40px"}}></img></div></button> */}
           </Swiper>
   
-
+          {/* <SwipeManual displayManual={displayManual} setDisplayManual={setDisplayManual} /> */}
           
    </>
 

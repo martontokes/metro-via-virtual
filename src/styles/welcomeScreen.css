@@ -4,30 +4,30 @@
 /* All welcome screen IDs start with the "wcs" prefix */
 
 
-#wcsOuterContainer {
 
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    height: 100%;
-    width: 100vw;
-    transition: opacity 1s ease-in-out;
-    overflow-x: hidden;
-}
-
-#wcsInnerContainer {
-    position: relative;
-
-
-    display: flex;
-    justify-content: flex-start;
-    align-items: flex-start;
-    flex-direction: column;
-    position: relative;
-}
 
 @media screen and (max-width: 560px) {
+
+    #wcsOuterContainer {
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        height: 100%;
+        width: 100%;
+        transition: opacity 1s ease-in-out;
+        overflow-x: hidden;
+    }
+    
+    #wcsInnerContainer {
+        width: 240px;
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+        flex-direction: column;
+    
+    }
 
     #wcsExhibitionEnglishHeader {
         font-size: 31.25px;
@@ -48,10 +48,9 @@
 
     #wcsEnterButtonEnglish {
         width: 100%;
-        border: solid 1px #5C5C5C;
+        border: solid 1px #9D9D9D;
         height: 54px;
         align-self: center;
-
         margin-top: 24px;
         font-size: 14px;
         border-radius: 200px;
@@ -71,7 +70,7 @@
         font-size: 25.63px;
         margin-top: 36px;
         font-weight: 400;
-        letter-spacing: 5px;
+        letter-spacing: 4px;
         align-self: flex-start;
     }
 
@@ -79,7 +78,7 @@
         font-size: 16px;
         font-weight: 400;
         opacity: 1;
-        letter-spacing: 0.3rem;
+        letter-spacing: 4px;
         align-self: flex-start;
         padding-top: 6.45px;
 
@@ -87,7 +86,7 @@
 
     #wcsEnterButtonChinese {
         width: 100%;
-        border: solid 1px #5C5C5C;
+        border: solid 1px #9D9D9D;
         border-radius: 200px;
         height: 54px;
         margin-top: 24px;
@@ -102,5 +101,116 @@
         top: -1.08px;
     }
 
+    
+    .innerContentContainer {
+        width: 100%;
+    }
+
 }
+
+
+@media screen and (orientation: landscape) {
+
+    #wcsOuterContainer {
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+        width: 100%;
+        transition: opacity 1s ease-in-out;
+        overflow-x: hidden;
+    }
+
+    #wcsInnerContainer {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+
+
+    
+    }
+
+
+    .innerContentContainer {
+        width: 180px;
+        display: flex;
+        flex-direction: column;
+        margin: 24px;
+        height: 180px !important;
+    }
+
+    #wcsExhibitionEnglishHeader {
+        font-size: 31.25px;
+        font-weight: 500;
+        line-height: 2rem;
+ 
+    }
+
+    #wcsExhibitionEnglishSubheader {
+        font-size: 12.64px;
+        opacity: 1;
+        padding-top: 12.64px;
+        font-weight: 500;
+        text-align: left;
+
+
+    }
+
+    #wcsEnterButtonEnglish {
+        width: 100%;
+        border: solid 1px #9D9D9D;
+        height: 48px;
+        margin-top: auto;
+        
+        font-size: 14px;
+        border-radius: 200px;
+        background-color: black;
+    }
+
+    #wcsEnterButtonEnglish span {
+
+        position: relative;
+        top: -0.129px;
+        font-weight: 500;
+        opacity: 1;
+        
+    }
+
+    #wcsExhibitionChineseHeader {
+        font-size: 25.63px;
+        margin-top: 28px;
+        font-weight: 400;
+        letter-spacing: 4px;
+
+    }
+
+    #wcsExhibitionChineseSubheader {
+        font-size: 16px;
+        font-weight: 400;
+        opacity: 1;
+        letter-spacing: 4px;
+
+        padding-top: 8px;
+
+    }
+
+    #wcsEnterButtonChinese {
+        width: 100%;
+        border: solid 1px #9D9D9D;
+        border-radius: 200px;
+        height: 48px !important;
+        font-size: 14.22px;
+        letter-spacing: 0.1rem;
+        margin-top: auto;
+    }
+
+    #wcsEnterButtonChinese span {
+        font-weight: 500;
+        position: relative;
+        top: -1.08px;
+    }
+
+}
+
 

@@ -29,6 +29,7 @@
     
     }
 
+
     #wcsExhibitionEnglishHeader {
         font-size: 31.25px;
         font-weight: 500;
@@ -179,7 +180,7 @@
 
     #wcsExhibitionChineseHeader {
         font-size: 25.63px;
-        margin-top: 28px;
+        margin-top: 27px;
         font-weight: 400;
         letter-spacing: 4px;
 
@@ -191,7 +192,7 @@
         opacity: 1;
         letter-spacing: 4px;
 
-        padding-top: 8px;
+        padding-top: 9px;
 
     }
 

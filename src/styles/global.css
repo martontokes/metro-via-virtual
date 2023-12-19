@@ -25,10 +25,11 @@ standard margin and padding
 
 :root {
 
-    background-color:  #101010;
+    background-color:  #0e0203;
     --montserrat-root: 16px;
     --noto-root: 16px;
     height: 100%;
+    --buttonText: rgb(224, 146, 146);
   }
 
 

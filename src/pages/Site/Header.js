@@ -1,18 +1,18 @@
 import React from "react";
 import Logo from "./Logo";
-import HamburgerMenu from "./HamburgerMenu";
+import Menu from "./Menu";
 
 export default function Header({ site }) {
 
   return (
 
     <>
-
-      <div id="header">
-        <Logo site={site} />
-
+      <div id="Header">
+        <div id="Logo">
+          <Logo site={site} />
+        </div>
+        <Menu />
       </div>
-      
     </>
 
   );

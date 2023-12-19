@@ -27,6 +27,7 @@ viewer.add( panorama );
 
         <Head />
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" ></meta>
+        <meta name="color-scheme" content="light only"></meta>
         <title>metro via virtual</title>
         <Main />
         <NextScript />

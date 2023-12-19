@@ -25,11 +25,13 @@ standard margin and padding
 
 :root {
 
-    background-color: black;
+    background-color:  #101010;
     --montserrat-root: 16px;
     --noto-root: 16px;
     height: 100%;
   }
+
+
 
   #__next {
     height: 100%;

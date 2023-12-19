@@ -25,11 +25,13 @@ standard margin and padding
 
 :root {
 
-    background-color:  #0e0203;
+    background-color:  #0a0a0a;
     --montserrat-root: 16px;
     --noto-root: 16px;
     height: 100%;
-    --buttonText: rgb(224, 146, 146);
+    --buttonText: rgb(238, 212, 212);
+    --buttonBorder: rgb(85, 22, 30);
+    --buttonBackground: rgba(32, 6, 11, 0.5);
   }
 
 
@@ -76,7 +78,18 @@ margin: 0;
 }
 
 
-
+#bg {
+  background-image: url("/bg.png");
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-size: cover;
+  background-position: center;
+  z-index: -5000;
+  opacity: 0.2;
+}
 
 body, #__next, :root {
   overflow-y: clip;

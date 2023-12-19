@@ -31,6 +31,7 @@ viewer.add( panorama );
         <title>metro via virtual</title>
         <Main />
         <NextScript />
+        <div id="bg"></div>
     </Html>
     
   )

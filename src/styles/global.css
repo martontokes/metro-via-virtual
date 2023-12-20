@@ -25,15 +25,17 @@ standard margin and padding
 
 :root {
 
-    background-color:  #0a0a0a;
+    background-color:  #f3f3f3;
     --montserrat-root: 16px;
     --noto-root: 16px;
     height: 100%;
-    --buttonText: rgb(238, 212, 212);
-    --buttonBorder: rgb(85, 22, 30);
-    --buttonBackground: rgba(32, 6, 11, 0.5);
+    --buttonText: #2c2c2c;
+    --buttonBorder: #949494;
+
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
   }
 
+/*     background-color:  #0a0a0a; */
 
 
   #__next {
@@ -49,7 +51,7 @@ standard margin and padding
 
     padding: 0px;
     margin: 0px;
-    color: white;
+    color: #0a0a0a;
     font-weight: 400;
     
   }
@@ -78,7 +80,7 @@ margin: 0;
 }
 
 
-#bg {
+ /* #bg {
   background-image: url("/bg.png");
   width: 100vw;
   height: 100vh;
@@ -89,7 +91,7 @@ margin: 0;
   background-position: center;
   z-index: -5000;
   opacity: 0.2;
-}
+}  */
 
 body, #__next, :root {
   overflow-y: clip;

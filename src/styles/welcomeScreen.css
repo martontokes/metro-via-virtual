@@ -5,8 +5,7 @@
 
 
 
-
-@media screen and (max-width: 560px) {
+@media screen and (min-height: 420px) {
 
     #wcsOuterContainer {
 
@@ -21,7 +20,7 @@
     }
     
     #wcsInnerContainer {
-        width: 240px;
+        width: 216px;
         display: flex;
         justify-content: flex-start;
         align-items: flex-start;
@@ -31,29 +30,39 @@
 
     #wcsExhibitionEnglishHeader {
         font-size: 31.25px;
-        font-weight: 500;
+        font-weight: 300;
         line-height: 2rem;
+        display: inline-flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: left;
+
+    }
+
+    #wcsExhibitionEnglishHeader span {
         align-self: flex-start;
     }
 
     #wcsExhibitionEnglishSubheader {
-        font-size: 12.64px;
+        font-size: 15.75px;
         opacity: 1;
         padding-top: 12.64px;
-        font-weight: 500;
+        font-weight: 400;
         text-align: left;
         align-self: flex-start;
 
     }
 
+    
     #wcsEnterButtonEnglish {
         width: 100%;
         border: solid 1px var(--buttonBorder);
-        height: 54px;
+        height: 48px;
         align-self: center;
         margin-top: 24px;
         font-size: 14px;
-        border-radius: 14px;
+        border-radius: 34px;
         background-color: var(--buttonBackground);
     }
 
@@ -61,7 +70,7 @@
 
         position: relative;
         top: -0.129px;
-        font-weight: 500;
+        font-weight: 400;
         opacity: 1;
         color: var(--buttonText);
     }
@@ -69,14 +78,14 @@
     #wcsExhibitionChineseHeader {
         font-size: 25.63px;
         margin-top: 36px;
-        font-weight: 400;
+        font-weight: 200;
         letter-spacing: 4px;
         align-self: flex-start;
     }
 
     #wcsExhibitionChineseSubheader {
         font-size: 16px;
-        font-weight: 400;
+        font-weight: 300;
         opacity: 1;
         letter-spacing: 4px;
         align-self: flex-start;
@@ -84,20 +93,22 @@
 
     }
 
+
     #wcsEnterButtonChinese {
         width: 100%;
         border: solid 1px var(--buttonBorder);
-        border-radius: 14px;
-        height: 54px;
+        border-radius: 34px;
+        height: 48px;
         margin-top: 24px;
         font-size: 14.22px;
         align-self: center;
         letter-spacing: 0.1rem;
         background-color: var(--buttonBackground);
+
     }
 
     #wcsEnterButtonChinese span {
-        font-weight: 400;
+        font-weight: 200;
         color: var(--buttonText);
         position: relative;
         top: -1.08px;
@@ -111,7 +122,10 @@
 }
 
 
-@media screen and (orientation: landscape) {
+
+
+
+@media screen and (max-height: 420px) {
 
     #wcsOuterContainer {
 
@@ -135,25 +149,25 @@
 
 
     .innerContentContainer {
-        width: 180px;
+        width: 200px;
         display: flex;
         flex-direction: column;
         margin: 24px;
-        height: 180px !important;
+        height: 192px !important;
     }
 
     #wcsExhibitionEnglishHeader {
         font-size: 31.25px;
-        font-weight: 500;
+        font-weight: 300;
         line-height: 2rem;
  
     }
 
     #wcsExhibitionEnglishSubheader {
-        font-size: 12.64px;
+        font-size: 15.75px;
         opacity: 1;
         padding-top: 12.64px;
-        font-weight: 500;
+        font-weight: 400;
         text-align: left;
 
 
@@ -167,33 +181,33 @@
         
         font-size: 14px;
         border-radius: 200px;
-        background-color: black;
+
     }
 
     #wcsEnterButtonEnglish span {
 
         position: relative;
         top: -0.129px;
-        font-weight: 500;
+        font-weight: 400;
         opacity: 1;
         
     }
 
     #wcsExhibitionChineseHeader {
         font-size: 25.63px;
-        margin-top: 27px;
-        font-weight: 400;
+        margin-top: 26px;
+        font-weight: 300;
         letter-spacing: 4px;
-
+    
     }
 
     #wcsExhibitionChineseSubheader {
         font-size: 16px;
-        font-weight: 400;
+        font-weight: 300;
         opacity: 1;
         letter-spacing: 4px;
 
-        padding-top: 9px;
+        padding-top: 10px;
 
     }
 
@@ -208,11 +222,20 @@
     }
 
     #wcsEnterButtonChinese span {
-        font-weight: 500;
+        font-weight: 300;
         position: relative;
         top: -1.08px;
     }
 
+
 }
 
 
+@media screen and (min-width: 720px) and (min-height: 1081px) {
+    
+    #wcsOuterContainer {
+        position: fixed;
+        width: 70%;
+        left: 0px;
+    }
+}

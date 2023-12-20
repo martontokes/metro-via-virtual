@@ -5,9 +5,7 @@
 
 }
 
-.swiper-wrapper {
-  overflow-y: clip;
-}
+
 
 .swiper-slide {
   overflow-y: scroll !important;

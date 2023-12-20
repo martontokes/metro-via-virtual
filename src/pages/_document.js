@@ -4,11 +4,11 @@ import { useEffect } from 'react'
 
 export default function Document() {
 
-useEffect(() => {
-  const panorama = new PANOLENS.ImagePanorama( '@/public/butterflies/0104b/media/butterflies.mp4' );
-const viewer = new PANOLENS.Viewer();
-viewer.add( panorama );
-}, []);
+// useEffect(() => {
+//   const panorama = new PANOLENS.ImagePanorama( '@/public/butterflies/0104b/media/butterflies.mp4' );
+// const viewer = new PANOLENS.Viewer();
+// viewer.add( panorama );
+// }, []);
 
   return (
 
@@ -26,7 +26,7 @@ viewer.add( panorama );
 
 
         <Head />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" ></meta>
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no"></meta>
         <meta name="color-scheme" content="light only"></meta>
         <title>metro via virtual</title>
         <Main />

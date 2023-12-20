@@ -1,76 +1,23 @@
 #header {
-  position: fixed;
-  width: 100%;
-  z-index: 60;
-  background-color: black;
-  display: flex;
-  align-items: center;
-  top: 0px;
+    margin: 0px 24px;
 }
 
 #headerTitle {
-    font-size: 14px !important;
-    margin-top: 24px;
-
-    font-weight: 500;
+    font-size: 14px;
 }
 
 #headerSubtitle {
-
-  font-size: 11.06px !important;
-  margin-bottom: 32px;
-  font-weight: 500;
-  margin-bottom: 16px;
+    font-size: 11.06px;
 }
 
-#hamburgerMenu {
-  position: fixed;
-  right: 25px;
-  width: 50px;
-  height: 50px;
+#mainMenu {
+    margin-top: 8px;
+    display: flex;
+    justify-content: space-between;
+    height: 48px;
 }
 
-#hamburgerMenu img {
-  width: 24px;
-  height: 24px;
- }
-
- #headerTextContainer {
-  margin-left: 24px;
-  width: 100vw;
- }
-
- #mainMenu {
-  display: flex;
-  justify-content: space-between;
-  box-sizing: border-box;
-  margin: 20px 24px;
-
- }
-
-@media screen and (max-width: 852px) {
-
-  #headerTitle {
-    font-size: 16px;
- }
-
-  #headerSubtitle {
-  font-size: 11.2355555556px;
- }
-
-
+#mainMenu button {
+    height: 100%;
+    min-width: 48px;
 }
-
-
-@media screen and (min-width: 853px) and (max-width: 1279) {
-
-}
-  
-
-@media screen and (min-width: 1280px) {
-
-  #hamburgerMenu {
-    display: none;
-  }
-}
-

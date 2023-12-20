@@ -4,7 +4,6 @@ export default function Statement() {
 
         <>
 
-        <div id="placeholder1" className="placeholder"></div>
         <div id="artwork_page">
             <h3>Curatorial statement</h3>
             <div>

@@ -6,6 +6,7 @@ import Essay from "./Content/English/Essay";
 import Curator from "./Content/English/Curator";
 import Statement from './Content/English/Statement';
 import Illumination from "./Content/English/Artworks/Illumination";
+import Loader from "./Loader";
 
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Pagination } from 'swiper/modules';
@@ -21,14 +22,39 @@ export default function Content({ site }) {
   const [itemsLoaded, incrementLoad] = useState(0);
 
   useEffect(() => {
-    console.log(itemsLoaded)
+
+    if (itemsLoaded == 11) {
+      
+      var newRuleToDisplayArtworkPageWithFade = `
+      #artwork_page {
+        display: block;
+        opacity: 1;
+      }
+    `;
+
+      var styleElement = document.createElement('style');
+      styleElement.textContent = newRuleToDisplayArtworkPageWithFade;
+    
+      document.head.appendChild(styleElement);
+      document.getElementById("loaderContainer").remove();
+      resizeSwiperContent();
+
+    }
+
   }, [itemsLoaded])
+
+
+
+
+
 
   if (site.language === 'english') {
 
     return (
       
       <>
+
+      <Loader />
 
         <Swiper
       // install Swiper modules
@@ -89,7 +115,18 @@ export default function Content({ site }) {
           </SwiperSlide>
 
           <SwiperSlide>
-          <Swiper>
+          <Swiper
+           onSliderMove={(swiper) => {
+
+
+            if (document.querySelector(".swiper-slide-next")) { 
+            document.querySelector(".swiper-slide-next").scrollTop = 0;
+            }
+                        
+            if (document.querySelector(".swiper-slide-prev")) {
+            document.querySelector(".swiper-slide-prev").scrollTop = 0; }
+    
+          }}>
 
           <SwiperSlide>
             <Confidential incrementLoad={incrementLoad} /> 

@@ -21,7 +21,6 @@ export default function Illumination({incrementLoad}) {
 
         <>
 
-            <div id="placeholder3" className="placeholder"></div>
             <div id="artwork_page">
                 <h3>Illumination (2021)</h3>
                 <div className="artistsBox">

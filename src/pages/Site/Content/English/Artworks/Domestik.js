@@ -4,7 +4,6 @@ export default function Domestik({incrementLoad}) {
 
     <>
 
-      <div id="placeholder5" className="placeholder"></div>
       <div id="artwork_page">
         <h3>Domestik / Publik (2020)</h3>
         <div className="artistsBox">

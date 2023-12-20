@@ -6,7 +6,7 @@ export default function Butterflies({incrementLoad}) {
     return (
       
       <>
-          <div id="placeholder4" className="placeholder"></div>
+
           <div id="artwork_page">
             <h3>Butterflies on the Wheel (2020)</h3>
             <div className="artistsBox">

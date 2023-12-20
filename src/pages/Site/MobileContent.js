@@ -21,9 +21,7 @@ export default function Content({ site }) {
   const [itemsLoaded, incrementLoad] = useState(0);
 
   useEffect(() => {
-
-    // hide spinner, display content //
-
+    console.log(itemsLoaded)
   }, [itemsLoaded])
 
   if (site.language === 'english') {
@@ -94,23 +92,23 @@ export default function Content({ site }) {
           <Swiper>
 
           <SwiperSlide>
-            <Confidential incrementLoad={incrementLoad} itemsLoaded={itemsLoaded}/> 
+            <Confidential incrementLoad={incrementLoad} /> 
           </SwiperSlide>
           
           <SwiperSlide>
-            <Domestik incrementLoad={incrementLoad} itemsLoaded={itemsLoaded}/>
+            <Domestik incrementLoad={incrementLoad} />
           </SwiperSlide>
 
             <SwiperSlide>
-              <Illumination incrementLoad={incrementLoad} itemsLoaded={itemsLoaded}/>
+              <Illumination incrementLoad={incrementLoad} />
             </SwiperSlide>
 
             <SwiperSlide>
-              <Butterflies incrementLoad={incrementLoad} itemsLoaded={itemsLoaded}/>
+              <Butterflies incrementLoad={incrementLoad} />
             </SwiperSlide>
 
             <SwiperSlide>
-              <Autosave incrementLoad={incrementLoad} itemsLoaded={itemsLoaded}/>
+              <Autosave incrementLoad={incrementLoad} />
             </SwiperSlide>
 
             </Swiper>

@@ -13,6 +13,8 @@
   },
   "dependencies": {
     "@egjs/react-view360": "^4.0.0-beta.7",
+    "@fontsource/montserrat": "^5.0.16",
+    "@fontsource/noto-sans-hk": "^5.0.17",
     "@lottiefiles/react-lottie-player": "^3.5.3",
     "jquery": "^3.7.1",
     "next": "^13.5.6",

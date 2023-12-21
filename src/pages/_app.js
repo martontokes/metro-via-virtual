@@ -14,7 +14,9 @@ import illumination from 'styles/content/illumination.css'
 
 import { Montserrat, Noto_Sans_HK } from 'next/font/google'
 
-const montserrat = Montserrat({ subsets: ['latin']});
+const notosanshk = Noto_Sans_HK({subsets: ["latin"], display: "optional"});
+const montserrat = Montserrat({subsets: ["latin"], display: "optional"});
+
 
 export default function App({ Component, pageProps }) {
  
@@ -27,9 +29,15 @@ export default function App({ Component, pageProps }) {
         {
     
           `
+          .notoSansHk {
+            font-family: ${notosanshk.style.fontFamily}
+          }
+          
             * {
               font-family: ${montserrat.style.fontFamily};
             }
+
+
 
           `
         }

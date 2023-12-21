@@ -20,7 +20,7 @@
     }
     
     #wcsInnerContainer {
-        width: 248px;
+        width: 256px;
         display: flex;
         justify-content: flex-start;
         align-items: flex-start;
@@ -28,14 +28,20 @@
     
     }
 
+    .innerContentContainer {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+    }
+
     #wcsExhibitionEnglishHeader {
         font-size: 34.84px;
-        font-weight: 700;
+        font-weight: 400;
         line-height: 2rem;
         display: inline-flex;
         flex-direction: column;
         justify-content: center;
-        align-items: center;
+        align-items: flex-start;
         text-align: left;
 
     }
@@ -45,24 +51,24 @@
     }
 
     #wcsExhibitionEnglishSubheader {
-        font-size: 16.8px;
+        font-size: 14px;
         opacity: 1;
         padding-top: 12.64px;
-        font-weight: 700;
-        text-align: left;
-        align-self: flex-start;
+        font-weight: 400;
+        text-align: center;
+
 
     }
 
     
     #wcsEnterButtonEnglish {
         width: 100%;
-        border: solid 2px var(--buttonBorder);
+        border: solid 1px var(--buttonBorder);
         height: 48px;
         align-self: center;
         margin-top: 24px;
         font-size: 14px;
-        border-radius: 60px;
+        border-radius: 12px;
         background-color: var(--buttonBackground);
     }
 
@@ -70,7 +76,7 @@
 
         position: relative;
         top: -0.52px;
-        font-weight: 700;
+        font-weight: 400;
         opacity: 1;
         color: var(--buttonText);
     }
@@ -78,14 +84,14 @@
     #wcsExhibitionChineseHeader {
         font-size: 29.03px;
         margin-top: 48px;
-        font-weight: 700;
+        font-weight: 300;
         letter-spacing: 4px;
         align-self: flex-start;
     }
 
     #wcsExhibitionChineseSubheader {
         font-size: 20.16px;
-        font-weight: 700;
+        font-weight: 300;
         opacity: 1;
         letter-spacing: 4px;
         align-self: flex-start;
@@ -96,8 +102,8 @@
 
     #wcsEnterButtonChinese {
         width: 100%;
-        border: solid 2px var(--buttonBorder);
-        border-radius: 60px;
+        border: solid 1px var(--buttonBorder);
+        border-radius: 12px;
         height: 48px;
         margin-top: 24px;
         font-size: 14.22px;
@@ -108,7 +114,7 @@
     }
 
     #wcsEnterButtonChinese span {
-        font-weight: 700;
+        font-weight: 300;
         color: var(--buttonText);
         position: relative;
         top: -1.08px;

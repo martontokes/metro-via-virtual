@@ -4,7 +4,7 @@ export default function Loader() {
 
       <>
         <div id="loaderContainer">
-          <div id="loader">
+          <div className="loader">
           </div>
         </div>
       </>

@@ -30,7 +30,7 @@
 
     #wcsExhibitionEnglishHeader {
         font-size: 31.25px;
-        font-weight: 300;
+        font-weight: 500;
         line-height: 2rem;
         display: inline-flex;
         flex-direction: column;
@@ -48,7 +48,7 @@
         font-size: 15.75px;
         opacity: 1;
         padding-top: 12.64px;
-        font-weight: 400;
+        font-weight: 500;
         text-align: left;
         align-self: flex-start;
 
@@ -57,7 +57,7 @@
     
     #wcsEnterButtonEnglish {
         width: 100%;
-        border: solid 1px var(--buttonBorder);
+        border: solid 1.5px var(--buttonBorder);
         height: 48px;
         align-self: center;
         margin-top: 24px;
@@ -70,7 +70,7 @@
 
         position: relative;
         top: -0.129px;
-        font-weight: 400;
+        font-weight: 500;
         opacity: 1;
         color: var(--buttonText);
     }
@@ -78,14 +78,14 @@
     #wcsExhibitionChineseHeader {
         font-size: 25.63px;
         margin-top: 36px;
-        font-weight: 200;
+        font-weight: 400;
         letter-spacing: 4px;
         align-self: flex-start;
     }
 
     #wcsExhibitionChineseSubheader {
         font-size: 16px;
-        font-weight: 300;
+        font-weight: 400;
         opacity: 1;
         letter-spacing: 4px;
         align-self: flex-start;
@@ -96,7 +96,7 @@
 
     #wcsEnterButtonChinese {
         width: 100%;
-        border: solid 1px var(--buttonBorder);
+        border: solid 1.5px var(--buttonBorder);
         border-radius: 34px;
         height: 48px;
         margin-top: 24px;
@@ -108,7 +108,7 @@
     }
 
     #wcsEnterButtonChinese span {
-        font-weight: 200;
+        font-weight: 400;
         color: var(--buttonText);
         position: relative;
         top: -1.08px;

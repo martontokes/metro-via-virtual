@@ -38,6 +38,7 @@ export default function Content({ site }) {
       document.head.appendChild(styleElement);
       document.getElementById("loaderContainer").remove();
       resizeSwiperContent();
+      document.getElementById("header").style.opacity = 1;
 
     }
 
@@ -122,7 +123,7 @@ export default function Content({ site }) {
             if (document.querySelector(".swiper-slide-next")) { 
             document.querySelector(".swiper-slide-next").scrollTop = 0;
             }
-                        
+
             if (document.querySelector(".swiper-slide-prev")) {
             document.querySelector(".swiper-slide-prev").scrollTop = 0; }
     

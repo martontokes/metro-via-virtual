@@ -6,7 +6,9 @@ import Essay from "./Content/English/Essay";
 import Curator from "./Content/English/Curator";
 import Statement from './Content/English/Statement';
 import Illumination from "./Content/English/Artworks/Illumination";
-import Loader from "./Loader";
+
+import Menu from "./Menu";
+import Header from "./Header";
 
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Pagination } from 'swiper/modules';
@@ -17,37 +19,37 @@ import 'swiper/css/pagination';
 import { useState, useEffect } from "react";
 
 
-export default function Content({ site }) {
+export default function MobileContent({ site, swiperState, setSwiperState }) {
 
   const [itemsLoaded, incrementLoad] = useState(0);
 
-  useEffect(() => {
 
-    if (itemsLoaded == 11) {
+  /* Display Content On Load */
+
+    useEffect(() => {
+
+      if (itemsLoaded == 11) {
       
-      var newRuleToDisplayArtworkPageWithFade = `
-      #artwork_page {
-        display: block;
-        opacity: 1;
-      }
-    `;
-
-      var styleElement = document.createElement('style');
-      styleElement.textContent = newRuleToDisplayArtworkPageWithFade;
+        addFontRuleToHead();
     
-      document.head.appendChild(styleElement);
-      document.getElementById("loaderContainer").remove();
-      resizeSwiperContent();
-      document.getElementById("header").style.opacity = 1;
+        if ((document.querySelector(".loader")) != null) {
+        document.querySelector(".loader").style.opacity = 0;
+        }
 
-    }
+        setTimeout(() => {
+          document.getElementById("loaderContainer").remove();
+          resizeSwiperContent();
+          document.getElementById("exhibition").style.opacity = 1;
+        }, 1000);
+        
+      }
 
-  }, [itemsLoaded])
+    }, [itemsLoaded]);
 
 
+    /* Exhibition Content */
 
-
-
+    
 
   if (site.language === 'english') {
 
@@ -55,57 +57,75 @@ export default function Content({ site }) {
       
       <>
 
-      <Loader />
-
         <Swiper
-      // install Swiper modules
-
-      spaceBetween={0}
-      slidesPerView={1}
-      pagination={{ clickable: false }}
-      onSwiper={(swiper) => {swiper.updateAutoHeight(1); }}
-      passiveListeners={true}
-      onSlideChangeTransitionEnd={() => {
-
-      }}
-
-      preventInteractionOnTransition={true}
-
-      onInit={() => {resizeSwiperContent();}}
-      // document.querySelector("swiper-slide").style.height = window.innerHeight - 147 + "px";
-
-      // onReachEnd={() => {document.getElementById("buttonRight").style.display = "none";}}
-      // onReachBeginning={() => {document.getElementById("buttonLeft").style.display = "none";}}
-      // onFromEdge={() => {document.getElementById("buttonRight").style.display = "block"; document.getElementById("buttonLeft").style.display = "block";}}
-
-      autoHeight={true}
-      onDragStart={() => {
-
-      }}
-      onSliderMove={(swiper) => {
 
 
-        if (document.querySelector(".swiper-slide-next")) { 
-        document.querySelector(".swiper-slide-next").scrollTop = 0; }
-        if (document.querySelector(".swiper-slide-prev")) {
-        document.querySelector(".swiper-slide-prev").scrollTop = 0; }
 
-      }}
+          spaceBetween={0}
+          slidesPerView={1}
+          pagination={{ clickable: false }}
+          onSwiper={(swiper) => {swiper.updateAutoHeight(1); }}
+          passiveListeners={true}
+          onSlideChangeTransitionEnd={() => {
 
-      onTouchStart={() => {}}
+          }}
 
-      onSlideResetTransitionEnd={(swiper) => {
+          preventInteractionOnTransition={true}
+
+          onInit={(swiper) => {
+            
+            resizeSwiperContent();
+            setSwiperState(swiper);
+
+            const menuButtons = document.querySelectorAll(".menubutton");
+
+          }}
+
+          autoHeight={true}
+          onDragStart={() => {
+
+          }}
+
+          onSlideChange={(swiper) => {
+
+            var menuButtons = document.querySelectorAll(".menubutton");
+
+            for (let i = 0; i < 4; i++) {
+              menuButtons[i].classList.remove("activeButton");
+            }
+
+            menuButtons[swiper.activeIndex].classList.add("activeButton");
+            
+          }}
+
+          onSliderMove={(swiper) => {
 
 
-  
-      }}
-      style={{
-        "--swiper-pagination-color": "white",
-        "--swiper-pagination-bullet-inactive-color": "rgb(50,50,50)",
-        "--swiper-pagination-bullet-inactive-opacity": "1",
-        "--swiper-pagination-bullet-size": "8px",
-        "--swiper-pagination-bullet-horizontal-gap": "6px"
-      }}>
+            if (document.querySelector(".swiper-slide-next")) { 
+            document.querySelector(".swiper-slide-next").scrollTop = 0; }
+            if (document.querySelector(".swiper-slide-prev")) {
+            document.querySelector(".swiper-slide-prev").scrollTop = 0; }
+
+            if (swiper.activeIndex == 3) {
+              document.querySelectorAll(".swiper-slide-active")[0].scrollTop = 0;
+            }
+
+            if (swiper.activeIndex == 1) {
+              document.querySelectorAll(".swiper-slide-active")[1].scrollTop = 0;
+            }
+
+          }}
+
+          onTouchStart={() => {}}
+
+          onSlideResetTransitionEnd={(swiper) => {
+
+
+      
+          }}
+         >
+
+
 
           <SwiperSlide>
             <Statement />
@@ -117,8 +137,27 @@ export default function Content({ site }) {
 
           <SwiperSlide>
           <Swiper
-           onSliderMove={(swiper) => {
 
+          
+
+spaceBetween={0}
+slidesPerView={1}
+pagination={{ clickable: false }}
+onSwiper={(swiper) => {swiper.updateAutoHeight(1); }}
+passiveListeners={true}
+
+          modules={[Pagination]}
+
+          style={{
+            "--swiper-pagination-color": "white",
+            "--swiper-pagination-bullet-inactive-color": "rgb(50,50,50)",
+            "--swiper-pagination-bullet-inactive-opacity": "1",
+            "--swiper-pagination-bullet-size": "8px",
+            "--swiper-pagination-bullet-horizontal-gap": "6px",
+
+          }}
+
+           onSliderMove={(swiper) => {
 
             if (document.querySelector(".swiper-slide-next")) { 
             document.querySelector(".swiper-slide-next").scrollTop = 0;
@@ -126,6 +165,18 @@ export default function Content({ site }) {
 
             if (document.querySelector(".swiper-slide-prev")) {
             document.querySelector(".swiper-slide-prev").scrollTop = 0; }
+
+            if (swiper.activeIndex > 0 && swiper.activeIndex < 4 ) {
+              document.querySelectorAll(".swiper-slide-prev")[1].scrollTop = 0;
+              document.querySelectorAll(".swiper-slide-next")[1].scrollTop = 0;  
+            }
+
+            if (swiper.activeIndex == 4 ) {
+              document.querySelectorAll(".swiper-slide-prev")[1].scrollTop = 0;
+              document.querySelector(".swiper-slide-next").scrollTop = 0;  
+            }
+
+
     
           }}>
 
@@ -148,6 +199,9 @@ export default function Content({ site }) {
             <SwiperSlide>
               <Autosave incrementLoad={incrementLoad} />
             </SwiperSlide>
+
+
+
 
             </Swiper>
             </SwiperSlide>
@@ -210,7 +264,7 @@ function isIOS() {
 function resizeSwiperContent() {
   let slides = document.querySelectorAll(".swiper-slide");
   for (let i = 0; i < slides.length; i++) {
-    slides[i].style.height = window.innerHeight - 104 + "px";
+    slides[i].style.height = window.innerHeight - 96 + "px";
     console.log("resized swiper slide");
   }
 }
@@ -226,4 +280,17 @@ const countLoadedItems = () => {
 
     }
 
+}
+
+function addFontRuleToHead() {
+  var newRuleToDisplayArtworkPageWithFade = `
+      #artwork_page {
+        display: block;
+        opacity: 1;
+      }
+    `;
+
+      var styleElement = document.createElement('style');
+      styleElement.textContent = newRuleToDisplayArtworkPageWithFade;
+      document.head.appendChild(styleElement);
 }

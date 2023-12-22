@@ -11,7 +11,7 @@ export default function Header({ site }) {
         <div id="Logo">
           <Logo site={site} />
         </div>
-        <Menu />
+
       </div>
     </>
 

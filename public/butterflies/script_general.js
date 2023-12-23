@@ -250,6 +250,10 @@
     d['data']['history'] = {};
     d['scripts']['createQuizConfig'] = createQuizConfig;
     TDV['PlayerAPI']['defineScript'](d);
+
+    console.log(d);
 }());
+
+
 //# sourceMappingURL=http://localhost:9000/script_device_v2020.5.0.js.map
 //Generated with v2020.5.0, Mon Jan 4 2021

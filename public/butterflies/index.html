@@ -199,8 +199,10 @@
                     onResize();
                 }
             }
-
+ 
+            
             var params = getParams(location.search.substr(1));
+
             if (params.hasOwnProperty("skip-loading")) {
                 loadTour();
                 return;
@@ -216,7 +218,8 @@
             loadTour();
         }
 
-
+ 
+     
 
         function playVideo(video) {
             function isSafariDesktopV11orGreater() {
@@ -284,6 +287,8 @@
         }
 
         document.addEventListener('DOMContentLoaded', onLoad);
+
+
     </script>
     <style type="text/css">
 

@@ -12,7 +12,7 @@ export default function Illumination({incrementLoad}) {
         });
         
     // Start slideshow on mounting
-    const intervalId = setInterval(illuminationSlideshow, 1000);
+    const intervalId = setInterval(illuminationSlideshow, 2000);
     return () => clearInterval(intervalId);
 
     }, []);

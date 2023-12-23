@@ -59,9 +59,14 @@ export default function MobileContent({ site, swiperState, setSwiperState }) {
           autoHeight={true}
           onDragStart={() => {}}
           onSlideChange={(swiper) => { reRenderMenuOnSlideChange(swiper.activeIndex); }}
-          onSliderMove={(swiper) => { scrollAdjacentSlidesToTop(swiper.activeIndex); }}
+          onSliderMove={(swiper) => { onSliderMove_Parent(swiper.activeIndex); }}
           onTouchStart={() => {}}
+          onBeforeTransitionStart={(swiper) => {
+
+          }}
           onSlideResetTransitionEnd={(swiper) => {}}>
+
+
 
           <SwiperSlide><Statement /></SwiperSlide>
           <SwiperSlide>
@@ -71,7 +76,10 @@ export default function MobileContent({ site, swiperState, setSwiperState }) {
             slidesPerView={1}
             onSwiper={(swiper) => {swiper.updateAutoHeight(1); }}
             passiveListeners={true}
-            onSliderMove={(swiper) => { scrollAdjacentToTop_Artworks(swiper.activeIndex); }}
+            onSliderMove={(swiper) => { onSliderMove_Child(swiper.activeIndex); }}
+            onBeforeTransitionStart={(swiper) => {
+
+            }}
             style={{
 
               "--swiper-pagination-color": "white",
@@ -85,7 +93,7 @@ export default function MobileContent({ site, swiperState, setSwiperState }) {
               <SwiperSlide><Illumination incrementLoad={incrementLoad} /></SwiperSlide>
               <SwiperSlide><Confidential incrementLoad={incrementLoad} /></SwiperSlide>
               <SwiperSlide><Autosave incrementLoad={incrementLoad} /></SwiperSlide>
-              <SwiperSlide><Butterflies incrementLoad={incrementLoad} /></SwiperSlide>
+              <SwiperSlide><Butterflies /></SwiperSlide>
             </Swiper>
           </SwiperSlide>
 
@@ -209,7 +217,7 @@ function reRenderMenuOnSlideChange(index) {
 
 }
 
-function scrollAdjacentSlidesToTop(index) {
+function onSliderMove_Parent(index) {
 
   if (document.querySelector(".swiper-slide-next")) { 
     document.querySelector(".swiper-slide-next").scrollTop = 0; }
@@ -217,16 +225,12 @@ function scrollAdjacentSlidesToTop(index) {
     document.querySelector(".swiper-slide-prev").scrollTop = 0; }
 
     if (index == 3) {
-      document.querySelectorAll(".swiper-slide-active")[0].scrollTop = 0;
-    }
-
-    if (index == 1) {
-      document.querySelectorAll(".swiper-slide-active")[1].scrollTop = 0;
+      document.querySelectorAll(".swiper-slide-prev")[1].scrollTop = 0;
     }
 
 }
 
-function scrollAdjacentToTop_Artworks(index) {
+function onSliderMove_Child(index) {
 
   if (document.querySelector(".swiper-slide-next")) { 
     document.querySelector(".swiper-slide-next").scrollTop = 0;

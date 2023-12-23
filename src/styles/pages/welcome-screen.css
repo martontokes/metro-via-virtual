@@ -63,7 +63,7 @@
     #wcsEnterButtonEnglish {
         width: 100%;
         border: solid 1px var(--buttonBorder);
-        height: 56px;
+        height: 50px;
         align-self: center;
         margin-top: 24px;
         font-size: 14px;
@@ -103,7 +103,7 @@
         width: 100%;
         border: solid 1px var(--buttonBorder);
         border-radius: 40px;
-        height: 56px;
+        height: 50px;
         margin-top: 24px;
         font-size: 14.22px;
         align-self: center;

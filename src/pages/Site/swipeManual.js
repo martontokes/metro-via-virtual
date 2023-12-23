@@ -2,11 +2,6 @@ export default function SwipeManual({displayManual, setDisplayManual}) {
 
   function onCloseManualPane() {
     document.getElementById("swipeManualContainer").style.display = "none";
-
-      // setDisplayManual(false);
-
-    
-    
   }
 
   return (

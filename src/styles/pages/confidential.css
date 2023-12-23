@@ -1,0 +1,11 @@
+#confidentialiframe {
+    aspect-ratio: 27 / 9;
+    display: grid;
+    align-items: center;
+    margin: 16px 0px;
+    width: 100%;
+}
+
+#confidentialContainer {
+    width: 100%;
+}

@@ -17,8 +17,10 @@
   margin: 0px;
   color: #ebebeb;
   font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
   
 }
+
 
 .notoSansHk {
 
@@ -30,6 +32,7 @@ button {
 
   border: none;
   background-color: transparent;
+
 
 }
 

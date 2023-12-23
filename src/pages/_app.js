@@ -8,7 +8,11 @@ import paginator from 'styles/layout/paginator.css'
 import horizontalScrollMobileView from 'styles/layout/horizontalScrollMobileView.css'
 import scrollbar from 'styles/layout/scrollbar.css'
 import swipeManual from 'styles/layout/swipeManual.css'
+
 import illumination from 'styles/pages/illumination.css'
+import autosave from 'styles/pages/autosave.css'
+import confidential from 'styles/pages/confidential.css'
+import butterflies from 'styles/pages/butterflies.css'
 
 import loader_spinner from 'styles/layout/loader-spinner.css'
 

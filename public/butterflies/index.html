@@ -15,6 +15,7 @@
     <script src="lib/tdvplayer.js?v=1608192945163"></script>
     <script src="script.js?v=1608192945163"></script>
     <script type="text/javascript">
+       
         (function () {
             var deviceType = TDV.PlayerAPI.mobile ? 'mobile' : 'general';
             var devicesUrl = { "general": "script_general.js?v=1608192945163" };
@@ -32,6 +33,7 @@
             var el = document.getElementsByTagName('script')[0];
             el.parentNode.insertBefore(link, el);
         })();
+
     </script>
     <script type="text/javascript">
         var tour;
@@ -48,8 +50,7 @@
             var devicesUrl = { "general": "script_general.js?v=1608192945163" };
 
             tour = new TDV.Tour(settings, devicesUrl);
-            tour.bind(TDV.Tour.EVENT_TOUR_INITIALIZED, onVirtualTourInit);
-            tour.bind(TDV.Tour.EVENT_TOUR_LOADED, onVirtualTourLoaded);
+
             tour.bind(TDV.Tour.EVENT_TOUR_ENDED, onVirtualTourEnded);
             tour.load();
         }
@@ -156,7 +157,7 @@
         function onBodyClick() {
             document.body.removeEventListener("click", onBodyClick);
             document.body.removeEventListener("touchend", onBodyClick);
-            loadTour();
+            // loadTour();
         }
 
         function onLoad() {
@@ -207,13 +208,15 @@
 
             if (isOVRWeb()) {
                 showPreloader();
-                loadTour();
+             loadTour();
                 return;
             }
 
             showPreloader();
             loadTour();
         }
+
+
 
         function playVideo(video) {
             function isSafariDesktopV11orGreater() {
@@ -225,6 +228,8 @@
                     Boolean(video.webkitAudioDecodedByteCount) ||
                     Boolean(video.audioTracks && video.audioTracks.length);
             }
+
+            console.log("playvideo is called");
 
             function detectUserAction() {
                 var onVideoClick = function (e) {
@@ -327,6 +332,43 @@ body {
         
     }
 
+    #loaderContainer {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  display: grid;
+  place-items: center;
+  top: 0px;
+
+}
+
+.loader {
+  width: 60px;
+  height: 60px;
+  border-radius: 70%;
+  transition: opacity 1s ease-in-out;
+  opacity: 0;
+  display: inline-block;
+  border-top: 4px solid #ececec;
+  border-right: 4px solid transparent;
+  box-sizing: border-box;
+  animation: rotation 1s linear infinite;
+}
+
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+} 
+
+#launchAndFullscreen {
+    z-index: 9000;
+    position: fixed;
+    top: 0;
+}
 
     </style>
 
@@ -338,13 +380,17 @@ body {
     <!-- LOADING TEXT -->
 
     <div id="preloadContainer" style="opacity: 0; visibility: hidden; display: none;">
-        <div style="z-index: 4; position: absolute; left: 0%; top: 50%; width: 100.00%; height: 10.00%">
+        <!-- <div style="z-index: 4; position: absolute; left: 0%; top: 50%; width: 100.00%; height: 10.00%">
             <div style="text-align:left; color:#000000; ">
                 <div style="text-align:center;font-size:1.6666666666666663vmin;">
                     <span style="display:inline-block; letter-spacing:0vmin; white-space:pre-wrap;color:#777777;font-size:1.67vmin;font-family:Arial, Helvetica, sans-serif;">Loading virtual tour. Please wait...</span>
                 </div>
             </div>
+        </div> -->            
+        <div id="loaderContainer">
+        <div class="loader"></div>
         </div>
+
     </div>
 
     <!-- MAIN CONTAINER -->
@@ -363,14 +409,60 @@ body {
         </div>
     </div>
 
+    <button id="launchAndFullscreen" onclick="closeExperience()">Fullscreen and Launch</button>
+
 
 
     <div id="launchvideomessagetouser">
         <p>Launch Butterflies on the Wheel</p>
     </div>
 
+<script>
+
+console.log(window.parent);
+
+var videoFrame = document.getElementById(("viewer"));
+
+document.body.addEventListener("click", function() {
+
+    console.log("body clicked");
+    window.parent.toFullScreen();
+
+    if (videoFrame.requestFullscreen) {
+    videoFrame.requestFullscreen();
+    } else if (videoFrame.webkitRequestFullscreen) { /* Safari */
+    elem.webkitRequestFullscreen();
+    } else if (videoFrame.msRequestFullscreen) { /* IE11 */
+    elem.msRequestFullscreen();
+    }
+
+});
+
+function closeExperience() {
+
+    window.location.reload();
+
+}
+
+</script>
+
+<style>
+
+.experienceIsFullscreen {
+
+    position: fixed;
+    top: 0;
+    left: 0;
+
+}    
+
+</style>
+
 
 </body>
+
+
+
 
 
 

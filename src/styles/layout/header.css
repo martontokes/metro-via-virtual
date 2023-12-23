@@ -1,16 +1,17 @@
 #header {
     margin: 0px 24px;
+    opacity: 0.9;
 }
-
-
 
 #headerTitle {
     margin-top: 16px;
-    font-size: 14px;
-    font-weight: 400;
+    font-size: 11.2px;
+    font-weight: 600 !important;
+
 }
 
 #headerSubtitle {
-    font-size: 11.06px;
-    font-weight: 400;
+    font-size: 8.96px;
+    font-weight: 600 !important;
+
 }

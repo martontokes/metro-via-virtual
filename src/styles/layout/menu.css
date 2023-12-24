@@ -1,17 +1,14 @@
 .menubutton {
 
 
-  color: #e5e5e5;
+  color: #6B6B6B;
   font-weight: 700 !important;
 
 }
 
 .activeButton {
-  color: #ffffff;
+  color: #000000;
 
-  text-decoration: underline;
-  text-decoration-thickness: 1px;
-  text-underline-offset: 3px;
 }
 
 #mainMenu {

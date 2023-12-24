@@ -8,8 +8,8 @@ export default function Logo({site}) {
 
         <>
           <div id="headerTextContainer">
-            <h1 id="headerTitle" className="montserrat">metro via virtual</h1>
-            <h2 id="headerSubtitle" className="montserrat">a virtual exhibition from Hong Kong</h2>
+
+
           </div>
         </>
 

@@ -20,7 +20,7 @@ import 'swiper/css/pagination';
 
 // Event handlers and helpers at the bottom //
 
-export default function MobileContent({ site, swiperState, setSwiperState }) {
+export default function Exhibition({ site, setExhibitionSwiper, setArtworksSwiper }) {
 
   const [itemsLoaded, incrementLoad] = useState(0);
 
@@ -53,12 +53,14 @@ export default function MobileContent({ site, swiperState, setSwiperState }) {
           preventInteractionOnTransition={true}
           onInit={(swiper) => {
             resizeSwiperContent();
-            setSwiperState(swiper);
+            setExhibitionSwiper(swiper);
             const menuButtons = document.querySelectorAll(".menubutton");
             }}
           autoHeight={true}
           onDragStart={() => {}}
-          onSlideChange={(swiper) => { reRenderMenuOnSlideChange(swiper.activeIndex); }}
+          onSlideChange={(swiper) => { reRenderMenuOnSlideChange(swiper.activeIndex);
+          setExhibitionSwiper(swiper);
+          }}
           onSliderMove={(swiper) => { onSliderMove_Parent(swiper.activeIndex); }}
           onTouchStart={() => {}}
           onBeforeTransitionStart={(swiper) => {
@@ -71,7 +73,8 @@ export default function MobileContent({ site, swiperState, setSwiperState }) {
           <SwiperSlide><Statement /></SwiperSlide>
           <SwiperSlide>
             <Swiper
-
+            onInit={(swiper) => {setArtworksSwiper(swiper);}}
+            onSlideChange={(swiper) => {setArtworksSwiper(swiper);}}
             spaceBetween={0}
             slidesPerView={1}
             onSwiper={(swiper) => {swiper.updateAutoHeight(1); }}
@@ -157,7 +160,7 @@ function resizeSwiperContent() {
 
   let slides = document.querySelectorAll(".swiper-slide");
   for (let i = 0; i < slides.length; i++) {
-    slides[i].style.height = window.innerHeight - 96 + "px";
+    slides[i].style.height = window.innerHeight - 56 + "px";
     console.log("resized swiper slide");
   }
 

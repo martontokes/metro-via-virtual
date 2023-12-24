@@ -15,7 +15,7 @@
   transition: opacity 1s ease-in-out;
   opacity: 0;
   display: inline-block;
-  border-top: 4px solid #ececec;
+  border-top: 4px solid #0e0e0e;
   border-right: 4px solid transparent;
   box-sizing: border-box;
   animation: rotation 1s linear infinite;

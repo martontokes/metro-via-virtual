@@ -1,14 +1,16 @@
-export default function Menu({swiperState}) {
+export default function Menu({exhibitionSwiper, artworksSwiper}) {
 
+  const exhibitionSlides = exhibitionSwiper.slides;
+  const artworksSlides = artworksSwiper.slides;
 
     return (
 
     <>
       <div id="mainMenu">
-        <button onClick={() => statementButtonClickHandler(swiperState)} className="menubutton activeButton">statement</button>
-        <button onClick={() => artworksButtonClickHandler(swiperState)} className="menubutton">artworks</button>
-        <button onClick={() => essayButtonClickHandler(swiperState)} className="menubutton">essay</button>
-        <button onClick={() => curatorButtonClickHandler(swiperState)} className="menubutton">curator</button>
+        <button onClick={() => statementButtonClickHandler(exhibitionSwiper, artworksSwiper)} className="menubutton activeButton">statement</button>
+        <button onClick={() => artworksButtonClickHandler(exhibitionSwiper, artworksSwiper)} className="menubutton">artworks</button>
+        <button onClick={() => essayButtonClickHandler(exhibitionSwiper, artworksSwiper)} className="menubutton">essay</button>
+        <button onClick={() => curatorButtonClickHandler(exhibitionSwiper, artworksSwiper)} className="menubutton">curator</button>
       </div>
       <div id="artworksMenu"></div>
     </>
@@ -47,11 +49,12 @@ function curatorButtonClickHandler(index) {
 
 }
 
-function scrollAllToTop(index) {
-  
-  var elements = document.querySelectorAll(".swiper-slide");
+function scrollAllToTop(exhibitionSwiper, artworksSwiper) {
+
+console.log(exhibitionSlides);
+
   for (let i = 0; i < elements.length; i++) {
-    if (i == index.activeSlide) {
+    if (i == exhibitionSwiper.activeIndex) {
       continue;
     }
     elements[i].scrollTo(0,0);

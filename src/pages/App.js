@@ -9,6 +9,8 @@ export default function App() {
   const [language, setLanguage] = useState('');
   const [activePage, setActivePage] = useState('');
 
+  // Remove activePage //
+
   const site = { language, setLanguage, activePage, setActivePage, toggleWelcomeScreen };
 
   return (

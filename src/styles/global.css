@@ -3,9 +3,7 @@
 
 :root {
 
-  background-color: #0c0c0c;
-  --buttonText: #ececec;
-  --buttonBorder: #5c5c5c;
+  background-color: #f3f3f3;
   -webkit-tap-highlight-color: rgba(0,0,0,0);
 
 
@@ -15,7 +13,7 @@
 
   padding: 0px;
   margin: 0px;
-  color: #ebebeb;
+  color: #141414;
   font-family: 'Montserrat', sans-serif;
   font-weight: 700;
   

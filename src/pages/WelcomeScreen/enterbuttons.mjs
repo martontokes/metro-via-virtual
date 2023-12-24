@@ -1,6 +1,8 @@
 export function enterSite(site) {
 
   document.getElementById("wcsOuterContainer").style.opacity = 0;
+  document.getElementById("wcsEnterButtonEnglish").classList.add("buttonClicked");
+  document.getElementById("wcsEnterButtonEnglish").querySelector("span").classList.add("buttonTextClicked");
 
     setTimeout(() => {
       site.setLanguage("english");

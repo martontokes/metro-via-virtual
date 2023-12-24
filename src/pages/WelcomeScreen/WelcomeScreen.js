@@ -14,7 +14,7 @@ export default function WelcomeScreen({site}) {
             <div className="innerContentContainer">
             <h1 id="wcsExhibitionEnglishHeader" className="montserrat">metro<br/> via virtual</h1>
             <h2 id="wcsExhibitionEnglishSubheader" className="montserrat">a virtual exhibition<br/> from Hong Kong</h2>
-            <button id="wcsEnterButtonEnglish" onClick={ () => enterSite(site) } ><span id="buttonTextEng">enter exhibition</span></button>
+            <button id="wcsEnterButtonEnglish" onClick={ () => enterSite(site) } ><span id="buttonTextEng">enter</span></button>
             </div>
             <div className="innerContentContainer" id="iCC2">
             <h1 id="wcsExhibitionChineseHeader" className="notoSansHk">虛擬都會</h1>

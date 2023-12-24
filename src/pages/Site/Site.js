@@ -1,10 +1,10 @@
 import Menu from "./Menu"
 import Content from "./Content"
-import LanguageButtons from "./LanguageButtons"
 import Header from "./Header"
-import MobileContent from "./MobileContent"
-import SwipeManual from "./swipeManual"
+import Exhibition from "./Exhibition"
 import Loader from "./Loader"
+
+import SwipeManual from "./swipeManual"
 
 import { useEffect, useState } from "react"
 
@@ -12,32 +12,24 @@ import { isMobile } from "react-device-detect"
 
 export default function Site({site}) {
 
-  const [swiperState, setSwiperState] = useState('');
+  const [exhibitionSwiper, setExhibitionSwiper] = useState('');
+  const [artworksSwiper, setArtworksSwiper] = useState('');
 
-  useEffect(() => {
-
-    if (document.querySelector(".loader") != null) {
-
-    document.querySelector(".loader").style.opacity = 1;
-  
-    }
-
-  }, [])
 
     return (
       <>
 
+        <Loader />
+
         <div id="exhibition">
 
           <Header site={site} />
-          <Menu swiperState={swiperState} setSwiperState={setSwiperState} />
-          
-          { isMobile ? <MobileContent swiperState={swiperState} setSwiperState={setSwiperState} site={site} /> : null }
-          { isMobile ? null : <Content site={site} /> }
+          <Menu exhibitionSwiper={exhibitionSwiper} artworksSwiper={artworksSwiper} />
+          <Exhibition setArtworksSwiper={setArtworksSwiper} setExhibitionSwiper={setExhibitionSwiper} site={site} />
 
         </div>
         
-        <Loader />
+
 
       </>
     )

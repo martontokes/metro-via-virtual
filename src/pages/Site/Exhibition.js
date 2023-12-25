@@ -23,16 +23,23 @@ import 'swiper/css/pagination';
 export default function Exhibition({ site, setExhibitionSwiper, setArtworksSwiper }) {
 
   const [itemsLoaded, incrementLoad] = useState(0);
+  const [readingTimeExceeded, setTimeExceeded] = useState(false);
+
+          useEffect(() => {
+            setTimeout(() => {
+              setTimeExceeded(true);
+            }, 7000);
+          }, []);
 
         /* Display Content On Load */
 
           useEffect(() => {
 
-            if (itemsLoaded == 10) {
+            if (itemsLoaded == 10 && readingTimeExceeded == true) {
               onContentLoad();
             }
 
-          }, [itemsLoaded]);
+          }, [itemsLoaded, readingTimeExceeded]);
 
   /* Exhibition content "Swipers" returned by an if, based on site.language */
 
@@ -44,6 +51,7 @@ export default function Exhibition({ site, setExhibitionSwiper, setArtworksSwipe
 
         <Swiper
 
+          touchRatio={1.2}
           spaceBetween={0}
           slidesPerView={1}
           pagination={{ clickable: false }}
@@ -199,7 +207,7 @@ function onContentLoad() {
   addFontRuleToHead();
     
     if ((document.querySelector(".loader")) != null) {
-    document.querySelector(".loader").style.opacity = 0;
+    document.getElementById("loaderContainer").style.opacity = 0;
     }
 
     setTimeout(() => {

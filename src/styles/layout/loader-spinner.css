@@ -5,18 +5,20 @@
   display: grid;
   place-items: center;
   top: 0px;
+  background-color: transparent;
+  transition: opacity 1s ease-in-out;
+  opacity: 0;
 
 }
 
 .loader {
-  width: 60px;
-  height: 60px;
+  width: 48px;
+  height: 48px;
   border-radius: 70%;
-  transition: opacity 1s ease-in-out;
-  opacity: 0;
+
   display: inline-block;
-  border-top: 4px solid #0e0e0e;
-  border-right: 4px solid transparent;
+  border-top: 2px solid #131313;
+  border-right: 2px solid transparent;
   box-sizing: border-box;
   animation: rotation 1s linear infinite;
 }

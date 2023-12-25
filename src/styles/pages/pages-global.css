@@ -1,7 +1,7 @@
 
 
 #artwork_page {
-    margin: 16px 24px;
+    margin: 0px 24px;
     opacity: 0;
     transition: opacity 2s;
 }
@@ -17,14 +17,17 @@ a {
     font-weight: 500;
 }
 
-
+#welcomeText {
+    width: 80%;
+}
 
 
 h3 {
 
     padding-bottom: 4px;
     font-size: 14.94px;
-    font-weight: 700 !important;
+    font-weight: 500 !important;
+    
 }
 
 h4 {

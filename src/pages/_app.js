@@ -1,5 +1,5 @@
 import styles from 'styles/global.css'
-import header from 'styles/layout/header.css'
+
 import menu from 'styles/layout/menu.css'
 import languageButton from 'styles/layout/languageButton.css'
 import welcomeScreen from 'styles/pages/welcome-screen.css'
@@ -16,11 +16,40 @@ import butterflies from 'styles/pages/butterflies.css'
 
 import loader_spinner from 'styles/layout/loader-spinner.css'
 
+import { Montserrat, Noto_Sans_HK } from 'next/font/google'
+
+const notosanshk = Noto_Sans_HK({subsets: ["latin"], weight: ['100', '200', '300', '400', '500', '600', '700']});
+const montserrat = Montserrat({subsets: ["latin"]});
+
+
 export default function App({ Component, pageProps }) {
+
+  console.log(montserrat);
  
   return (
 
     <>
+
+      <style jsx global>
+      
+        {
+    
+          `
+          .notoSansHk {
+            font-family: ${notosanshk.style.fontFamily};
+
+          }
+          
+          .montserrat {
+              font-family: ${montserrat.style.fontFamily};
+            }
+
+
+
+          `
+        }
+      
+      </style>
 
       <Component {...pageProps} />
 

@@ -1,3 +1,4 @@
+import { montserrat, notosanshk } from "pages/_app";
 import { enterSite, enterSiteZh } from "./enterbuttons";
 import { useEffect } from "react";
 
@@ -39,13 +40,13 @@ function changeUniversalFontToEnglishOnEnter() {
 
   setTimeout(() => {
 
-    (async function() {
-      var stringToStyles = "* { font-family: '__Montserrat_cce811', '__Montserrat_Fallback_cce811'; }";
+
+      var stringToStyles = `* { font-family: ${montserrat.style.fontFamily} }`;
       var styleElement = document.createElement('style');
       styleElement.appendChild(document.createTextNode(stringToStyles));
       document.head.appendChild(styleElement);
 
-    })();
+
 
   }, 1000)
 
@@ -55,13 +56,13 @@ function changeUniversalFontToChineseOnEnter() {
   
   setTimeout(() => {
 
-    (async function() {
-      var stringToStyles = "* { font-family: '__Noto_Sans_HK_d9bc71', '__Noto_Sans_HK_Fallback_d9bc71'; }";
+   
+      var stringToStyles = `* { font-family: ${notosanshk.style.fontFamily} }`;
       var styleElement = document.createElement('style');
       styleElement.appendChild(document.createTextNode(stringToStyles));
       document.head.appendChild(styleElement);
 
-    })();
+
 
   }, 1000)
 

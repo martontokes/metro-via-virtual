@@ -19,12 +19,9 @@ import loader_spinner from 'styles/layout/loader-spinner.css'
 import { Montserrat, Noto_Sans_HK } from 'next/font/google'
 
 const notosanshk = Noto_Sans_HK({subsets: ["latin"], weight: ['100', '200', '300', '400', '500', '600', '700']});
-const montserrat = Montserrat({subsets: ["latin"]});
-
+const montserrat = Montserrat({subsets: ["latin"], weight: ['100', '200', '300', '400', '500', '600', '700']});
 
 export default function App({ Component, pageProps }) {
-
-  console.log(montserrat);
  
   return (
 
@@ -59,3 +56,6 @@ export default function App({ Component, pageProps }) {
   
 }
 
+
+export { montserrat };
+export { notosanshk };

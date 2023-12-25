@@ -51,6 +51,7 @@ export default function Exhibition({ site, setExhibitionSwiper, setArtworksSwipe
 
         <Swiper
 
+          slideClass={"exhibitionSlide"}
           touchRatio={1.2}
           spaceBetween={0}
           slidesPerView={1}
@@ -69,7 +70,7 @@ export default function Exhibition({ site, setExhibitionSwiper, setArtworksSwipe
           onSlideChange={(swiper) => { reRenderMenuOnSlideChange(swiper.activeIndex);
           setExhibitionSwiper(swiper);
           }}
-          onSliderMove={(swiper) => { onSliderMove_Parent(swiper.activeIndex); }}
+          onSliderFirstMove={(swiper) => { onSliderMove_Parent(swiper.activeIndex); }}
           onTouchStart={() => {}}
           onBeforeTransitionStart={(swiper) => {
 
@@ -81,13 +82,14 @@ export default function Exhibition({ site, setExhibitionSwiper, setArtworksSwipe
           <SwiperSlide><Statement /></SwiperSlide>
           <SwiperSlide>
             <Swiper
+            slideClass={"artworkSlide"}
             onInit={(swiper) => {setArtworksSwiper(swiper);}}
             onSlideChange={(swiper) => {setArtworksSwiper(swiper);}}
             spaceBetween={0}
             slidesPerView={1}
             onSwiper={(swiper) => {swiper.updateAutoHeight(1); }}
             passiveListeners={true}
-            onSliderMove={(swiper) => { onSliderMove_Child(swiper.activeIndex); }}
+            onSliderFirstMove={(swiper) => { onSliderMove_Child(swiper.activeIndex); }}
             onBeforeTransitionStart={(swiper) => {
 
             }}
@@ -230,34 +232,33 @@ function reRenderMenuOnSlideChange(index) {
 
 function onSliderMove_Parent(index) {
 
-  if (document.querySelector(".swiper-slide-next")) { 
-    document.querySelector(".swiper-slide-next").scrollTop = 0; }
-    if (document.querySelector(".swiper-slide-prev")) {
-    document.querySelector(".swiper-slide-prev").scrollTop = 0; }
-
-    if (index == 3) {
-      document.querySelectorAll(".swiper-slide-prev")[1].scrollTop = 0;
-    }
+  let elements = document.querySelectorAll(".exhibitionSlide");
+  if (index.activeIndex == 0) {
+    
+  }
 
 }
 
+// function onSliderMove_Parent(index) {
+
+//   let elements = document.querySelector(".swiper").querySelectorAll(".swiper-slide");
+//     for (let i = 0; i < elements.length; i++) {
+//       if (i == index.activeIndex) {
+//         continue;
+//       }
+//       elements[i].scrollTo(0,0);
+//     }
+// }
+
 function onSliderMove_Child(index) {
 
-  if (document.querySelector(".swiper-slide-next")) { 
-    document.querySelector(".swiper-slide-next").scrollTop = 0;
+  let elements = document.querySelector(".swiper").querySelectorAll(".swiper-slide");
+  for (let i = 0; i < elements.length; i++) {
+    console.log(index.activeIndex);
+    if (i == index.activeIndex) {
+      continue;
     }
-
-    if (document.querySelector(".swiper-slide-prev")) {
-    document.querySelector(".swiper-slide-prev").scrollTop = 0; }
-
-    if (index > 0 && index < 4 ) {
-      document.querySelectorAll(".swiper-slide-prev")[1].scrollTop = 0;
-      document.querySelectorAll(".swiper-slide-next")[1].scrollTop = 0;  
-    }
-
-    if (index == 4 ) {
-      document.querySelectorAll(".swiper-slide-prev")[1].scrollTop = 0;
-      document.querySelector(".swiper-slide-next").scrollTop = 0;  
-    }
+    elements[i].scrollTo(0,0);
+  }
 
 }

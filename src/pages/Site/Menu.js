@@ -29,7 +29,6 @@ function statementButtonClickHandler(index) {
 
 function artworksButtonClickHandler(index) {
 
-  console.log(index.activeIndex);
   scrollAllToTop(index);
   index.slideTo(1, 500, false);
   console.log(index.activeIndex);
@@ -51,7 +50,7 @@ function curatorButtonClickHandler(index) {
 
 function scrollAllToTop(exhibitionSwiper, artworksSwiper) {
 
-console.log(exhibitionSlides);
+  let elements = document.querySelectorAll(".swiper-slide");
 
   for (let i = 0; i < elements.length; i++) {
     if (i == exhibitionSwiper.activeIndex) {

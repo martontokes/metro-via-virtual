@@ -1,7 +1,7 @@
 export default function Menu({exhibitionSwiper, artworksSwiper}) {
 
-  const exhibitionSlides = exhibitionSwiper.slides;
-  const artworksSlides = artworksSwiper.slides;
+  const exhibitionSlides = exhibitionSwiper;
+  const artworksSlides = artworksSwiper;
 
     return (
 

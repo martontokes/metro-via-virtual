@@ -50,3 +50,15 @@ body::webkit-scrollbar {
 body {
   margin: 0px;
 }
+
+/* #bg {
+  background-image: url("/bgww.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0px;
+  z-index: -10000;
+} */

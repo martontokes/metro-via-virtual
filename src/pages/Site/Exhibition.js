@@ -51,7 +51,7 @@ export default function Exhibition({ site, setExhibitionSwiper, setArtworksSwipe
 
         <Swiper
 
-          slideClass={"exhibitionSlide"}
+
           touchRatio={1.2}
           spaceBetween={0}
           slidesPerView={1}
@@ -63,6 +63,8 @@ export default function Exhibition({ site, setExhibitionSwiper, setArtworksSwipe
           onInit={(swiper) => {
             resizeSwiperContent();
             setExhibitionSwiper(swiper);
+            console.log(swiper);
+            console.log(swiper.slides);
             const menuButtons = document.querySelectorAll(".menubutton");
             }}
           autoHeight={true}
@@ -82,7 +84,7 @@ export default function Exhibition({ site, setExhibitionSwiper, setArtworksSwipe
           <SwiperSlide><Statement /></SwiperSlide>
           <SwiperSlide>
             <Swiper
-            slideClass={"artworkSlide"}
+
             onInit={(swiper) => {setArtworksSwiper(swiper);}}
             onSlideChange={(swiper) => {setArtworksSwiper(swiper);}}
             spaceBetween={0}
@@ -234,7 +236,7 @@ function onSliderMove_Parent(index) {
 
   let elements = document.querySelectorAll(".exhibitionSlide");
   if (index.activeIndex == 0) {
-    
+
   }
 
 }

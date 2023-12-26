@@ -1,6 +1,6 @@
 import React from "react";
 import Logo from "./Logo";
-import Menu from "./Menu";
+import Menu from "./ExhibitionMenu";
 
 export default function Header({ site }) {
 

@@ -4,9 +4,12 @@
 
   background-color: #f3f3f3;
   -webkit-tap-highlight-color: rgba(0,0,0,0);
+  height: 100vh;
 
 
 }
+
+
 
 * {
 
@@ -22,6 +25,10 @@ button {
   background-color: transparent;
 
 
+}
+
+body, #__next {
+  height: 100%;
 }
 
 #exhibition {
@@ -50,9 +57,9 @@ body::webkit-scrollbar {
 body {
   margin: 0px;
 }
-
-/* #bg {
-  background-image: url("/bgww.png");
+/* 
+#bg {
+  background-image: url("/bg.png");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -61,4 +68,6 @@ body {
   position: fixed;
   top: 0px;
   z-index: -10000;
+  filter: invert(1);
+  opacity: 0.2;
 } */

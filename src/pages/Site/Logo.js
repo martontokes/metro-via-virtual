@@ -8,7 +8,7 @@ export default function Logo({site}) {
 
         <>
           <div id="headerTextContainer">
-
+            <h1 id="headerTitle" className="montserrat">metro via virtual</h1>
 
           </div>
         </>

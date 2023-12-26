@@ -18,8 +18,13 @@ import loader_spinner from 'styles/layout/loader-spinner.css'
 
 import { Montserrat, Noto_Sans_HK } from 'next/font/google'
 
-const notosanshk = Noto_Sans_HK({subsets: ["latin"], weight: ['100', '200', '300', '400', '500', '600', '700']});
-const montserrat = Montserrat({subsets: ["latin"], weight: ['100', '200', '300', '400', '500', '600', '700']});
+
+const notosanshk = Noto_Sans_HK({subsets: ["latin"], weight: ['100', '200', '300', '400', '500', '600', '700'],  display: 'swap'});
+const montserrat = Montserrat({subsets: ["latin"], weight: ['100', '200', '300', '400', '500', '600', '700'], display: 'swap'});
+
+setTimeout(() => {
+  console.log(notosanshk);
+}, 5000);
 
 export default function App({ Component, pageProps }) {
  

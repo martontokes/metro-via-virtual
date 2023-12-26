@@ -27,3 +27,16 @@
 
   }
   
+#artworksMenu {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin: 0px 24px;
+  margin-bottom: 24px;
+}
+
+#artworksMenu button {
+  min-height: 48px;
+  font-weight: 500 !important;
+
+}

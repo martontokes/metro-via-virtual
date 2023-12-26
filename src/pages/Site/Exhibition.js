@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 
-import Menu from "./Menu";
+import Menu from "./ExhibitionMenu";
 import Header from "./Header";
 
 import Autosave from "./Content/English/Artworks/Autosave";
@@ -12,34 +12,30 @@ import Curator from "./Content/English/Curator";
 import Statement from './Content/English/Statement';
 import Illumination from "./Content/English/Artworks/Illumination";
 
+import ArtworksMenu from "./ArtworksMenu";
+
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Pagination } from 'swiper/modules';
+import { Pagination, Scrollbar } from 'swiper/modules';
 
 import 'swiper/css';
 import 'swiper/css/pagination';
+import 'swiper/css/scrollbar';
 
 // Event handlers and helpers at the bottom //
 
 export default function Exhibition({ site, setExhibitionSwiper, setArtworksSwiper }) {
 
   const [itemsLoaded, incrementLoad] = useState(0);
-  const [readingTimeExceeded, setTimeExceeded] = useState(false);
-
-          useEffect(() => {
-            setTimeout(() => {
-              setTimeExceeded(true);
-            }, 7000);
-          }, []);
 
         /* Display Content On Load */
 
           useEffect(() => {
 
-            if (itemsLoaded == 10 && readingTimeExceeded == true) {
+            if (itemsLoaded == 10) {
               onContentLoad();
             }
 
-          }, [itemsLoaded, readingTimeExceeded]);
+          }, [itemsLoaded]);
 
   /* Exhibition content "Swipers" returned by an if, based on site.language */
 
@@ -49,8 +45,8 @@ export default function Exhibition({ site, setExhibitionSwiper, setArtworksSwipe
       
       <>
 
-        <Swiper
 
+        <Swiper
 
           touchRatio={1.2}
           spaceBetween={0}
@@ -83,8 +79,10 @@ export default function Exhibition({ site, setExhibitionSwiper, setArtworksSwipe
 
           <SwiperSlide><Statement /></SwiperSlide>
           <SwiperSlide>
+            
             <Swiper
-
+            modules={[Pagination]}
+            pagination={true}
             onInit={(swiper) => {setArtworksSwiper(swiper);}}
             onSlideChange={(swiper) => {setArtworksSwiper(swiper);}}
             spaceBetween={0}
@@ -104,6 +102,7 @@ export default function Exhibition({ site, setExhibitionSwiper, setArtworksSwipe
               "--swiper-pagination-bullet-horizontal-gap": "6px",
 
             }}>
+                    
               <SwiperSlide><Domestik incrementLoad={incrementLoad} /></SwiperSlide>
               <SwiperSlide><Illumination incrementLoad={incrementLoad} /></SwiperSlide>
               <SwiperSlide><Confidential incrementLoad={incrementLoad} /></SwiperSlide>
@@ -161,12 +160,6 @@ export default function Exhibition({ site, setExhibitionSwiper, setArtworksSwipe
 
       /// Helpers and Handlers ///
 
-
-// function isIOS() {
-
-//   return /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
-
-// }
 
 function resizeSwiperContent() {
 

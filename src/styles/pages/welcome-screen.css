@@ -3,6 +3,7 @@
 /* These styles are applied to the content of the welcome screen */
 /* All welcome screen IDs start with the "wcs" prefix */
 
+
 :root {
 
     --buttonText: #111111;
@@ -10,7 +11,7 @@
     /* --buttonBackground: ; */
     --borderRadius: 32px;
     --clickedButtonColor: #000000e1;
-}
+  }
 
 .buttonClicked {
 
@@ -32,6 +33,8 @@
         width: 100%;
         transition: opacity 1s ease-in-out;
         overflow-x: hidden;
+        height: 100%;
+        opacity: 0;
     }
     
     #wcsInnerContainer {
@@ -67,7 +70,7 @@
     }
 
     #wcsExhibitionEnglishSubheader {
-        font-size: 15.75px;
+        font-size: 14.94px;
         opacity: 1;
         padding-top: 12px;
         font-weight: 500;
@@ -83,10 +86,9 @@
         height: 48px;
         align-self: center;
         margin-top: 24px;
-        font-size: 15.75px;
+        font-size: 14.94px;
         border-radius: var(--borderRadius);
         background-color: var(--buttonBackground);
-
 
     }
 
@@ -123,7 +125,7 @@
         border-radius: var(--borderRadius);
         height: 48px;
         margin-top: 24px;
-        font-size: 14.94px;
+        font-size: 14px;
         align-self: center;
         letter-spacing: 0.1rem;
         background-color: var(--buttonBackground);
@@ -131,7 +133,7 @@
     }
 
     #wcsEnterButtonChinese span {
-        font-weight: 200;
+        font-weight: 300;
         color: var(--buttonText);
         position: relative;
  

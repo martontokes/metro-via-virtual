@@ -1,4 +1,4 @@
-import Menu from "./Menu"
+import ExhibitionMenu from "./ExhibitionMenu"
 import Content from "./Content"
 import Header from "./Header"
 import Exhibition from "./Exhibition"
@@ -24,7 +24,7 @@ export default function Site({site}) {
         <div id="exhibition">
 
           <Header site={site} />
-          <Menu exhibitionSwiper={exhibitionSwiper} artworksSwiper={artworksSwiper} />
+          <ExhibitionMenu exhibitionSwiper={exhibitionSwiper} artworksSwiper={artworksSwiper} />
           <Exhibition setArtworksSwiper={setArtworksSwiper} setExhibitionSwiper={setExhibitionSwiper} site={site} />
 
         </div>

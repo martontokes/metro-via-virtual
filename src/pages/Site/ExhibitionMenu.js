@@ -12,7 +12,6 @@ export default function Menu({exhibitionSwiper, artworksSwiper}) {
         <button onClick={() => essayButtonClickHandler(exhibitionSwiper, artworksSwiper)} className="menubutton">essay</button>
         <button onClick={() => curatorButtonClickHandler(exhibitionSwiper, artworksSwiper)} className="menubutton">curator</button>
       </div>
-      <div id="artworksMenu"></div>
     </>
 
   );

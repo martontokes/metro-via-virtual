@@ -1,4 +1,12 @@
+import { useEffect } from "react";
+
 export default function Domestik({incrementLoad}) {
+
+  useEffect(() => {
+    document.getElementById("domestikPlayer").addEventListener("touchmove", function (event) {
+      event.stopPropagation();
+    })
+  }, []);
 
   return (
 
@@ -10,7 +18,7 @@ export default function Domestik({incrementLoad}) {
           <h4>Riar Rizaldi</h4>
           <a href="https://www.riarrizaldi.com" target="_blank">www.riarrizaldi.com</a>
         </div>
-        {(true) ? <audio controls style={{padding: "16px"}} onLoad={() => {incrementLoad(n => n + 1)}}>
+        {(true) ? <audio id="domestikPlayer" controls style={{padding: "16px"}} onLoad={() => {incrementLoad(n => n + 1)}}>
         <source src="DomestikPublik.mp3" type="audio/mp3" />
         </audio> : null }
         <p>Domestik/Publik reflects the notions of sound and spatial knowledge as conceived by Indonesian domestic migrant workers in Hong Kong.<br /><br />The first part of the piece focuses on a ‘public ear’ while the second half is an investigation into a ‘domestic ear.’<br /><br />A soundscape of Sunday at Victoria Park, the weekly women’s rights speech, public radio-karaoke, the soundtrack for Jaranan dance and a composed noise of domestic utensils are presented in this sonic-narrative that mimics the aesthetic of radio play.

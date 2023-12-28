@@ -1,3 +1,5 @@
+import { Pagination, Scrollbar } from 'swiper/modules';
+
 const exhibitionSwiperConfig = {
 
     touchRatio: 1.2,

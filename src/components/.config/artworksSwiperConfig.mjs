@@ -1,4 +1,7 @@
+import { Pagination, Scrollbar } from 'swiper/modules';
+
 const artworksSwiperConfig = {
+  
   modules: [Pagination],
   pagination: true,
   onInit: (swiper) => {

@@ -14,6 +14,10 @@ export default function App() {
 
   const site = { language, setLanguage, exhibition, setExhibition, artworks, setArtworks };
 
+  useEffect(() => {
+    console.log("App useEffect run");
+  }, [])
+
     return (
 
       <>

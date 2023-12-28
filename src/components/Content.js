@@ -1,12 +1,20 @@
 import exhibitionSwiperConfig from "./.config/exhibitionSwiperConfig.mjs"
 import artworksSwiperConfig from "./.config/artworksSwiperConfig.mjs"
 
+import { Swiper, SwiperSlide } from 'swiper/react';
+
+import { useState } from "react";
+
+import 'swiper/css';
+import 'swiper/css/pagination';
+import 'swiper/css/scrollbar';
+
 export default function Content({ site }) {
 
   const [itemsLoaded, incrementLoad] = useState(0);
 
           useEffect(() => {
-
+            console.log("content use Effect triggered");
             if (itemsLoaded == 10) {
               console.log("loaded");
             }

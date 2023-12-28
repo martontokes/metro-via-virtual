@@ -4,17 +4,32 @@ import Menu from "./ExhibitionMenu";
 
 export default function Header({ site }) {
 
+
   return (
 
     <>
-      <div id="header">
-        <div id="Logo">
-          <Logo site={site} />
-        </div>
 
-      </div>
+      {site.language === 'english' ? (
+
+        <>
+          <div id="headerTextContainer">
+            <h1 id="headerTitle" className="montserrat">metro via virtual</h1>
+            <h2 id="headerSubtitle" className="montserrat">a virtual exhibition from Hong Kong</h2>
+          </div>
+        </>
+
+      ) : (
+
+        <>
+          <div id="logoContainer">
+            <h1 id="headerTitle" className="noto">虛擬都會</h1>
+            <h2 id="headerSubtitle" className="noto">來自香港的線上展覽</h2>
+          </div>
+        </>
+
+      )}
+
     </>
-
   );
 
 }

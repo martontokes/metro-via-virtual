@@ -32,7 +32,7 @@ export default function Exhibition({ site, setExhibitionSwiper, setArtworksSwipe
           useEffect(() => {
 
             if (itemsLoaded == 10) {
-              onContentLoad();
+              // onContentLoad();
             }
 
           }, [itemsLoaded]);
@@ -165,7 +165,7 @@ function resizeSwiperContent() {
 
   let slides = document.querySelectorAll(".swiper-slide");
   for (let i = 0; i < slides.length; i++) {
-    slides[i].style.height = window.innerHeight - 56 + "px";
+    slides[i].style.height = window.innerHeight - 82 + "px";
     console.log("resized swiper slide");
   }
 
@@ -211,7 +211,10 @@ function onContentLoad() {
       document.getElementById("loaderContainer").remove();
       resizeSwiperContent();
       document.getElementById("exhibition").style.opacity = 1;
+      
     }, 1000);
+
+
 
 }
 

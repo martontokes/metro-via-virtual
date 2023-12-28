@@ -7,10 +7,10 @@
 :root {
 
     --buttonText: #111111;
-    --buttonBorder: rgb(111, 111, 111);
+    --buttonBorder: #999999;
     /* --buttonBackground: ; */
     --borderRadius: 32px;
-    --clickedButtonColor: #000000e1;
+    --clickedButtonColor: #0c54beda;
   }
 
 .buttonClicked {
@@ -34,7 +34,7 @@
         transition: opacity 1s ease-in-out;
         overflow-x: hidden;
         height: 100%;
-        opacity: 0;
+        opacity: 1;
     }
     
     #wcsInnerContainer {
@@ -89,7 +89,7 @@
         font-size: 14.94px;
         border-radius: var(--borderRadius);
         background-color: var(--buttonBackground);
-
+        transition: border-color 500ms;
     }
 
     #wcsEnterButtonEnglish span {

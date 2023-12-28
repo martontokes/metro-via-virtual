@@ -8,6 +8,7 @@ import paginator from 'styles/layout/paginator.css'
 import horizontalScrollMobileView from 'styles/layout/horizontalScrollMobileView.css'
 import scrollbar from 'styles/layout/scrollbar.css'
 import swipeManual from 'styles/layout/swipeManual.css'
+import header from 'styles/layout/header.css'
 
 import illumination from 'styles/pages/illumination.css'
 import autosave from 'styles/pages/autosave.css'
@@ -21,10 +22,6 @@ import { Montserrat, Noto_Sans_HK } from 'next/font/google'
 
 const notosanshk = Noto_Sans_HK({subsets: ["latin"], weight: ['100', '200', '300', '400', '500', '600', '700'],  display: 'swap'});
 const montserrat = Montserrat({subsets: ["latin"], weight: ['100', '200', '300', '400', '500', '600', '700'], display: 'swap'});
-
-setTimeout(() => {
-  console.log(notosanshk);
-}, 5000);
 
 export default function App({ Component, pageProps }) {
  

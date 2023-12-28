@@ -14,3 +14,9 @@
     top: 0 !important;
 
 }
+
+audio::-webkit-media-controls-panel {
+    background-color: red;
+    color: #333;
+    border-radius: 8px;
+  }

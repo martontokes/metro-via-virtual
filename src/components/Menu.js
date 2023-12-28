@@ -4,10 +4,10 @@ export default function Menu({site}) {
 
     <>
       <div id="mainMenu">
-        <button onClick={() => statementButtonClickHandler(exhibitionSwiper, artworksSwiper)} className="menubutton activeButton">statement</button>
-        <button onClick={() => artworksButtonClickHandler(exhibitionSwiper, artworksSwiper)} className="menubutton">artworks</button>
-        <button onClick={() => essayButtonClickHandler(exhibitionSwiper, artworksSwiper)} className="menubutton">essay</button>
-        <button onClick={() => curatorButtonClickHandler(exhibitionSwiper, artworksSwiper)} className="menubutton">curator</button>
+        <button onClick={() => statementButtonClickHandler(site.exhibition, site.artwork)} className="menubutton activeButton">statement</button>
+        <button onClick={() => artworksButtonClickHandler(site.exhibition, site.artwork)} className="menubutton">artworks</button>
+        <button onClick={() => essayButtonClickHandler(site.exhibition, site.artwork)} className="menubutton">essay</button>
+        <button onClick={() => curatorButtonClickHandler(site.exhibition, site.artwork)} className="menubutton">curator</button>
       </div>
     </>
 

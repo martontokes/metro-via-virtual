@@ -1,4 +1,4 @@
-export default function Statement() {
+export default function Statement({site}) {
 
     return (
 

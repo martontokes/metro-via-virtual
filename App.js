@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react"
 
-import Menu from "./Site/ExhibitionMenu"
+import Menu from "./Site/Menu"
 import Header from "./Site/Header"
-import Exhibition from "./Site/Exhibition"
+import Content from "./Site/Content"
 
 export default function App() {
 
@@ -18,7 +18,7 @@ export default function App() {
 
         <Header site={site} />
         <Menu site={site}  />
-        <Exhibition site={site} />
+        <Content site={site} />
     
       </>
 

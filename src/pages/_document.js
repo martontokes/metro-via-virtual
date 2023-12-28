@@ -4,12 +4,6 @@ import { useEffect } from 'react'
 
 export default function Document() {
 
-// useEffect(() => {
-//   const panorama = new PANOLENS.ImagePanorama( '@/public/butterflies/0104b/media/butterflies.mp4' );
-// const viewer = new PANOLENS.Viewer();
-// viewer.add( panorama );
-// }, []);
-
   return (
 
     <Html lang="en">

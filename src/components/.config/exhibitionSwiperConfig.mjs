@@ -11,19 +11,13 @@ const exhibitionSwiperConfig = {
     onSlideChangeTransitionEnd: () => {},
     preventInteractionOnTransition: true,
     onInit: (swiper) => {
-      resizeSwiperContent();
-      setExhibitionSwiper(swiper);
-      console.log(swiper);
-      console.log(swiper.slides);
-      const menuButtons = document.querySelectorAll(".menubutton");
     },
     autoHeight: true,
     onDragStart: () => {},
     onSlideChange: (swiper) => {
-      reRenderMenuOnSlideChange(swiper.activeIndex);
-      setExhibitionSwiper(swiper);
+
     },
-    onSliderFirstMove: (swiper) => { onSliderMove_Parent(swiper.activeIndex); },
+    onSliderFirstMove: (swiper) => { },
     onTouchStart: () => {},
     onBeforeTransitionStart: (swiper) => {},
     onSlideResetTransitionEnd: (swiper) => {},

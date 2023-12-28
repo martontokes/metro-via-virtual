@@ -4,12 +4,6 @@ const artworksSwiperConfig = {
   
   modules: [Pagination],
   pagination: true,
-  onInit: (swiper) => {
-    setArtworksSwiper(swiper);
-  },
-  onSlideChange: (swiper) => {
-    setArtworksSwiper(swiper);
-  },
   spaceBetween: 0,
   slidesPerView: 1,
   onSwiper: (swiper) => {
@@ -17,7 +11,6 @@ const artworksSwiperConfig = {
   },
   passiveListeners: true,
   onSliderFirstMove: (swiper) => {
-    onSliderMove_Child(swiper.activeIndex);
   },
   onBeforeTransitionStart: (swiper) => {
     // Add any additional logic for before transition starts

@@ -1,12 +1,14 @@
-import React, { useEffect, useState } from "react"
+import React, { useEffect, useState, useMemo } from "react"
 
-import Menu from "./Site/Menu"
-import Header from "./Site/Header"
-import Content from "./Site/Content"
+import Menu from "components/Menu"
+import Header from "components/Header"
+import Content from "components/Content"
+
+import detectLanguage from "/modules/detectLanguage.mjs"
 
 export default function App() {
 
-  const [language, setLanguage] = useState('english');
+  const [language, setLanguage] = useState('');
   const [exhibition, setExhibition] = useState('');
   const [artworks, setArtworks] = useState('');
 
@@ -26,3 +28,9 @@ export default function App() {
 
 }
 
+export async function getServerSideProps() {
+
+  const userLanguage = req ? req.headers['accept-language'] : navigator.language || navigator.userLanguage;
+  console.log(userLanguage);
+  return { userLanguage };
+}

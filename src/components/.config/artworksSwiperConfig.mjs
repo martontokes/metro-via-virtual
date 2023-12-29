@@ -1,9 +1,10 @@
-import { Pagination, Scrollbar } from 'swiper/modules';
+import { Pagination, Navigation } from 'swiper/modules';
 
 const artworksSwiperConfig = {
-  
-  modules: [Pagination],
+  navigation: true,
+  modules: [Pagination, Navigation],
   pagination: true,
+  
   spaceBetween: 0,
   slidesPerView: 1,
   onSwiper: (swiper) => {
@@ -16,6 +17,12 @@ const artworksSwiperConfig = {
     // Add any additional logic for before transition starts
   },
   style: {
+    
+    "--swiper-navigation-size": "44px",
+    "--swiper-navigation-top-offset": "50%",
+    "--swiper-navigation-sides-offset": "10px",
+    "--swiper-navigation-color": "black",
+    
     "--swiper-pagination-color": "white",
     "--swiper-pagination-bullet-inactive-color": "rgb(50,50,50)",
     "--swiper-pagination-bullet-inactive-opacity": "1",

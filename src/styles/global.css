@@ -2,7 +2,7 @@
 
 :root {
 
-  background-color: #fafafa;
+
   -webkit-tap-highlight-color: rgba(0,0,0,0);
   height: 100vh;
 
@@ -15,7 +15,7 @@
 
   padding: 0px;
   margin: 0px;
-  color: #303030;
+  color: #fffff0;
   
 }
 
@@ -36,6 +36,7 @@ body, #__next {
 
   opacity: 1;
   transition: opacity 1s ease-in-out;
+  margin: 0px 0px;
 
 }
 

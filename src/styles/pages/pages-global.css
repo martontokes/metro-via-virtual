@@ -2,8 +2,12 @@
 
 #artwork_page {
     margin: 0px 24px;
-    opacity: 0;
+    opacity: 1;
     transition: opacity 2s;
+}
+
+.swiper {
+    height: 100vh;
 }
 
 p {

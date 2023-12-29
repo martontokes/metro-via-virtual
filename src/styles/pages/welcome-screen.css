@@ -6,21 +6,17 @@
 
 :root {
 
-    --buttonText: #000000;
-    --buttonBorder: #000000;
+    --buttonText: #fffff0;
+    --buttonBorder: #858585;
     /* --buttonBackground: ; */
-    --borderRadius: 32px;
-    --clickedButtonColor: #0c54beda;
+    --borderRadius: 16px;
     --buttonBorderWidth: 1px;
+    /* #1b1c1e */
+    background-color: #0d0f0d;
   }
 
-.buttonClicked {
-
-    border-color: var(--clickedButtonColor) !important;
-}
-
-.buttonTextClicked {
-    color: var(--clickedButtonColor) !important;
+#welcomeOuterContainer {
+    transition: opacity 1s;
 }
 
 .titleEngW {
@@ -92,8 +88,8 @@
     }
 
     
-    #welcomeEnterButtonEnglish {
-        width: 72%;
+    #welcomeButtonEnglish {
+        width: 240px;
         border: solid var(--buttonBorderWidth) var(--buttonBorder);
         height: 48px;
         align-self: center;
@@ -102,10 +98,9 @@
         border-radius: var(--borderRadius);
         background-color: var(--buttonBackground);
         transition: border-color 500ms;
-
     }
 
-    #welcomeEnterButtonEnglish span {
+    #welcomeButtonEnglish span {
 
         position: relative;
         font-weight: 700;
@@ -141,8 +136,8 @@
     }
 
 
-    #welcomeEnterButtonChinese {
-        width: 72%;
+    #welcomeButtonChinese {
+        width: 240px;
         border: solid var(--buttonBorderWidth) var(--buttonBorder);
         border-radius: var(--borderRadius);
         height: 48px;
@@ -154,7 +149,7 @@
 
     }
 
-    #welcomeEnterButtonChinese span {
+    #welcomeButtonChinese span {
         font-weight: 300;
         color: var(--buttonText);
         position: relative;

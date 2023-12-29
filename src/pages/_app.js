@@ -13,6 +13,7 @@ import header from "styles/layout/header.css"
 import loaderSpinner from "styles/layout/loader-spinner.css"
 import scrollbar from "styles/layout/scrollbar.css"
 import menu from "styles/layout/menu.css"
+import swiper from "styles/layout/swiper.css"
 
 const notosanshk = Noto_Sans_HK({subsets: ["latin"], weight: ['100', '200', '300', '400', '500', '600', '700'], display: "block"});
 const montserrat = Montserrat({subsets: ["latin"], weight: ['100', '200', '300', '400', '500', '600', '700']});

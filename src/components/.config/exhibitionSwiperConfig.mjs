@@ -11,6 +11,10 @@ const exhibitionSwiperConfig = {
     onSlideChangeTransitionEnd: () => {},
     preventInteractionOnTransition: true,
     onInit: (swiper) => {
+      resizeSwiperContent();
+    },
+    onResize: () => {
+      resizeSwiperContent();
     },
     autoHeight: true,
     onDragStart: () => {},
@@ -23,5 +27,15 @@ const exhibitionSwiperConfig = {
     onSlideResetTransitionEnd: (swiper) => {},
     
   };
+
+  function resizeSwiperContent() {
+
+    let slides = document.querySelectorAll(".swiper-slide");
+    for (let i = 0; i < slides.length; i++) {
+      slides[i].style.height = window.innerHeight - 82 + "px";
+      console.log("resized swiper slide");
+    }
+  
+  }
   
   export default exhibitionSwiperConfig;

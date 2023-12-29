@@ -1,11 +1,11 @@
 .menubutton {
-  color: #737373;
+  color: #858585;
   font-weight: 500 !important;
   font-size: 12.3px;
 }
 
 .activeButton {
-  color: #303030;
+  color: #fffff0;
 }
 
 #mainMenu {

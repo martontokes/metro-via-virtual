@@ -2,12 +2,14 @@ import exhibitionSwiperConfig from "./.config/exhibitionSwiperConfig.mjs"
 import artworksSwiperConfig from "./.config/artworksSwiperConfig.mjs"
 
 import { Swiper, SwiperSlide } from 'swiper/react';
+import { Pagination, Navigation } from 'swiper/modules';
 
 import { useState, useEffect } from "react";
 
 import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
+import 'swiper/css/navigation'
 
 import Statement from "/src/components/content/English/Statement";
 import Essay from "/src/components/content/English/Essay";
@@ -37,13 +39,18 @@ export default function Content({ site }) {
 
           }, [itemsLoaded]);
 
+          useEffect(() => {
+            
+          }, []);
+
     return (
       
       <>
 
         <Swiper {...exhibitionSwiperConfig}
         onInit={(swiper) => {site.setExhibition(swiper);}}
-        onSlideChange={(swiper) => {site.setExhibition(swiper);}}>
+        onSlideChange={(swiper) => {site.setExhibition(swiper);}}
+        >
 
           <SwiperSlide>
           {(site.language == "english") ? <Statement /> : <StatementZh /> }
@@ -52,7 +59,9 @@ export default function Content({ site }) {
           <SwiperSlide>
             <Swiper {...artworksSwiperConfig}
             onInit={(swiper) => {site.setArtworks(swiper);}}
-            onSlideChange={(swiper) => {site.setArtworks(swiper);}}>  
+            onSlideChange={(swiper) => {site.setArtworks(swiper);}}
+            navigation={true}
+            modules={[Navigation]}>  
 
               {(site.language == "english") ? 
               

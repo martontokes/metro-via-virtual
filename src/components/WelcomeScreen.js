@@ -2,6 +2,8 @@ import { useEffect } from "react";
 
 import { enterSite, enterSiteZh } from "/modules/enter-site-buttons.mjs";
 
+import { montserrat, notosanshk } from "pages/_app";
+
 export default function WelcomeScreen({site}) {
 
 useEffect(() => {
@@ -18,7 +20,10 @@ useEffect(() => {
             <div className="innerContentContainer">
             <h1 id="welcomeEnglishHeader" className="montserrat titleEngW">metro via virtual</h1>
             <h2 id="welcomeEnglishSubheader" className="montserrat titleEngW">a virtual exhibition from Hong Kong</h2>
-            <button id="welcomeEnterButtonEnglish" onClick={ () => enterSite(site) } ><span id="buttonTextEng" className="montserrat titleEngW">enter</span></button>
+            <button id="welcomeButtonEnglish" onClick={ () => {
+              enterSite(site);
+              addFontRuleToHead(montserrat);
+              }}><span id="buttonTextEng" className="montserrat titleEngW">enter</span></button>
             </div>
             <div className="innerContentContainer">
             <h1 id="welcomeChineseHeader" className="notoSansHk titleZhW">虛擬都會</h1>
@@ -26,9 +31,9 @@ useEffect(() => {
             <button onClick={ () => {
               
               enterSiteZh(site);
-              changeUniversalFontOnEnter();
+              addFontRuleToHead(notosanshk);
             
-            } } className="notoSansHk" id="welcomeEnterButtonChinese"><span id="buttonTextZh" className="notoSansHk titleZhW">進入</span></button>       
+            } } className="notoSansHk" id="welcomeButtonChinese"><span id="buttonTextZh" className="notoSansHk titleZhW">進入</span></button>       
 
             </div>
           </div>    
@@ -36,3 +41,17 @@ useEffect(() => {
       </>
     );
  }
+
+ function addFontRuleToHead(font) {
+
+  var pageFontRule = 
+      `* {
+        font-family: ${font.style.fontFamily}
+      }`;
+   
+
+      var styleElement = document.createElement('style');
+      styleElement.textContent = pageFontRule;
+      document.head.appendChild(styleElement);
+
+}

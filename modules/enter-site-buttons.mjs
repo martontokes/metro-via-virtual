@@ -1,11 +1,10 @@
 export function enterSite(site) {
 
-    document.getElementById("wcsOuterContainer").style.opacity = 0;
+    document.getElementById("welcomeOuterContainer").style.opacity = 0;
   
       setTimeout(() => {
         site.setLanguage("english");
-        site.toggleWelcomeScreen(false);
-        site.setActivePage("Statement");
+        site.setWelcomeScreen(false);
         setTimeout(() => {
           document.getElementById("exhibition").style.opacity = 1;
         }, 50);
@@ -17,12 +16,11 @@ export function enterSite(site) {
   
   export function enterSiteZh(site) {
   
-      document.getElementById("wcsOuterContainer").style.opacity = 0;
+      document.getElementById("welcomeOuterContainer").style.opacity = 0;
   
       setTimeout(() => {
           site.setLanguage("chinese");
-          site.toggleWelcomeScreen(false);
-          site.setActivePage("StatementZh");
+          site.setWelcomeScreen(false);
           setTimeout(() => {
             document.getElementById("exhibition").style.opacity = 1;
           }, 50);

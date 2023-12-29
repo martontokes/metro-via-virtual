@@ -30,10 +30,11 @@ export default function Content({ site }) {
   const [itemsLoaded, incrementLoad] = useState(0);
 
           useEffect(() => {
-
+            console.log("useEffect");
             if (itemsLoaded == 10) {
               console.log("loaded");
             }
+
           }, [itemsLoaded]);
 
     return (
@@ -44,58 +45,54 @@ export default function Content({ site }) {
         onInit={(swiper) => {site.setExhibition(swiper);}}
         onSlideChange={(swiper) => {site.setExhibition(swiper);}}>
 
-              {(site.language == "english") ? <Statement /> : <StatementZh /> }
           <SwiperSlide>
+          {(site.language == "english") ? <Statement /> : <StatementZh /> }
+          </SwiperSlide>
 
+          <SwiperSlide>
             <Swiper {...artworksSwiperConfig}
             onInit={(swiper) => {site.setArtworks(swiper);}}
             onSlideChange={(swiper) => {site.setArtworks(swiper);}}>  
 
-              {(site.language == "english") ? <EnglishArtworks incrementLoad={incrementLoad} /> : <ChineseArtworks incrementLoad={incrementLoad} /> }
+              {(site.language == "english") ? 
+              
+                <>
+
+                  <SwiperSlide><Domestik incrementLoad={incrementLoad} /></SwiperSlide>
+                  <SwiperSlide><Illumination incrementLoad={incrementLoad} /></SwiperSlide>
+                  <SwiperSlide><Confidential incrementLoad={incrementLoad} /></SwiperSlide>
+                  <SwiperSlide><Autosave incrementLoad={incrementLoad} /></SwiperSlide>
+                  <SwiperSlide><Butterflies /></SwiperSlide>
+              
+                </> : 
+
+                <>
+
+                  <SwiperSlide><DomestikZh incrementLoad={incrementLoad} /></SwiperSlide>
+                  <SwiperSlide><IlluminationZh incrementLoad={incrementLoad} /></SwiperSlide>
+                  <SwiperSlide><ConfidentialZh incrementLoad={incrementLoad} /></SwiperSlide>
+                  <SwiperSlide><AutosaveZh incrementLoad={incrementLoad} /></SwiperSlide>
+                  <SwiperSlide><ButterfliesZh /></SwiperSlide>
+
+                </>
+                
+              }
 
             </Swiper>
-
           </SwiperSlide>
 
+          <SwiperSlide>
           {(site.language == "english") ? <Essay /> : null }
+          </SwiperSlide>
+
+          <SwiperSlide>
           {(site.language == "english") ? <Curator /> : <CuratorZh /> }
+          </SwiperSlide>
 
         </Swiper>
   
       </>
 
     );
-
-}
-
-function EnglishArtworks({incrementLoad}) {
-
-  return (
-
-    <>
-    <SwiperSlide><Domestik incrementLoad={incrementLoad} /></SwiperSlide>
-    <SwiperSlide><Illumination incrementLoad={incrementLoad} /></SwiperSlide>
-    <SwiperSlide><Confidential incrementLoad={incrementLoad} /></SwiperSlide>
-    <SwiperSlide><Autosave incrementLoad={incrementLoad} /></SwiperSlide>
-    <SwiperSlide><Butterflies /></SwiperSlide>
-    </>
-
-  )
-
-}
-
-function ChineseArtworks({incrementLoad}) {
-
-  return (
-
-    <>
-    <SwiperSlide><DomestikZh incrementLoad={incrementLoad} /></SwiperSlide>
-    <SwiperSlide><IlluminationZh incrementLoad={incrementLoad} /></SwiperSlide>
-    <SwiperSlide><ConfidentialZh incrementLoad={incrementLoad} /></SwiperSlide>
-    <SwiperSlide><AutosaveZh incrementLoad={incrementLoad} /></SwiperSlide>
-    <SwiperSlide><ButterfliesZh /></SwiperSlide>
-    </>
-
-  )
 
 }

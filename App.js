@@ -24,9 +24,11 @@ export default function App() {
         { isWelcomeScreenOn ? <WelcomeScreen site={site} /> :
         
         <>
+        <div id="exhibition">
         <Header site={site} />
         <Menu site={site}  />
         <Content site={site} />
+        </div>
         </>
         
         } 

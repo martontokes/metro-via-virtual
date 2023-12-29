@@ -1,0 +1,19 @@
+.swiper-pagination {
+    position: fixed !important;
+    bottom: 0px !important;
+    height: 50px;
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.swiper-pagination-bullet-active {
+    background-color: rgb(200,200,200) !important;
+}
+
+#butterfliesToFullscreenButton {
+    position: fixed;
+    top: 50px;
+    right: 50px;
+}

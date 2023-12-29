@@ -1,27 +1,34 @@
+import { useEffect } from "react";
+
 import { enterSite, enterSiteZh } from "/modules/enter-site-buttons.mjs";
 
 export default function WelcomeScreen({site}) {
 
+useEffect(() => {
 
+  document.getElementById("welcomeOuterContainer").style.height = window.innerHeight + "px";
+  document.getElementById("welcomeOuterContainer").style.opacity = 1;
+
+}, [])
 
     return (
     <>
-        <div id="wcsOuterContainer">
-          <div id="wcsInnerContainer">
+        <div id="welcomeOuterContainer">
+          <div id="welcomeInnerContainer">
             <div className="innerContentContainer">
-            <h1 id="wcsExhibitionEnglishHeader" className="montserrat">metro<br/>via virtual</h1>
-            <h2 id="wcsExhibitionEnglishSubheader" className="montserrat">a virtual exhibition<br /> from Hong Kong</h2>
-            <button id="wcsEnterButtonEnglish" onClick={ () => enterSite(site) } ><span id="buttonTextEng">enter exhibition</span></button>
+            <h1 id="welcomeEnglishHeader" className="montserrat titleEngW">metro via virtual</h1>
+            <h2 id="welcomeEnglishSubheader" className="montserrat titleEngW">a virtual exhibition from Hong Kong</h2>
+            <button id="welcomeEnterButtonEnglish" onClick={ () => enterSite(site) } ><span id="buttonTextEng" className="montserrat titleEngW">enter</span></button>
             </div>
-            <div className="innerContentContainer" id="iCC2">
-            <h1 id="wcsExhibitionChineseHeader" className="notoSansHk">虛擬都會</h1>
-            <h2 id="wcsExhibitionChineseSubheader" className="notoSansHk">來自香港的線上展覽</h2>
+            <div className="innerContentContainer">
+            <h1 id="welcomeChineseHeader" className="notoSansHk titleZhW">虛擬都會</h1>
+            <h2 id="welcomeChineseSubheader" className="notoSansHk titleZhW">來自香港的線上展覽</h2>
             <button onClick={ () => {
               
               enterSiteZh(site);
               changeUniversalFontOnEnter();
             
-            } } className="notoSansHk" id="wcsEnterButtonChinese"><span id="buttonTextZh">進入展覽</span></button>       
+            } } className="notoSansHk" id="welcomeEnterButtonChinese"><span id="buttonTextZh" className="notoSansHk titleZhW">進入</span></button>       
 
             </div>
           </div>    

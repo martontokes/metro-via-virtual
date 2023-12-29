@@ -1,0 +1,25 @@
+
+
+/* These styles are applied to the content of the welcome screen */
+/* All welcome screen IDs start with the "wcs" prefix */
+
+#buddhacontainer {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 16px;
+    height: 75vh;
+}
+
+.buddha {
+    height: 90%;
+    position: absolute;
+    transition: opacity 5s;
+
+}
+
+img {
+
+    max-width: 100%;
+
+}

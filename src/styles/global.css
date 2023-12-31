@@ -4,8 +4,8 @@
 
 
   -webkit-tap-highlight-color: rgba(0,0,0,0);
-  height: 100vh;
 
+  overflow-y: hidden;
 
 }
 
@@ -15,7 +15,7 @@
 
   padding: 0px;
   margin: 0px;
-  color: #fffff0;
+
   
 }
 
@@ -27,30 +27,26 @@ button {
 
 }
 
+.div100vh {
+  overflow-y: clip !important;
+  position: fixed;
+  top: 0px;
+}
+
 body, #__next {
-  height: 100%;
+
   transition: opacity 2s;
 }
 
 #exhibition {
 
-  opacity: 1;
+  opacity: 0;
   transition: opacity 1s ease-in-out;
   margin: 0px 0px;
 
 }
 
 
-.swiper {
-  overflow-y: clip;
-  position: fixed;
-
-}
-
-.swiper-slide {
-  overflow-y: scroll !important;
-  position: fixed;
-}
 
 body::webkit-scrollbar {
   width: 40px;

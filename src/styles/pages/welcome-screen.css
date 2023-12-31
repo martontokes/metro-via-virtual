@@ -3,17 +3,19 @@
 /* These styles are applied to the content of the welcome screen */
 /* All welcome screen IDs start with the "welcome" prefix */
 
+* {
+    color: black;
+}
 
 :root {
 
-    --buttonText: #fffff0;
-    --buttonBorder: #858585;
-    /* --buttonBackground: ; */
+    --buttonText: rgb(49, 49, 49);
+    --buttonBorder: rgb(49, 49, 49);
     --borderRadius: 16px;
     --buttonBorderWidth: 1px;
-    /* #1b1c1e */
-    background-color: #0d0f0d;
+    background-color: rgb(252, 252, 252);
   }
+
 
 #welcomeOuterContainer {
     transition: opacity 1s;

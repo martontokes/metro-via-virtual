@@ -7,14 +7,15 @@ import { montserrat, notosanshk } from "pages/_app";
 export default function WelcomeScreen({site}) {
 
 useEffect(() => {
-
-  document.getElementById("welcomeOuterContainer").style.height = window.innerHeight + "px";
+  // document.getElementById("__next").style.height = window.innerHeight + "px";
+  // document.getElementById("welcomeOuterContainer").style.height = window.innerHeight + "px";
   document.getElementById("welcomeOuterContainer").style.opacity = 1;
 
 }, [])
 
     return (
     <>
+
         <div id="welcomeOuterContainer">
           <div id="welcomeInnerContainer">
             <div className="innerContentContainer">

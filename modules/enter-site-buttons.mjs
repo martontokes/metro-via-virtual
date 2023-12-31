@@ -1,13 +1,12 @@
 export function enterSite(site) {
 
     document.getElementById("welcomeOuterContainer").style.opacity = 0;
+
   
       setTimeout(() => {
         site.setLanguage("english");
         site.setWelcomeScreen(false);
-        setTimeout(() => {
-          document.getElementById("exhibition").style.opacity = 1;
-        }, 50);
+
       }, 1000)
   
   

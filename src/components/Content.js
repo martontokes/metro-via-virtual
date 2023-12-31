@@ -27,27 +27,15 @@ import ConfidentialZh from "/src/components/content/Chinese/Artworks/Confidentia
 import AutosaveZh from "/src/components/content/Chinese/Artworks/AutosaveZh";
 import ButterfliesZh from "/src/components/content/Chinese/Artworks/ButterfliesZh";
 
-export default function Content({ site }) {
-
-  const [itemsLoaded, incrementLoad] = useState(0);
-
-          useEffect(() => {
-            console.log("useEffect");
-            if (itemsLoaded == 10) {
-              console.log("loaded");
-            }
-
-          }, [itemsLoaded]);
-
-          useEffect(() => {
-            
-          }, []);
+export default function Content({ site, incrementLoad }) {
 
     return (
       
       <>
 
-        <Swiper {...exhibitionSwiperConfig}
+
+
+        <Swiper {...exhibitionSwiperConfig} 
         onInit={(swiper) => {site.setExhibition(swiper);}}
         onSlideChange={(swiper) => {site.setExhibition(swiper);}}
         >
@@ -59,9 +47,8 @@ export default function Content({ site }) {
           <SwiperSlide>
             <Swiper {...artworksSwiperConfig}
             onInit={(swiper) => {site.setArtworks(swiper);}}
-            onSlideChange={(swiper) => {site.setArtworks(swiper);}}
-            navigation={true}
-            modules={[Navigation]}>  
+            onSlideChange={(swiper) => {site.setArtworks(swiper);}} className="innerSwiper-wrapper"
+>  
 
               {(site.language == "english") ? 
               

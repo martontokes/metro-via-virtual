@@ -25,7 +25,6 @@ export default function Document() {
         <title>metro via virtual</title>
         <Main />
         <NextScript />
-        <div id="bg"></div>
     </Html>
     
   )

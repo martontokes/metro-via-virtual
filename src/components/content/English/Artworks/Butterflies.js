@@ -3,7 +3,7 @@ import { useState, useEffect } from "react"
 export default function Butterflies({}) {
 
   const handleClick = () => {
-    window.open('/butterflies/index.html', '_blank');
+    window.open('/butterflies/index.htm', '_blank');
   }
 
     return (

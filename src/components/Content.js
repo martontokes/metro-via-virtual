@@ -37,7 +37,7 @@ export default function Content({ site, incrementLoad }) {
 
         <Swiper {...exhibitionSwiperConfig} 
         onInit={(swiper) => {site.setExhibition(swiper);}}
-        onSlideChange={(swiper) => {site.setExhibition(swiper);}}
+        onSlideChange={(swiper) => {site.setExhibition(swiper); updateMenu(site);}}
         >
 
           <SwiperSlide>
@@ -47,7 +47,7 @@ export default function Content({ site, incrementLoad }) {
           <SwiperSlide>
             <Swiper {...artworksSwiperConfig}
             onInit={(swiper) => {site.setArtworks(swiper);}}
-            onSlideChange={(swiper) => {site.setArtworks(swiper);}} className="innerSwiper-wrapper"
+            onSlideChange={(swiper) => {site.setArtworks(swiper); updateArtworkMenu(site);}} className="innerSwiper-wrapper"
 >  
 
               {(site.language == "english") ? 
@@ -90,5 +90,26 @@ export default function Content({ site, incrementLoad }) {
       </>
 
     );
+
+}
+
+
+function updateMenu(site) {
+
+  const menubuttons = document.querySelectorAll(".menubutton");
+  for (let i = 0; i < menubuttons.length; i++) {
+    menubuttons[i].classList.remove("activeButton");
+  }
+ menubuttons[site.exhibition.activeIndex].classList.add("activeButton");
+
+}
+
+function updateArtworkMenu(site) {
+
+    const menubuttons = document.querySelectorAll(".artworkMenuButton");
+    for (let i = 0; i < menubuttons.length; i++) {
+      menubuttons[i].classList.remove("activeButton");
+  }
+   menubuttons[site.artworks.activeIndex].classList.add("activeButton");
 
 }

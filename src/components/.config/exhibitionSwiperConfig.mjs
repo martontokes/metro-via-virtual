@@ -6,6 +6,7 @@ const exhibitionSwiperConfig = {
     spaceBetween: 0,
     slidesPerView: 1,
     pagination: { clickable: false },
+    scrollbar:{enabled: true},
     onSwiper: (swiper) => { swiper.updateAutoHeight(1); },
     passiveListeners: true,
     onSlideChangeTransitionEnd: () => {},

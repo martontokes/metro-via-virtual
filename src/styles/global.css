@@ -6,8 +6,9 @@
   -webkit-tap-highlight-color: rgba(0,0,0,0);
 
   overflow-y: hidden;
-  background-color: #0a0a0a !important;
+  background-color: #020202 !important;
 }
+
 
 
 * {
@@ -15,8 +16,10 @@
   padding: 0px;
   margin: 0px;
   color: white;
+
   
 }
+
 
 button {
 
@@ -46,25 +49,3 @@ body, #__next {
 }
 
 
-
-body::webkit-scrollbar {
-  width: 40px;
-}
-
-body {
-  margin: 0px;
-}
-/* 
-#bg {
-  background-image: url("/bg.png");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  width: 100vw;
-  height: 100vh;
-  position: fixed;
-  top: 0px;
-  z-index: -10000;
-  filter: invert(1);
-  opacity: 0.2;
-} */

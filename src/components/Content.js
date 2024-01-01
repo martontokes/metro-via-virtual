@@ -27,7 +27,15 @@ import ConfidentialZh from "/src/components/content/Chinese/Artworks/Confidentia
 import AutosaveZh from "/src/components/content/Chinese/Artworks/AutosaveZh";
 import ButterfliesZh from "/src/components/content/Chinese/Artworks/ButterfliesZh";
 
-export default function Content({ site, incrementLoad }) {
+export default function Content({ site, incrementLoad, setArtworksMenuOn }) {
+
+  function updateState(swiper) {
+    if (swiper.activeIndex == 1) {
+      setArtworksMenuOn(true);
+    } else {
+      setArtworksMenuOn(false);
+    }
+  }
 
     return (
       
@@ -35,7 +43,7 @@ export default function Content({ site, incrementLoad }) {
 
         <Swiper {...exhibitionSwiperConfig} 
         onInit={(swiper) => {site.setExhibition(swiper);}}
-        onSlideChange={(swiper) => {    console.log(site); site.setExhibition(swiper); updateMenu(site); updateArtworkMenu(site);}}
+        onSlideChange={(swiper) => {site.setExhibition(swiper); updateMenu(site); updateArtworkMenu(site); updateState(swiper);}}
         onSliderMove={(swiper) => {exhibitionButtonScrollTop(site);}}
         >
 

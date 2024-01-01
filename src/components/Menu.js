@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 
-export default function Menu({ site }) {
+export default function Menu({ site, isArtworksMenuOn }) {
 
   return (
     <>
@@ -11,7 +11,7 @@ export default function Menu({ site }) {
         <button onClick={() => exhibitionButtonHandler(site, 3)} className="menubutton">curator</button>
       </div>
 
-      { site.exhibition.activeIndex == 1 ? <ArtworksMenu site={site}/> : null}
+      { isArtworksMenuOn ? <ArtworksMenu site={site}/> : null}
     </>
   );
 }
@@ -42,7 +42,6 @@ function exhibitionButtonHandler(site, index) {
 
   exhibitionButtonScrollTop(site);
   site.exhibition.slideTo(index, 500, false);
-
 
 }
 

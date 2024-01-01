@@ -16,12 +16,9 @@ export default function App() {
   const [isWelcomeScreenOn, setWelcomeScreen] = useState(true);
   const [itemsLoaded, incrementLoad] = useState(0);
   const [contentLoaded, setContentLoaded] = useState(false);
+  const [isArtworksMenuOn, setArtworksMenuOn] = useState(false);
 
   const site = { language, setLanguage, exhibition, setExhibition, artworks, setArtworks, setWelcomeScreen };
-
-  useEffect(() => {
-    console.log(site.exhibition.activeIndex);
-  }, [site])
 
   useEffect(() => {
 
@@ -43,8 +40,8 @@ export default function App() {
         <>
         <Loader setContentLoaded={setContentLoaded} itemsLoaded={itemsLoaded}/>
         <div id="exhibition">
-        <Menu site={site}  />
-        <Content site={site} incrementLoad={incrementLoad} />
+        <Menu site={site} isArtworksMenuOn={isArtworksMenuOn}  />
+        <Content site={site} incrementLoad={incrementLoad} setArtworksMenuOn={setArtworksMenuOn}/>
         </div>
         </>
         

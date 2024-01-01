@@ -109,11 +109,14 @@ function updateMenu(site) {
 
 function updateArtworkMenu(site) {
 
+  
     const menubuttons = document.querySelectorAll(".artworkMenuButton");
+    if (menubuttons.length > 0) {
     for (let i = 0; i < menubuttons.length; i++) {
       menubuttons[i].classList.remove("activeButton");
   }
    menubuttons[site.artworks.activeIndex].classList.add("activeButton");
+  }
 
 }
 

@@ -4,16 +4,16 @@
 /* All welcome screen IDs start with the "welcome" prefix */
 
 * {
-    color: black;
+   
 }
 
 :root {
 
-    --buttonText: rgb(49, 49, 49);
-    --buttonBorder: rgb(49, 49, 49);
-    --borderRadius: 16px;
+    --buttonText: #ffffff;
+    --buttonBorder: #979797;
+    --borderRadius: 32px;
     --buttonBorderWidth: 1px;
-    background-color: rgb(252, 252, 252);
+
   }
 
 

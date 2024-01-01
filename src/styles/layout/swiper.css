@@ -20,9 +20,9 @@
 
 
 .swiper {
-    overflow-y: clip;
+
     position: fixed;
-  
+    overflow-y: clip;
   }
   
   .swiper-slide {

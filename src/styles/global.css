@@ -6,16 +6,15 @@
   -webkit-tap-highlight-color: rgba(0,0,0,0);
 
   overflow-y: hidden;
-
+  background-color: #0a0a0a !important;
 }
-
 
 
 * {
 
   padding: 0px;
   margin: 0px;
-
+  color: white;
   
 }
 

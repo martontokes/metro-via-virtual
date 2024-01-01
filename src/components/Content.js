@@ -33,11 +33,9 @@ export default function Content({ site, incrementLoad }) {
       
       <>
 
-
-
         <Swiper {...exhibitionSwiperConfig} 
         onInit={(swiper) => {site.setExhibition(swiper);}}
-        onSlideChange={(swiper) => {site.setExhibition(swiper); updateMenu(site); updateArtworkMenu(site);}}
+        onSlideChange={(swiper) => {    console.log(site); site.setExhibition(swiper); updateMenu(site); updateArtworkMenu(site);}}
         onSliderMove={(swiper) => {exhibitionButtonScrollTop(site);}}
         >
 

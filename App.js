@@ -20,6 +20,10 @@ export default function App() {
   const site = { language, setLanguage, exhibition, setExhibition, artworks, setArtworks, setWelcomeScreen };
 
   useEffect(() => {
+    console.log(site.exhibition.activeIndex);
+  }, [site])
+
+  useEffect(() => {
 
     if (contentLoaded) {
       document.getElementById("loaderContainer").style.opacity = 0;

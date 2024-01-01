@@ -27,20 +27,42 @@ export default function Menu({site}) {
 
 function artworkButtonHandler(site, index) {
 
-  scrollAllToTop(site);
+  artworkButtonScrollTop(site);
   site.artworks.slideTo(index, 500, false);
 
 }
 
 function exhibitionButtonHandler(site, index) {
 
-  scrollAllToTop(site);
+  exhibitionButtonScrollTop(site);
   site.exhibition.slideTo(index, 500, false);
 
 }
 
 
-function scrollAllToTop(site) {
+function exhibitionButtonScrollTop(site) {
+
+  let exhibitionSlides = document.querySelectorAll(".exhibitionSlide");
+  let artworkSlides = document.querySelectorAll(".artworkSlide");
+
+  if ([0, 2, 3].includes(site.exhibition.activeIndex)) {
+
+    for (let i = 0; i < artworkSlides.length; i++) {
+      artworkSlides[i].scrollTo(0,0);
+    }
+
+  }
+
+  for (let i = 0; i < exhibitionSlides.length; i++) {
+    if (i == site.exhibition.activeIndex) {
+      continue;
+    }
+    exhibitionSlides[i].scrollTo(0,0);
+  }
+
+}
+
+function artworkButtonScrollTop(site) {
 
   let exhibitionSlides = document.querySelectorAll(".exhibitionSlide");
   let artworkSlides = document.querySelectorAll(".artworkSlide");

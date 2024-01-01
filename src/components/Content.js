@@ -113,3 +113,4 @@ function updateArtworkMenu(site) {
    menubuttons[site.artworks.activeIndex].classList.add("activeButton");
 
 }
+

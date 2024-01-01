@@ -37,7 +37,8 @@ export default function Content({ site, incrementLoad }) {
 
         <Swiper {...exhibitionSwiperConfig} 
         onInit={(swiper) => {site.setExhibition(swiper);}}
-        onSlideChange={(swiper) => {site.setExhibition(swiper); updateMenu(site);}}
+        onSlideChange={(swiper) => {site.setExhibition(swiper); updateMenu(site); updateArtworkMenu(site);}}
+        onSliderMove={(swiper) => {exhibitionButtonScrollTop(site);}}
         >
 
           <SwiperSlide className="exhibitionSlide">
@@ -47,7 +48,9 @@ export default function Content({ site, incrementLoad }) {
           <SwiperSlide className="exhibitionSlide">
             <Swiper {...artworksSwiperConfig}
             onInit={(swiper) => {site.setArtworks(swiper);}}
-            onSlideChange={(swiper) => {site.setArtworks(swiper); updateArtworkMenu(site);}} className="innerSwiper-wrapper"
+            onSlideChange={(swiper) => {site.setArtworks(swiper); updateArtworkMenu(site);}} 
+            onSliderMove={(swiper) => {artworkButtonScrollTop(site)}}
+            className="innerSwiper-wrapper"
 >  
 
               {(site.language == "english") ? 
@@ -114,3 +117,47 @@ function updateArtworkMenu(site) {
 
 }
 
+function exhibitionButtonScrollTop(site) {
+
+  let exhibitionSlides = document.querySelectorAll(".exhibitionSlide");
+  let artworkSlides = document.querySelectorAll(".artworkSlide");
+
+  if ([0, 2, 3].includes(site.exhibition.activeIndex)) {
+
+    for (let i = 0; i < artworkSlides.length; i++) {
+      artworkSlides[i].scrollTo(0,0);
+    }
+
+  }
+
+  for (let i = 0; i < exhibitionSlides.length; i++) {
+    if (i == site.exhibition.activeIndex) {
+      continue;
+    }
+    exhibitionSlides[i].scrollTo(0,0);
+  }
+
+}
+
+function artworkButtonScrollTop(site) {
+
+  let exhibitionSlides = document.querySelectorAll(".exhibitionSlide");
+  let artworkSlides = document.querySelectorAll(".artworkSlide");
+
+  console.log(exhibitionSlides, artworkSlides);
+
+  for (let i = 0; i < exhibitionSlides.length; i++) {
+    if (i == site.exhibition.activeIndex) {
+      continue;
+    }
+    exhibitionSlides[i].scrollTo(0,0);
+  }
+
+  for (let i = 0; i < artworkSlides.length; i++) {
+    if (i == site.artworks.activeIndex) {
+      continue;
+    }
+    artworkSlides[i].scrollTo(0,0);
+  }
+
+}

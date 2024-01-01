@@ -1,9 +1,8 @@
 import { useEffect } from "react";
 
-export default function Menu({site}) {
+export default function Menu({ site }) {
 
   return (
-
     <>
       <div id="mainMenu">
         <button onClick={() => exhibitionButtonHandler(site, 0)} className="menubutton activeButton">statement</button>
@@ -11,18 +10,18 @@ export default function Menu({site}) {
         <button onClick={() => exhibitionButtonHandler(site, 2)} className="menubutton">essay</button>
         <button onClick={() => exhibitionButtonHandler(site, 3)} className="menubutton">curator</button>
       </div>
-      <div id="artworksMenu">
-        <button onClick={() => artworkButtonHandler(site, 0)} className="menubutton artworkMenuButton activeButton">Autosave: Redoubt</button>
-        <button onClick={() => artworkButtonHandler(site, 1)} className="menubutton artworkMenuButton activeButton">Confidential Records</button>
-        <button onClick={() => artworkButtonHandler(site, 2)} className="menubutton artworkMenuButton activeButton">Illumination</button>
-        <button onClick={() => artworkButtonHandler(site, 3)} className="menubutton artworkMenuButton activeButton">Butterflies on the Wheel</button>
-        <button onClick={() => artworkButtonHandler(site, 4)} className="menubutton artworkMenuButton activeButton">Domestik/Publik</button>
-      </div>
-      
+
+      {site.exhibition.activeIndex === 2 && (
+        <div id="artworksMenu">
+          <button onClick={() => artworkButtonHandler(site, 0)} className="menubutton artworkMenuButton activeButton">Autosave: Redoubt</button>
+          <button onClick={() => artworkButtonHandler(site, 1)} className="menubutton artworkMenuButton activeButton">Confidential Records</button>
+          <button onClick={() => artworkButtonHandler(site, 2)} className="menubutton artworkMenuButton activeButton">Illumination</button>
+          <button onClick={() => artworkButtonHandler(site, 3)} className="menubutton artworkMenuButton activeButton">Butterflies on the Wheel</button>
+          <button onClick={() => artworkButtonHandler(site, 4)} className="menubutton artworkMenuButton activeButton">Domestik/Publik</button>
+        </div>
+      )}
     </>
-
   );
-
 }
 
 function artworkButtonHandler(site, index) {

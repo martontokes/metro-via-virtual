@@ -40,11 +40,11 @@ export default function Content({ site, incrementLoad }) {
         onSlideChange={(swiper) => {site.setExhibition(swiper); updateMenu(site);}}
         >
 
-          <SwiperSlide>
+          <SwiperSlide className="exhibitionSlide">
           {(site.language == "english") ? <Statement /> : <StatementZh /> }
           </SwiperSlide>
 
-          <SwiperSlide>
+          <SwiperSlide className="exhibitionSlide">
             <Swiper {...artworksSwiperConfig}
             onInit={(swiper) => {site.setArtworks(swiper);}}
             onSlideChange={(swiper) => {site.setArtworks(swiper); updateArtworkMenu(site);}} className="innerSwiper-wrapper"
@@ -54,11 +54,11 @@ export default function Content({ site, incrementLoad }) {
               
                 <>
 
-                  <SwiperSlide><Domestik incrementLoad={incrementLoad} /></SwiperSlide>
-                  <SwiperSlide><Illumination incrementLoad={incrementLoad} /></SwiperSlide>
-                  <SwiperSlide><Confidential incrementLoad={incrementLoad} /></SwiperSlide>
-                  <SwiperSlide><Autosave incrementLoad={incrementLoad} /></SwiperSlide>
-                  <SwiperSlide><Butterflies /></SwiperSlide>
+                  <SwiperSlide className="artworkSlide"><Domestik incrementLoad={incrementLoad} /></SwiperSlide>
+                  <SwiperSlide className="artworkSlide"><Illumination incrementLoad={incrementLoad} /></SwiperSlide>
+                  <SwiperSlide className="artworkSlide"><Confidential incrementLoad={incrementLoad} /></SwiperSlide>
+                  <SwiperSlide className="artworkSlide"><Autosave incrementLoad={incrementLoad} /></SwiperSlide>
+                  <SwiperSlide className="artworkSlide"><Butterflies /></SwiperSlide>
               
                 </> : 
 
@@ -77,11 +77,11 @@ export default function Content({ site, incrementLoad }) {
             </Swiper>
           </SwiperSlide>
 
-          <SwiperSlide>
+          <SwiperSlide className="exhibitionSlide">
           {(site.language == "english") ? <Essay /> : null }
           </SwiperSlide>
 
-          <SwiperSlide>
+          <SwiperSlide className="exhibitionSlide">
           {(site.language == "english") ? <Curator /> : <CuratorZh /> }
           </SwiperSlide>
 

@@ -19,6 +19,7 @@
 
 #welcomeOuterContainer {
     transition: opacity 1s;
+    height: 100dvh;
 }
 
 .titleEngW {
@@ -39,7 +40,7 @@
         flex-direction: column;
         width: 100%;
         overflow-x: hidden;
-        height: 100%;
+
         opacity: 0;
     }
     

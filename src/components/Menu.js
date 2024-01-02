@@ -1,4 +1,5 @@
 import { useEffect } from "react";
+import { isMobile } from "react-device-detect";
 
 export default function Menu({ site, isArtworksMenuOn }) {
 
@@ -11,7 +12,7 @@ export default function Menu({ site, isArtworksMenuOn }) {
         <button onClick={() => exhibitionButtonHandler(site, 3)} className="menubutton">curator</button>
       </div>
 
-      { isArtworksMenuOn ? <ArtworksMenu site={site}/> : null}
+      { !isMobile ? <ArtworksMenu site={site}/> : null}
     </>
   );
 }

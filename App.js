@@ -5,6 +5,7 @@ import Header from "components/Header"
 import Content from "components/Content"
 import WelcomeScreen from "components/WelcomeScreen"
 import Loader from "/src/components/Loader";
+// import SwipeInstructions from "components/SwipeInstructions";
 
 import detectLanguage from "/modules/detect-language.mjs"
 
@@ -42,6 +43,7 @@ export default function App() {
         <div id="exhibition">
         <Menu site={site} isArtworksMenuOn={isArtworksMenuOn}  />
         <Content site={site} incrementLoad={incrementLoad} setArtworksMenuOn={setArtworksMenuOn}/>
+        {/* <SwipeInstructions /> */}
         </div>
         </>
         

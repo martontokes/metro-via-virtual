@@ -1,5 +1,7 @@
 import { Montserrat, Noto_Sans_HK } from 'next/font/google'
 
+import swiper from "styles/layout/swiper.css"
+
 import styles from "styles/global.css"
 
 import welcomescreen from "styles/pages/welcome-screen.css"
@@ -10,11 +12,13 @@ import autosave from "styles/pages/autosave.css"
 import domestik from "styles/pages/domestik.css"
 import pagesGlobal from "styles/pages/pages-global.css"
 
+import swipeInstructions from "styles/layout/swipeInstructions.css"
+
 import header from "styles/layout/header.css"
 import loaderSpinner from "styles/layout/loader-spinner.css"
 import scrollbar from "styles/layout/scrollbar.css"
 import menu from "styles/layout/menu.css"
-import swiper from "styles/layout/swiper.css"
+
 
 const notosanshk = Noto_Sans_HK({subsets: ["latin"], weight: ['100', '200', '300', '400', '500', '600', '700']});
 const montserrat = Montserrat({subsets: ["latin"], weight: ['100', '200', '300', '400', '500', '600', '700']});

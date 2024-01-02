@@ -1,32 +1,42 @@
-.swiper-button-prev, .swiper-button-next {
 
-    display: none !important;
+.swiper-pagination {
+    position: fixed;
+    bottom: 0px;
+    padding-top: 16px;
+    padding-bottom: 8px;
+    background-color: black;
 
-  }
-
-  .swiper-pagination {
-    position: fixed !important;
-    bottom: 0px !important;
-  }
-
-.swiper {
-    width: 100vw;
 }
 
-.exhibitionSwiper {
-    transition: opacity 2s;
-    opacity: 0;
+.swiper-button-next, .swiper-button-prev {
+  color: white !important; 
 }
 
 
-.swiper {
 
-    position: fixed;
-    overflow-y: clip;
-  }
-  
-  .swiper-slide {
-    overflow-y: scroll !important;
-    position: fixed;
+.swiper-wrapper {
 
-  }
+}
+
+
+.swiper-slide {
+  overflow-y: scroll;
+ 
+}
+
+.swiper-pagination-bullet-active {
+  background: white !important;
+}
+
+.artworkSlide {
+  height: calc(100dvh - 115px) !important;
+}
+
+.autosaveSwiper .swiper-pagination {
+
+  bottom: 0px;
+}
+
+.artworksSwiper, .exhibitionSwiper {
+  height: calc(100dvh - 66px) !important;
+}

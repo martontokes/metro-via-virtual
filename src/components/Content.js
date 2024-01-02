@@ -43,8 +43,9 @@ export default function Content({ site, incrementLoad, setArtworksMenuOn }) {
 
         <Swiper {...exhibitionSwiperConfig} 
         onInit={(swiper) => {site.setExhibition(swiper);}}
-        onSlideChange={(swiper) => {site.setExhibition(swiper); updateMenu(site); updateArtworkMenu(site); updateState(swiper);}}
+        onSlideChange={(swiper) => {site.setExhibition(swiper); updateMenu(site); updateArtworkMenu(site); updateState(swiper); console.log(swiper)}}
         onSliderMove={(swiper) => {exhibitionButtonScrollTop(site);}}
+        className="exhibitionSwiper"
         >
 
           <SwiperSlide className="exhibitionSlide">
@@ -52,13 +53,13 @@ export default function Content({ site, incrementLoad, setArtworksMenuOn }) {
           </SwiperSlide>
 
           <SwiperSlide className="exhibitionSlide">
+  
             <Swiper {...artworksSwiperConfig}
             onInit={(swiper) => {site.setArtworks(swiper);}}
             onSlideChange={(swiper) => {site.setArtworks(swiper); updateArtworkMenu(site);}} 
             onSliderMove={(swiper) => {artworkButtonScrollTop(site)}}
-            className="innerSwiper-wrapper"
+            className="artworksSwiper"
 >  
-
               {(site.language == "english") ? 
               
                 <>

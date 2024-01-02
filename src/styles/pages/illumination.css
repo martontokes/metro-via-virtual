@@ -12,7 +12,7 @@
 }
 
 .buddha {
-    width: 100%;
+
     position: absolute;
     transition: opacity 5s;
 
@@ -20,6 +20,6 @@
 
 img {
 
-    max-width: 100%;
+    max-height: calc(100dvh - 115px) !important;
 
 }

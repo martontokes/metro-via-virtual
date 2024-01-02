@@ -6,6 +6,9 @@
     transition: opacity 2s;
 }
 
+#confidentialContainer {
+    margin: 24px 40px;
+}
 
 
 p {

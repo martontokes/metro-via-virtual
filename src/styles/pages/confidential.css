@@ -3,11 +3,8 @@
     display: grid;
     align-items: center;
     margin: 16px 0px;
-    width: 100%;
-}
 
-#confidentialContainer {
-    width: 100%;
+    left: 0px;
 }
 
 .experienceIsFullscreen {

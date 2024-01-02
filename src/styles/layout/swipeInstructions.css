@@ -1,0 +1,15 @@
+#swipeInstructions {
+  color: black !important;
+  background-color: #fafafa;
+  z-index: 4;
+  padding: 12px 24px;
+  border-radius: 16px;
+  width: 220px;
+  left: 0px;
+  transition: bottom 0.5s ease-in-out;
+  display: flex;
+  align-items: center;
+  position: fixed;
+  bottom: 24px;
+  left: 16px;
+}

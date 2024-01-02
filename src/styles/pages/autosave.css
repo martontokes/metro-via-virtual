@@ -1,3 +1,16 @@
 .autosaveVid {
     width: 100%;
 }
+
+.autosaveSwiper {
+    width: 100vw;
+}
+
+.autosaveSwiper .swiper-slide {
+    display: flex;
+    justify-content: center;
+}
+
+.autosaveSwiper .swiper-slide iframe {
+    width: 80%;
+}

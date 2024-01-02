@@ -8,9 +8,6 @@
 
 }
 
-.swiper-button-next, .swiper-button-prev {
-  color: white !important; 
-}
 
 
 
@@ -28,13 +25,19 @@
   background: white !important;
 }
 
+.exhibitionSlide {
+  height: calc(100dvh - 48px) !important;
+}
+
 .artworkSlide {
   height: calc(100dvh - 115px) !important;
 }
 
+
+
 .autosaveSwiper .swiper-pagination {
 
-  bottom: 0px;
+
 }
 
 .artworksSwiper, .exhibitionSwiper {

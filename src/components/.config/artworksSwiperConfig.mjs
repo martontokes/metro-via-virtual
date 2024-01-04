@@ -1,9 +1,11 @@
 import { Pagination, Navigation } from 'swiper/modules';
 
 const artworksSwiperConfig = {
-  modules: [Pagination],
+  
+  modules: [Pagination, Navigation],
   pagination: true,
   spaceBetween: 0,
+  navigation: false,
   slidesPerView: 1,
   onSwiper: (swiper) => {
     swiper.updateAutoHeight(1);

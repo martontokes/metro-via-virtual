@@ -6,6 +6,15 @@
     transition: opacity 2s;
 }
 
+.inactiveArrow {
+    opacity: 0 !important;
+}
+
+.artworkArrowButton {
+    min-height: 60px;
+    min-width: 48px;
+}
+
 #confidentialContainer {
     margin: 24px 40px;
 }

@@ -20,3 +20,9 @@ audio::-webkit-media-controls-panel {
     color: #333;
     border-radius: 8px;
   }
+
+#butterfliesVisitButton {
+    width: 80%;
+    border-radius: var(--borderRadius);
+    height: 48px;
+}

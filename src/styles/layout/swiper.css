@@ -1,10 +1,10 @@
 
 .swiper-pagination {
-    position: fixed;
+    position: absolute;
     bottom: 0px;
-    padding-top: 16px;
-    padding-bottom: 8px;
-    background-color: black;
+    padding-top: 32px;
+    padding-bottom: 16px;
+
 
 }
 
@@ -30,7 +30,7 @@
 }
 
 .artworkSlide {
-  height: calc(100dvh - 115px) !important;
+  height: calc(100dvh - 146px) !important;
 }
 
 
@@ -43,3 +43,20 @@
 .artworksSwiper, .exhibitionSwiper {
   height: calc(100dvh - 66px) !important;
 }
+
+
+
+.artworkArrowButton {
+  position: absolute;
+  bottom: 0px;
+  z-index: 5000;
+}
+
+#artworksNext {
+  right: 24px;
+}
+
+#artworksPrev {
+  left: 24px;
+}
+

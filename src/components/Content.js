@@ -9,7 +9,7 @@ import { useState, useEffect } from "react";
 import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
-import 'swiper/css/navigation'
+import 'swiper/css/navigation';
 
 import Statement from "/src/components/content/English/Statement";
 import Essay from "/src/components/content/English/Essay";
@@ -54,12 +54,12 @@ export default function Content({ site, incrementLoad, setArtworksMenuOn }) {
 
           <SwiperSlide className="exhibitionSlide">
   
-            <Swiper {...artworksSwiperConfig}
+            <Swiper {...artworksSwiperConfig} 
             onInit={(swiper) => {site.setArtworks(swiper);}}
-            onSlideChange={(swiper) => {site.setArtworks(swiper); updateArtworkMenu(site);}} 
+            onSlideChange={(swiper) => {site.setArtworks(swiper); updateArtworkMenu(site); }} 
             onSliderMove={(swiper) => {artworkButtonScrollTop(site)}}
-            className="artworksSwiper"
->  
+            className="artworksSwiper">  
+              {/* <ArtworkArrowButtons site={site} /> */}
               {(site.language == "english") ? 
               
                 <>
@@ -69,6 +69,7 @@ export default function Content({ site, incrementLoad, setArtworksMenuOn }) {
                   <SwiperSlide className="artworkSlide"><Confidential incrementLoad={incrementLoad} /></SwiperSlide>
                   <SwiperSlide className="artworkSlide"><Autosave incrementLoad={incrementLoad} /></SwiperSlide>
                   <SwiperSlide className="artworkSlide"><Butterflies /></SwiperSlide>
+
               
                 </> : 
 
@@ -103,6 +104,46 @@ export default function Content({ site, incrementLoad, setArtworksMenuOn }) {
 
 }
 
+function updateArtworkArrows(activeIndex) {
+
+  if (activeIndex > 0 && activeIndex < 4) {
+    document.getElementById("artworksNext").classList.remove("inactiveArrow");
+    document.getElementById("artworksPrev").classList.remove("inactiveArrow");
+  }
+
+  if (activeIndex == 4) {
+    document.getElementById("artworksNext").classList.add("inactiveArrow");
+  }
+
+  if (activeIndex == 0) {
+    document.getElementById("artworksPrev").classList.add("inactiveArrow");
+  }
+
+}
+
+function ArtworkArrowButtons({site}) {
+
+  return (
+
+    <>
+      <button 
+          id="artworksNext" 
+          className="artworkArrowButton" 
+          onClick={() => {site.artworks.slideNext(600)}}>
+        <img src="arrowRight.svg" />
+      </button>
+
+      <button 
+          id="artworksPrev" 
+          className="artworkArrowButton inactiveArrow"
+          onClick={() => {site.artworks.slidePrev(600)}}>
+        <img src="arrowLeft.svg" />
+      </button>
+    </>
+
+  )
+ 
+}
 
 function updateMenu(site) {
 

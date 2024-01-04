@@ -2,11 +2,16 @@
     width: 100%;
 }
 
+.autosaveVid {
+    height: 176px;
+}
+
 .autosaveSwiper {
     width: 100vw;
 }
 
 .autosaveSwiper .swiper-slide {
+
     display: flex;
     justify-content: center;
 }
@@ -17,6 +22,6 @@
 
 .swiper-button-next, .swiper-button-prev {
     color: white !important; 
-    z-index: 10000000000000000;
+
   }
-  
+

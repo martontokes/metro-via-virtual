@@ -5,18 +5,20 @@ import Header from "components/Header"
 import Content from "components/Content"
 import WelcomeScreen from "components/WelcomeScreen"
 import Loader from "/src/components/Loader";
-// import SwipeInstructions from "components/SwipeInstructions";
-
-import detectLanguage from "/modules/detect-language.mjs"
 
 export default function App() {
 
+  const [isWelcomeScreenOn, setWelcomeScreen] = useState(true);
+  const [itemsLoaded, incrementLoad] = useState(4);
+  const [contentLoaded, setContentLoaded] = useState(false);
+  
   const [language, setLanguage] = useState('');
+
+  // Swipers set by Swiper events //
+
   const [exhibition, setExhibition] = useState('');
   const [artworks, setArtworks] = useState('');
-  const [isWelcomeScreenOn, setWelcomeScreen] = useState(true);
-  const [itemsLoaded, incrementLoad] = useState(0);
-  const [contentLoaded, setContentLoaded] = useState(false);
+  
   const [isArtworksMenuOn, setArtworksMenuOn] = useState(false);
 
   const site = { language, setLanguage, exhibition, setExhibition, artworks, setArtworks, setWelcomeScreen };
@@ -24,11 +26,7 @@ export default function App() {
   useEffect(() => {
 
     if (contentLoaded) {
-      document.getElementById("loaderContainer").style.opacity = 0;
-      setTimeout(() => {
-        document.getElementById("loaderContainer").remove();
-        document.getElementById("exhibition").style.opacity = 1;
-      }, 1000);
+      hideLoaderRevealSite();
     }
   }, [contentLoaded]);
 
@@ -40,10 +38,11 @@ export default function App() {
 
         <>
         <Loader setContentLoaded={setContentLoaded} itemsLoaded={itemsLoaded}/>
+
         <div id="exhibition">
         <Menu site={site} isArtworksMenuOn={isArtworksMenuOn}  />
         <Content site={site} incrementLoad={incrementLoad} setArtworksMenuOn={setArtworksMenuOn}/>
-        {/* <SwipeInstructions /> */}
+
         </div>
         </>
         
@@ -52,5 +51,15 @@ export default function App() {
       </>
 
     )
+
+}
+
+function hideLoaderRevealSite() {
+
+  document.getElementById("loaderContainer").style.opacity = 0;
+  setTimeout(() => {
+    document.getElementById("loaderContainer").remove();
+    document.getElementById("exhibition").style.opacity = 1;
+  }, 1000);
 
 }

@@ -10,7 +10,7 @@ import confidential from "styles/pages/confidential.css"
 import butterflies from "styles/pages/butterflies.css"
 import autosave from "styles/pages/autosave.css"
 import domestik from "styles/pages/domestik.css"
-import pagesGlobal from "styles/pages/pages-global.css"
+import pagesGlobal from "styles/pages-global.css"
 
 import swipeInstructions from "styles/layout/swipeInstructions.css"
 

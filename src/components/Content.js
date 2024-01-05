@@ -2,7 +2,7 @@ import exhibitionSwiperConfig from "./.config/exhibitionSwiperConfig.mjs"
 import artworksSwiperConfig from "./.config/artworksSwiperConfig.mjs"
 
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Pagination, Navigation } from 'swiper/modules';
+import { Pagination, Navigation, Scrollbar } from 'swiper/modules';
 
 import { useState, useEffect } from "react";
 
@@ -10,6 +10,8 @@ import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
 import 'swiper/css/navigation';
+
+import 'swiper/css/free-mode';
 
 import Statement from "/src/components/content/English/Statement";
 import Essay from "/src/components/content/English/Essay";
@@ -46,10 +48,14 @@ export default function Content({ site, incrementLoad, setArtworksMenuOn }) {
         onSlideChange={(swiper) => {site.setExhibition(swiper); updateMenu(site); updateArtworkMenu(site); updateState(swiper); console.log(swiper)}}
         onSliderMove={(swiper) => {exhibitionButtonScrollTop(site);}}
         className="exhibitionSwiper"
+
+
         >
 
           <SwiperSlide className="exhibitionSlide">
-          {(site.language == "english") ? <Statement /> : <StatementZh /> }
+          {(site.language == "english") ? 
+
+          <Statement /> : <StatementZh /> }
           </SwiperSlide>
 
           <SwiperSlide className="exhibitionSlide">
@@ -58,7 +64,9 @@ export default function Content({ site, incrementLoad, setArtworksMenuOn }) {
             onInit={(swiper) => {site.setArtworks(swiper);}}
             onSlideChange={(swiper) => {site.setArtworks(swiper); updateArtworkMenu(site); }} 
             onSliderMove={(swiper) => {artworkButtonScrollTop(site)}}
-            className="artworksSwiper">  
+            className="artworksSwiper"
+            modules={[Scrollbar]}
+            scrollbar={true}>  
               {/* <ArtworkArrowButtons site={site} /> */}
               {(site.language == "english") ? 
               
@@ -69,6 +77,7 @@ export default function Content({ site, incrementLoad, setArtworksMenuOn }) {
                   <SwiperSlide className="artworkSlide"><Confidential incrementLoad={incrementLoad} /></SwiperSlide>
                   <SwiperSlide className="artworkSlide"><Autosave incrementLoad={incrementLoad} /></SwiperSlide>
                   <SwiperSlide className="artworkSlide"><Butterflies /></SwiperSlide>
+                  <Scrollbar />
 
               
                 </> : 

@@ -6,7 +6,7 @@ export default function Loader({ itemsLoaded, setContentLoaded }) {
   const [targetValue, setTargetValue] = useState(0);
 
   useEffect(() => {
-    setTargetValue(Math.min(itemsLoaded * 10, 100));
+    setTargetValue(100 / itemsLoaded * 10);
   }, [itemsLoaded]);
 
   useEffect(() => {

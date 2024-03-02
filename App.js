@@ -17,8 +17,6 @@ export default function App() {
   
   const [language, setLanguage] = useState('');
 
-  // Swipers set by Swiper events //
-
   const [exhibition, setExhibition] = useState('');
   const [artworks, setArtworks] = useState('');
   

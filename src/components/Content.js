@@ -47,8 +47,8 @@ export default function Content({ site, incrementLoad, setArtworksMenuOn }) {
 
         <Swiper {...exhibitionSwiperConfig} 
         onInit={(swiper) => {site.setExhibition(swiper);}}
-        onSlideChange={(swiper) => {site.setExhibition(swiper); updateMenu(site); updateArtworkMenu(site); updateState(swiper); console.log(swiper)}}
-        onSliderMove={(swiper) => {exhibitionButtonScrollTop(site);}}
+        onSlideChange={(swiper) => {site.setExhibition(swiper); updateMenu(site); updateActiveArtworkButtonOnNavigation(site); updateState(swiper); console.log(swiper)}}
+        onSliderMove={(swiper) => {scrollContentToTopOnSwitchingExhibitionPage(site);}}
         className="exhibitionSwiper"
 
 
@@ -64,8 +64,8 @@ export default function Content({ site, incrementLoad, setArtworksMenuOn }) {
   
             <Swiper {...artworksSwiperConfig} 
             onInit={(swiper) => {site.setArtworks(swiper);}}
-            onSlideChange={(swiper) => {site.setArtworks(swiper); updateArtworkMenu(site); }} 
-            onSliderMove={(swiper) => {artworkButtonScrollTop(site)}}
+            onSlideChange={(swiper) => {site.setArtworks(swiper); updateActiveArtworkButtonOnNavigation(site); }} 
+            onSliderMove={(swiper) => {scrollContentToTopOnSwitchingArtworkPage(site)}}
             className="artworksSwiper"
             modules={[Scrollbar]}
             scrollbar={true}>  
@@ -115,61 +115,24 @@ export default function Content({ site, incrementLoad, setArtworksMenuOn }) {
 
 }
 
-function updateArtworkArrows(activeIndex) {
 
-  if (activeIndex > 0 && activeIndex < 4) {
-    document.getElementById("artworksNext").classList.remove("inactiveArrow");
-    document.getElementById("artworksPrev").classList.remove("inactiveArrow");
-  }
+function updateActiveArtworkButtonOnNavigation(site) {
 
-  if (activeIndex == 4) {
-    document.getElementById("artworksNext").classList.add("inactiveArrow");
-  }
-
-  if (activeIndex == 0) {
-    document.getElementById("artworksPrev").classList.add("inactiveArrow");
-  }
-
-}
-
-function ArtworkArrowButtons({site}) {
-
-  return (
-
-    <>
-      <button 
-          id="artworksNext" 
-          className="artworkArrowButton" 
-          onClick={() => {site.artworks.slideNext(600)}}>
-        <img src="arrowRight.svg" />
-      </button>
-
-      <button 
-          id="artworksPrev" 
-          className="artworkArrowButton inactiveArrow"
-          onClick={() => {site.artworks.slidePrev(600)}}>
-        <img src="arrowLeft.svg" />
-      </button>
-    </>
-
-  )
- 
-}
-
-function updateArtworkMenu(site) {
-
-  
     const menubuttons = document.querySelectorAll(".artworkMenuButton");
+
     if (menubuttons.length > 0) {
-    for (let i = 0; i < menubuttons.length; i++) {
-      menubuttons[i].classList.remove("activeButton");
-  }
-   menubuttons[site.artworks.activeIndex].classList.add("activeButton");
-  }
+
+      for (let i = 0; i < menubuttons.length; i++) {
+        menubuttons[i].classList.remove("activeButton");
+      }
+
+      menubuttons[site.artworks.activeIndex].classList.add("activeButton");
+
+    }
 
 }
 
-function exhibitionButtonScrollTop(site) {
+function scrollContentToTopOnSwitchingExhibitionPage(site) {
 
   let exhibitionSlides = document.querySelectorAll(".exhibitionSlide");
   let artworkSlides = document.querySelectorAll(".artworkSlide");
@@ -191,7 +154,7 @@ function exhibitionButtonScrollTop(site) {
 
 }
 
-function artworkButtonScrollTop(site) {
+function scrollContentToTopOnSwitchingArtworkPage(site) {
 
   let exhibitionSlides = document.querySelectorAll(".exhibitionSlide");
   let artworkSlides = document.querySelectorAll(".artworkSlide");

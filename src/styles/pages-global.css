@@ -3,8 +3,12 @@
 #artwork_page {
     margin: 24px 40px;
     opacity: 1;
-    transition: opacity 2s;
+    transition: opacity 1s;
 }
+
+.swiper {
+    transition: opacity 1s;
+} 
 
 .inactiveArrow {
     opacity: 0 !important;

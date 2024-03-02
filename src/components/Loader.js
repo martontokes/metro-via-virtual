@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 
 export default function Loader({ itemsLoaded, setContentLoaded }) {
 
-  const [loadingProgress, setLoadingProgress] = useState(0);
+  const [loadingProgressToDisplay, setloadingProgressToDisplay] = useState(0);
   const [targetValue, setTargetValue] = useState(0);
 
   useEffect(() => {
@@ -14,32 +14,31 @@ export default function Loader({ itemsLoaded, setContentLoaded }) {
   }, []);
 
   useEffect(() => {
-    if (loadingProgress == 100) {
+    if (loadingProgressToDisplay == 100) {
       setContentLoaded(true);
     }
-  }, [loadingProgress])
+  }, [loadingProgressToDisplay])
 
   useEffect(() => {
     const counter = setInterval(() => {
-      setLoadingProgress((prevProgress) => {
-        // Increment based on the previous state
+      setloadingProgressToDisplay((prevProgress) => {
         if (prevProgress < targetValue) {
           return prevProgress + 1;
         } else {
-          clearInterval(counter);// Stop the interval when target is reached
+          clearInterval(counter);
           return prevProgress;
         }
       });
     }, 10);
 
-    return () => {clearInterval(counter); }// Cleanup the interval on component unmount or target reached
+    return () => {clearInterval(counter);}
   }, [targetValue]);
 
   return (
     <>
       <div id="loaderContainer">
         <div id="loader"></div>
-        {loadingProgress}%
+        {loadingProgressToDisplay}%
       </div>
     </>
   );

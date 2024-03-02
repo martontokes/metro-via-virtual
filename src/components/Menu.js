@@ -1,12 +1,14 @@
 import { useEffect } from "react";
 import { isMobile } from "react-device-detect";
 
+
+
 export default function Menu({ site, isArtworksMenuOn }) {
 
   return (
     <>
       <div id="mainMenu">
-        <button onClick={() => exhibitionButtonHandler(site, 0)} className="menubutton activeButton">statement</button>
+        <button onClick={() => exhibitionButtonHandler(site, 0)} className="menubutton activeButton">{ (site.language == "english")  ? "statement" : "chinese" }</button>
         <button onClick={() => exhibitionButtonHandler(site, 1)} className="menubutton">artworks</button>
         <button onClick={() => exhibitionButtonHandler(site, 2)} className="menubutton">essay</button>
         <button onClick={() => exhibitionButtonHandler(site, 3)} className="menubutton">curator</button>
@@ -34,16 +36,49 @@ function ArtworksMenu({site}) {
 
 function artworkButtonHandler(site, index) {
 
+  const artworkpage = document.querySelector(".swiper");
+
+  if (isMobile) {
+
   artworkButtonScrollTop(site);
   site.artworks.slideTo(index, 500, false);
+
+  } else {
+
+  artworkpage.style.opacity = 0;  
+  setTimeout(() => {
+    site.artworks.slideTo(index, 0, false);
+    setTimeout(() => {
+      artworkpage.style.opacity = 1;
+    }, 1000);
+  }, 1000);
+
+  
+
+  }
+
 
 }
 
 function exhibitionButtonHandler(site, index) {
 
-  exhibitionButtonScrollTop(site);
-  site.exhibition.slideTo(index, 500, false);
 
+  const artworkpage = document.querySelector(".swiper");
+
+  if (isMobile) {
+
+    exhibitionButtonScrollTop(site);
+    site.exhibition.slideTo(index, 500, false);
+  
+    } else {
+  
+    artworkpage.style.opacity = 0;  
+    setTimeout(() => {
+      site.exhibition.slideTo(index, 0, false);
+      artworkpage.style.opacity = 1;
+    }, 1000);
+
+  }
 }
 
 

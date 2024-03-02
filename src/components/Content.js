@@ -13,6 +13,8 @@ import 'swiper/css/navigation';
 
 import 'swiper/css/free-mode';
 
+import updateMenu from "../../modules/updateMenuActiveButton.mjs";
+
 import Statement from "/src/components/content/English/Statement";
 import Essay from "/src/components/content/English/Essay";
 import Curator from "/src/components/content/English/Curator";
@@ -152,16 +154,6 @@ function ArtworkArrowButtons({site}) {
 
   )
  
-}
-
-function updateMenu(site) {
-
-  const menubuttons = document.querySelectorAll(".menubutton");
-  for (let i = 0; i < menubuttons.length; i++) {
-    menubuttons[i].classList.remove("activeButton");
-  }
- menubuttons[site.exhibition.activeIndex].classList.add("activeButton");
-
 }
 
 function updateArtworkMenu(site) {

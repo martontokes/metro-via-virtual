@@ -1,14 +1,14 @@
 import { useEffect } from "react";
 import { isMobile } from "react-device-detect";
 
-
+import updateMenu from "../../modules/updateMenuActiveButton.mjs";
 
 export default function Menu({ site, isArtworksMenuOn }) {
 
   return (
     <>
       <div id="mainMenu">
-        <button onClick={() => exhibitionButtonHandler(site, 0)} className="menubutton activeButton">{ (site.language == "english")  ? "statement" : "chinese" }</button>
+        <button onClick={() => exhibitionButtonHandler(site, 0)} className="menubutton activeButton">{ (site.language == "english")  ? "statement" : "chinese" } </button>
         <button onClick={() => exhibitionButtonHandler(site, 1)} className="menubutton">artworks</button>
         <button onClick={() => exhibitionButtonHandler(site, 2)} className="menubutton">essay</button>
         <button onClick={() => exhibitionButtonHandler(site, 3)} className="menubutton">curator</button>
@@ -36,6 +36,14 @@ function ArtworksMenu({site}) {
 
 function artworkButtonHandler(site, index) {
 
+  const menubuttons = document.querySelectorAll(".artworkMenuButton");
+  if (menubuttons.length > 0) {
+  for (let i = 0; i < menubuttons.length; i++) {
+    menubuttons[i].classList.remove("activeButton");
+}
+ menubuttons[index].classList.add("activeButton");
+}
+
   const artworkpage = document.querySelector(".swiper");
 
   if (isMobile) {
@@ -62,6 +70,11 @@ function artworkButtonHandler(site, index) {
 
 function exhibitionButtonHandler(site, index) {
 
+  const menubuttons = document.querySelectorAll(".menubutton");
+  for (let i = 0; i < menubuttons.length; i++) {
+    menubuttons[i].classList.remove("activeButton");
+  }
+ menubuttons[index].classList.add("activeButton");
 
   const artworkpage = document.querySelector(".swiper");
 
@@ -77,8 +90,9 @@ function exhibitionButtonHandler(site, index) {
       site.exhibition.slideTo(index, 0, false);
       artworkpage.style.opacity = 1;
     }, 1000);
-
   }
+
+
 }
 
 

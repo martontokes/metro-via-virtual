@@ -1,6 +1,52 @@
 .menubutton {
   color: #878787;
   font-weight: 500 !important;
+  font-size: 22px;
+}
+
+.activeButton {
+  color: #f7f7f7;
+}
+
+#mainMenu {
+  display: flex;
+  justify-content: space-between;
+  height: 48px;
+  margin: 8px 24px;
+}
+
+#mainMenu button {
+  height: 100%;
+  min-width: 48px;
+}
+
+.menubutton {
+  text-align: center;
+}
+
+  .inactiveButton {
+
+  }
+  
+#artworksMenu {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin: 0px 24px;
+  margin-bottom: 24px;
+}
+
+#artworksMenu button {
+  min-height: 48px;
+  font-weight: 500 !important;
+
+}
+
+@media screen and (max-width: 768px) {
+  
+.menubutton {
+  color: #878787;
+  font-weight: 500 !important;
   font-size: 12.3px;
 }
 
@@ -39,5 +85,7 @@
 #artworksMenu button {
   min-height: 48px;
   font-weight: 500 !important;
+
+}
 
 }

@@ -1,8 +1,6 @@
 import { useEffect } from "react";
 import { isMobile } from "react-device-detect";
 
-import updateMenu from "../../modules/updateMenuActiveButton.mjs";
-
 export default function Menu({ site, isArtworksMenuOn }) {
 
   return (
@@ -48,7 +46,7 @@ function artworkButtonHandler(site, index) {
 
   if (isMobile) {
 
-  artworkButtonScrollTop(site);
+  scrollContentToTopOnSwitchingArtworkPage(site);
   site.artworks.slideTo(index, 500, false);
 
   } else {
@@ -80,7 +78,7 @@ function exhibitionButtonHandler(site, index) {
 
   if (isMobile) {
 
-    exhibitionButtonScrollTop(site);
+    scrollContentToTopOnSwitchingExhibitionPage(site);
     site.exhibition.slideTo(index, 500, false);
   
     } else {
@@ -96,7 +94,30 @@ function exhibitionButtonHandler(site, index) {
 }
 
 
-function exhibitionButtonScrollTop(site) {
+function scrollContentToTopOnSwitchingArtworkPage(site) {
+  
+  let exhibitionSlides = document.querySelectorAll(".exhibitionSlide");
+  let artworkSlides = document.querySelectorAll(".artworkSlide");
+
+  console.log(exhibitionSlides, artworkSlides);
+
+  for (let i = 0; i < exhibitionSlides.length; i++) {
+    if (i == site.exhibition.activeIndex) {
+      continue;
+    }
+    exhibitionSlides[i].scrollTo(0,0);
+  }
+
+  for (let i = 0; i < artworkSlides.length; i++) {
+    if (i == site.artworks.activeIndex) {
+      continue;
+    }
+    artworkSlides[i].scrollTo(0,0);
+  }
+
+}
+
+function scrollContentToTopOnSwitchingExhibitionPage(site) {
 
   let exhibitionSlides = document.querySelectorAll(".exhibitionSlide");
   let artworkSlides = document.querySelectorAll(".artworkSlide");
@@ -115,31 +136,5 @@ function exhibitionButtonScrollTop(site) {
     }
     exhibitionSlides[i].scrollTo(0,0);
   }
-
-}
-
-function artworkButtonScrollTop(site) {
-
-  let exhibitionSlides = document.querySelectorAll(".exhibitionSlide");
-  let artworkSlides = document.querySelectorAll(".artworkSlide");
-
-  console.log(exhibitionSlides, artworkSlides);
-
-  for (let i = 0; i < exhibitionSlides.length; i++) {
-    if (i == site.exhibition.activeIndex) {
-      continue;
-    }
-    exhibitionSlides[i].scrollTo(0,0);
-  }
-
-
-
-  for (let i = 0; i < artworkSlides.length; i++) {
-    if (i == site.artworks.activeIndex) {
-      continue;
-    }
-    artworkSlides[i].scrollTo(0,0);
-  }
-
 
 }

@@ -132,6 +132,30 @@ function updateActiveArtworkButtonOnNavigation(site) {
 
 }
 
+
+function scrollContentToTopOnSwitchingArtworkPage(site) {
+  
+  let exhibitionSlides = document.querySelectorAll(".exhibitionSlide");
+  let artworkSlides = document.querySelectorAll(".artworkSlide");
+
+  console.log(exhibitionSlides, artworkSlides);
+
+  for (let i = 0; i < exhibitionSlides.length; i++) {
+    if (i == site.exhibition.activeIndex) {
+      continue;
+    }
+    exhibitionSlides[i].scrollTo(0,0);
+  }
+
+  for (let i = 0; i < artworkSlides.length; i++) {
+    if (i == site.artworks.activeIndex) {
+      continue;
+    }
+    artworkSlides[i].scrollTo(0,0);
+  }
+
+}
+
 function scrollContentToTopOnSwitchingExhibitionPage(site) {
 
   let exhibitionSlides = document.querySelectorAll(".exhibitionSlide");
@@ -150,29 +174,6 @@ function scrollContentToTopOnSwitchingExhibitionPage(site) {
       continue;
     }
     exhibitionSlides[i].scrollTo(0,0);
-  }
-
-}
-
-function scrollContentToTopOnSwitchingArtworkPage(site) {
-
-  let exhibitionSlides = document.querySelectorAll(".exhibitionSlide");
-  let artworkSlides = document.querySelectorAll(".artworkSlide");
-
-  console.log(exhibitionSlides, artworkSlides);
-
-  for (let i = 0; i < exhibitionSlides.length; i++) {
-    if (i == site.exhibition.activeIndex) {
-      continue;
-    }
-    exhibitionSlides[i].scrollTo(0,0);
-  }
-
-  for (let i = 0; i < artworkSlides.length; i++) {
-    if (i == site.artworks.activeIndex) {
-      continue;
-    }
-    artworkSlides[i].scrollTo(0,0);
   }
 
 }

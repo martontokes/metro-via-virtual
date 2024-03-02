@@ -23,11 +23,11 @@ export default function Menu({ site, isArtworksMenuOn }) {
 function ArtworksMenu({site}) {
   return (
     <div id="artworksMenu">
-    <button onClick={() => artworkButtonHandler(site, 0)} className="menubutton artworkMenuButton activeButton">Autosave: Redoubt</button>
-    <button onClick={() => artworkButtonHandler(site, 1)} className="menubutton artworkMenuButton activeButton">Confidential Records</button>
-    <button onClick={() => artworkButtonHandler(site, 2)} className="menubutton artworkMenuButton activeButton">Illumination</button>
-    <button onClick={() => artworkButtonHandler(site, 3)} className="menubutton artworkMenuButton activeButton">Butterflies on the Wheel</button>
-    <button onClick={() => artworkButtonHandler(site, 4)} className="menubutton artworkMenuButton activeButton">Domestik/Publik</button>
+    <button onClick={() => artworkButtonHandler(site, 0)} className="menubutton artworkMenuButton activeButton">Domestik/Publik</button>
+    <button onClick={() => artworkButtonHandler(site, 1)} className="menubutton artworkMenuButton activeButton">Illumination</button>
+    <button onClick={() => artworkButtonHandler(site, 2)} className="menubutton artworkMenuButton activeButton">Confidential Records</button>
+    <button onClick={() => artworkButtonHandler(site, 3)} className="menubutton artworkMenuButton activeButton">Autosave: Redoubt</button>
+    <button onClick={() => artworkButtonHandler(site, 4)} className="menubutton artworkMenuButton activeButton">Butterflies on the Wheel</button>
   </div>
   )
 }

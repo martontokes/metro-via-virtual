@@ -31,7 +31,7 @@ import ConfidentialZh from "/src/components/content/Chinese/Artworks/Confidentia
 import AutosaveZh from "/src/components/content/Chinese/Artworks/AutosaveZh";
 import ButterfliesZh from "/src/components/content/Chinese/Artworks/ButterfliesZh";
 
-export default function Content({ site, incrementLoad, setArtworksMenuOn }) {
+export default function MobileContent({ site, incrementLoad, setArtworksMenuOn }) {
 
   function updateState(swiper) {
     if (swiper.activeIndex == 1) {
@@ -118,17 +118,17 @@ export default function Content({ site, incrementLoad, setArtworksMenuOn }) {
 
 function updateActiveArtworkButtonOnNavigation(site) {
 
-    const menubuttons = document.querySelectorAll(".artworkMenuButton");
+    // const menubuttons = document.querySelectorAll(".artworkMenuButton");
 
-    if (menubuttons.length > 0) {
+    // if (menubuttons.length > 0) {
 
-      for (let i = 0; i < menubuttons.length; i++) {
-        menubuttons[i].classList.remove("activeButton");
-      }
+    //   for (let i = 0; i < menubuttons.length; i++) {
+    //     menubuttons[i].classList.remove("activeButton");
+    //   }
 
-      menubuttons[site.artworks.activeIndex].classList.add("activeButton");
+    //   menubuttons[site.artworks.activeIndex].classList.add("activeButton");
 
-    }
+    // }
 
 }
 

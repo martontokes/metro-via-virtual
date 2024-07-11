@@ -2,7 +2,7 @@ import React, { useEffect, useState, useMemo } from "react"
 
 import Menu from "components/Menu"
 import Header from "components/Header"
-import Content from "components/Content"
+import MobileContent from "components/MobileContent"
 import WelcomeScreen from "components/WelcomeScreen"
 import Loader from "/src/components/Loader";
 
@@ -44,7 +44,11 @@ export default function App() {
 
         <div id="exhibition">
         <Menu site={site} isArtworksMenuOn={isArtworksMenuOn}  />
-        <Content site={site} incrementLoad={incrementLoad} setArtworksMenuOn={setArtworksMenuOn}/>
+        <MobileContent site={site} incrementLoad={incrementLoad} setArtworksMenuOn={setArtworksMenuOn}/>
+
+        
+        
+        
 
         </div>
         </>

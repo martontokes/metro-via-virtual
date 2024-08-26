@@ -69,7 +69,7 @@ function artworkButtonHandler(site, index) {
     }
   artworkpage.style.opacity = 0;
   setTimeout(() => {
-    site.exhibition.slideTo(1, 500, false);  
+    site.exhibition.slideTo(1, 0, false);  
     site.artworks.slideTo(index, 0, false);
     setTimeout(() => {
       artworkpage.style.opacity = 1;

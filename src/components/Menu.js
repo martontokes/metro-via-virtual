@@ -73,7 +73,7 @@ function artworkButtonHandler(site, index) {
     site.artworks.slideTo(index, 0, false);
     setTimeout(() => {
       artworkpage.style.opacity = 1;
-    }, 1000);
+    }, 0);
   }, 1000);
 
   

@@ -18,7 +18,8 @@
 
 .swiper-slide {
   overflow-y: scroll;
- 
+  -ms-overflow-style: none;  /* Hide scrollbar in IE and Edge */
+  scrollbar-width: none;
 }
 
 .swiper-pagination-bullet-active {

@@ -1,52 +1,6 @@
 .menubutton {
   color: #878787;
   font-weight: 500 !important;
-  font-size: 22px;
-}
-
-.activeButton {
-  color: #161616;
-}
-
-#mainMenu {
-  display: flex;
-  justify-content: space-between;
-  height: 48px;
-  margin: 8px 24px;
-}
-
-#mainMenu button {
-  height: 100%;
-  min-width: 48px;
-}
-
-.menubutton {
-  text-align: center;
-}
-
-  .inactiveButton {
-
-  }
-  
-#artworksMenu {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  margin: 0px 24px;
-  margin-bottom: 24px;
-}
-
-#artworksMenu button {
-  min-height: 48px;
-  font-weight: 500 !important;
-
-}
-
-@media screen and (max-width: 768px) {
-  
-.menubutton {
-  color: #878787;
-  font-weight: 500 !important;
   font-size: 12.3px;
 }
 
@@ -68,6 +22,7 @@
 
 .menubutton {
   text-align: center;
+  cursor: pointer;
 }
 
   .inactiveButton {
@@ -77,6 +32,76 @@
 #artworksMenu {
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
+  margin: 0px 24px;
+  margin-bottom: 24px;
+}
+
+#artworksMenu button {
+  min-height: 48px;
+  font-weight: 500 !important;
+
+}
+
+
+@media screen and (min-width: 1280px) {
+
+p {
+  font-size: 17.71px;
+  line-height: 1.9;
+}
+  
+
+
+#artworksLabel {
+  font-size: 17.71px;
+  display: flex;
+  align-items: center;
+  margin-right: 26px;
+}
+
+#aboutLabel {
+  font-size: 17.71px;
+  display: flex;
+  align-items: center;
+  margin-right: 32px;
+}
+  
+.menubutton {
+  color: #878787;
+  font-weight: 500 !important;
+  font-size: 17.71px;
+}
+
+.activeButton {
+  color: #161616;
+}
+
+#mainMenu {
+  display: flex;
+  justify-content: flex-start;
+  gap: 24px;
+  height: 48px;
+  margin: 8px 24px;
+}
+
+#mainMenu button {
+  height: 100%;
+  min-width: 48px;
+}
+
+.menubutton {
+  text-align: center;
+}
+
+  .inactiveButton {
+
+  }
+  
+#artworksMenu {
+  display: flex;
+  justify-content: flex-start;
+  gap: 24px;
   flex-wrap: wrap;
   margin: 0px 24px;
   margin-bottom: 24px;

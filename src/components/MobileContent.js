@@ -118,17 +118,17 @@ export default function MobileContent({ site, incrementLoad, setArtworksMenuOn }
 
 function updateActiveArtworkButtonOnNavigation(site) {
 
-    // const menubuttons = document.querySelectorAll(".artworkMenuButton");
+    const menubuttons = document.querySelectorAll(".artworkMenuButton");
 
-    // if (menubuttons.length > 0) {
+    if (menubuttons.length > 0) {
 
-    //   for (let i = 0; i < menubuttons.length; i++) {
-    //     menubuttons[i].classList.remove("activeButton");
-    //   }
+      for (let i = 0; i < menubuttons.length; i++) {
+        menubuttons[i].classList.remove("activeButton");
+      }
 
-    //   menubuttons[site.artworks.activeIndex].classList.add("activeButton");
+      menubuttons[site.artworks.activeIndex].classList.add("activeButton");
 
-    // }
+    }
 
 }
 

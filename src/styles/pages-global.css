@@ -135,6 +135,25 @@ margin-bottom: 16px;
     max-height: 56px;
 }
 
+#headerTextContainer {
+    position: absolute;
+    right: 32px;
+    top: 4px;
+    text-align: right;
+}
+
+#headerTitle {
+    color: #757575;
+    font-size: 24px !important;
+    padding-bottom: 4px;
+}
+
+#headerSubtitle {
+    color: #757575;
+    font-size: 16px !important;
+    padding-bottom: 4px;
+}
+
 @media screen and (max-width: 320px) {
 
     #artwork_page {

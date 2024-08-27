@@ -1,0 +1,8 @@
+#artwork_page {
+    width: 20%;
+}
+
+.exhibitionSlide {
+    display: flex !important;
+    justify-content: center !important; 
+}

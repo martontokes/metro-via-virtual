@@ -12,6 +12,8 @@ import autosave from "styles/pages/autosave.css"
 import domestik from "styles/pages/domestik.css"
 import pagesGlobal from "styles/pages-global.css"
 
+import content_responsivity_global from "/src/styles/pages/content_responsivity_global.css"
+
 import swipeInstructions from "styles/layout/swipeInstructions.css"
 
 import header from "styles/layout/header.css"

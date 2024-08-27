@@ -6,7 +6,6 @@ import MobileContent from "components/MobileContent"
 import WelcomeScreen from "components/WelcomeScreen"
 import Loader from "/src/components/Loader";
 
-
 import { isMobile } from "react-device-detect"
 
 export default function App() {

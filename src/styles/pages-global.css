@@ -154,6 +154,15 @@ margin-bottom: 16px;
     padding-bottom: 4px;
 }
 
+#artwork_page > div > div:last-child > div {
+    background-color: #313131 !important;
+    pointer-events: none;
+}
+
+#curatorialContainer {
+    margin: 15px;
+}
+
 @media screen and (max-width: 320px) {
 
     #artwork_page {

@@ -1,12 +1,17 @@
+import { Scrollbars } from 'react-custom-scrollbars-2';
+
 export default function Statement({site}) {
+
+
 
     return (
 
         <>
 
         <div id="artwork_page">
+        <Scrollbars>
             <h3>Curatorial statement</h3>
-            <div>
+            <div id="curatorialContainer">
                 <p id="curatorial">
                 Shih Shu-ching, in writing her Hong Kong trilogy, came across a specimen of eurema hecabe, a small pierid butterfly species commonly found in Hong Kong.<br /><br />
                 Shih* used eurema hecabe as an analogy of the city, writing that this butterfly 'contains a decisive force to challenge its fate, albeit covered by its delicate, fragile appearance.'<br /><br />
@@ -21,6 +26,7 @@ export default function Statement({site}) {
                 <br /><br /><br />
                 </p>
             </div>
+            </Scrollbars>
         </div>
 
         </>
@@ -28,3 +34,4 @@ export default function Statement({site}) {
     )
 
 }
+

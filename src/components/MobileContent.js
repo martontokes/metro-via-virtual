@@ -6,6 +6,8 @@ import { Pagination, Navigation, Scrollbar } from 'swiper/modules';
 
 import { useState, useEffect } from "react";
 
+import { isMobile } from "react-device-detect";
+
 import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
@@ -122,12 +124,10 @@ function updateActiveArtworkButtonOnNavigation(site) {
 
     if (menubuttons.length > 0) {
 
-      for (let i = 0; i < menubuttons.length; i++) {
-        menubuttons[i].classList.remove("activeButton");
-      }
 
+      if (isMobile) {
       menubuttons[site.artworks.activeIndex].classList.add("activeButton");
-
+    }
     }
 
 }

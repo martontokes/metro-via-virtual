@@ -7,18 +7,16 @@ html {
     opacity: 1;
     transition: opacity 1s;
     overflow-y: scroll;
-    height: 250px;
-    background-color: blue; /* Black color for the scrollbar thumb */
+
 
 }
 
 
-#artwork_page::-webkit-scrollbar {
-    background-color: #d60606; /* Black color for the scrollbar thumb */
-    border-radius: 16px; /* Rounded corners for the thumb */
-    border: 6px solid #aa0e0e; /* Optional: Adds some spacing around the thumb */
-    width: 24px;
-  }
+#artwork_page {
+    
+        -webkit-overflow-scrolling: touch; /* Enables smooth scrolling on iOS */
+        overflow-y: scroll; /* Ensures vertical scroll is always visible */
+}
 
 .swiper {
     transition: opacity 1s;

@@ -8,7 +8,7 @@ export default function Statement({site}) {
     return (
 
         <>
-
+       <Scrollbars universal={true}  autoHide={false}  style={{right: "8px"}}>
         <div id="artwork_page">
             <h3>Curatorial statement</h3>
             <div id="curatorialContainer">
@@ -27,7 +27,7 @@ export default function Statement({site}) {
                 </p>
             </div>
         </div>
-  
+        </Scrollbars>
         </>
 
     )

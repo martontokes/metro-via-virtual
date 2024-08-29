@@ -11,7 +11,7 @@ export default function Statement({site}) {
 
         <div id="artwork_page">
             <Scrollbar></Scrollbar>
-            <div style={{position: "absolute", width: "20px", height: "100%", backgroundColor: "red", top: "0px", right: "0px"}}></div>
+
             <h3>Curatorial statement</h3>
             <div id="curatorialContainer">
                 <p id="curatorial">

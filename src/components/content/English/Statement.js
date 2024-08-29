@@ -1,4 +1,4 @@
-import { Scrollbars } from 'react-custom-scrollbars-2';
+import Scrollbar from 'components/Scrollbar';
 import { isMobile } from 'react-device-detect';
 
 export default function Statement({site}) {
@@ -10,6 +10,7 @@ export default function Statement({site}) {
         <>
 
         <div id="artwork_page">
+            <Scrollbar></Scrollbar>
             <h3>Curatorial statement</h3>
             <div id="curatorialContainer">
                 <p id="curatorial">

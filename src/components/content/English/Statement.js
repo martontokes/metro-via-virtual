@@ -1,4 +1,5 @@
 import { Scrollbars } from 'react-custom-scrollbars-2';
+import { isMobile } from 'react-device-detect';
 
 export default function Statement({site}) {
 
@@ -7,7 +8,7 @@ export default function Statement({site}) {
     return (
 
         <>
-       <Scrollbars style={{right: "8px"}}>
+       <Scrollbars autohide={false} style={{right: "8px"}}>
         <div id="artwork_page">
             <h3>Curatorial statement</h3>
             <div id="curatorialContainer">

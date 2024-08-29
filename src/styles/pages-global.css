@@ -155,9 +155,6 @@ margin-bottom: 16px;
 }
 
 
-.exhibitionSlide > div > div:last-child > div {
-    background-color: #6e6e6e !important;
-}
 
 
 @media screen and (max-width: 320px) {

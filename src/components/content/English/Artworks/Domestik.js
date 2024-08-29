@@ -1,5 +1,6 @@
 import { useEffect } from "react";
 import ReactPlayer from "react-player"
+import { Scrollbars } from 'react-custom-scrollbars-2';
 
 export default function Domestik({incrementLoad}) {
 
@@ -8,7 +9,7 @@ export default function Domestik({incrementLoad}) {
   return (
 
     <>
-
+       <Scrollbars style={{right: "8px"}}>
       <div id="artwork_page">
         <h3>Domestik / Publik (2020)</h3>
         <div className="artistsBox">
@@ -26,7 +27,7 @@ export default function Domestik({incrementLoad}) {
         url="https://soundcloud.com/m-rton-t-k-s-1/riar-rizaldi-domestikpublik-1"
       />
       </div>
-
+      </Scrollbars>
     </>
   
   )

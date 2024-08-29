@@ -3,12 +3,12 @@ import { isMobile } from 'react-device-detect';
 
 export default function Statement({site}) {
 
-
+    
 
     return (
 
         <>
-       <Scrollbars autohide={false} style={{right: "8px"}}>
+       <Scrollbars style={{right: "8px"}}>
         <div id="artwork_page">
             <h3>Curatorial statement</h3>
             <div id="curatorialContainer">

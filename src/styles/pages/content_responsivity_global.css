@@ -7,13 +7,12 @@
 
 .exhibitionSlide > div > div:last-child > div {
     background-color: #6e6e6e !important;
+    position: absolute !important;
+    left: 0px !important;
+    top: 0px !important;
+    display: block !important;
     
 
-}
-
-.exhibitionSlide > div > div:last-child {
-    display: block !important;
-    background-color: #dadada !important;
 }
 
 @media screen and (min-width: 768px) {

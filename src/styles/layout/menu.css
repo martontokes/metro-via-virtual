@@ -58,31 +58,12 @@
 
 @media screen and (min-width: 1280px) {
 
-p {
-  font-size: 17.71px;
-  line-height: 1.9;
-}
-  
 
-
-#artworksLabel {
-  font-size: 17.71px;
-  display: flex;
-  align-items: center;
-  margin-right: 26px;
-}
-
-#aboutLabel {
-  font-size: 17.71px;
-  display: flex;
-  align-items: center;
-  margin-right: 32px;
-}
   
 .menubutton {
   color: #878787;
   font-weight: 500 !important;
-  font-size: 17.71px;
+  font-size: 14.76px;
 }
 
 .activeButton {
@@ -95,6 +76,7 @@ p {
   gap: 24px;
   height: 48px;
   margin: 8px 24px;
+  margin-bottom: 0px;
 }
 
 #mainMenu button {

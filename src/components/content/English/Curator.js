@@ -1,10 +1,12 @@
+import { Scrollbars } from 'react-custom-scrollbars-2';
+
 export default function Curator() {
 
   return (
 
     <>
-   
-    <div id="artwork_page" style={{display: "block"}}>
+       <Scrollbars style={{right: "8px"}}>
+    <div id="artwork_page">
 
       <h3>About the Curator</h3>
       <p>Zeng Hong is an academic, curator and visual artist.<br /><br />
@@ -18,6 +20,7 @@ export default function Curator() {
       </p>
       
     </div>
+    </Scrollbars>
 
     </>
       

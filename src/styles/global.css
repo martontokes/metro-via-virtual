@@ -30,6 +30,8 @@ button {
 body, #__next {
 
   transition: opacity 2s;
+  overflow-y: hidden !important;
+
 
 }
 
@@ -40,5 +42,3 @@ body, #__next {
   margin: 0px 0px;
 
 }
-
-

@@ -1,9 +1,11 @@
 import { isMobile } from "react-device-detect";
+import { Scrollbars } from 'react-custom-scrollbars-2';
 
 export default function Essay() {
     
     return (
         <>
+       <Scrollbars style={{right: "8px"}}>
             <div id="artwork_page">
                 <h3>On the Role of <br />Symbol Alienation in Art</h3>
                 <div>
@@ -52,6 +54,7 @@ export default function Essay() {
                     April 26, 2022</p><br /><br /><br />
                 </div>
             </div>
+            </Scrollbars>
         </>
     );
 }

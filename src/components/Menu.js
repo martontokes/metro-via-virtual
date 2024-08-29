@@ -7,7 +7,7 @@ export default function Menu({ site, isArtworksMenuOn }) {
   return (
     <>
       <div id="mainMenu">
-        {isMobile ? null : <><h1 id="aboutLabel" style={{fontWeight: "normal", fontStyle: "italic"}}>about</h1></>}
+        {isMobile ? null : <><h1 id="aboutLabel" style={{fontWeight: "normal"}}>about</h1></>}
 
         <button onClick={() => exhibitionButtonHandler(site, 0)} className="uppermenu menubutton activeButton">{ (site.language == "english")  ? "statement" : "chinese" } </button>
         {isMobile ? <button onClick={() => exhibitionButtonHandler(site, 1)} className="uppermenu menubutton">artworks</button> : null}
@@ -30,7 +30,7 @@ function ArtworksMenu({site}) {
   return (
 
     <div id="artworksMenu">
-    <h1 id="artworksLabel" style={{fontWeight: "normal", fontStyle: "italic"}}>artworks</h1>
+    <h1 id="artworksLabel" style={{fontWeight: "normal"}}>artworks</h1>
     <button onClick={() => artworkButtonHandler(site, 0)} className="menubutton artworkMenuButton ">Domestik/Publik</button>
     <button onClick={() => artworkButtonHandler(site, 1)} className="menubutton artworkMenuButton ">Illumination</button>
     <button onClick={() => artworkButtonHandler(site, 2)} className="menubutton artworkMenuButton ">Confidential Records</button>

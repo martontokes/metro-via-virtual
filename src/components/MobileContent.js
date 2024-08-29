@@ -15,8 +15,6 @@ import 'swiper/css/navigation';
 
 import 'swiper/css/free-mode';
 
-import updateMenu from "../../modules/updateMenuActiveButton.mjs";
-
 import Statement from "/src/components/content/English/Statement";
 import Essay from "/src/components/content/English/Essay";
 import Curator from "/src/components/content/English/Curator";
@@ -33,15 +31,7 @@ import ConfidentialZh from "/src/components/content/Chinese/Artworks/Confidentia
 import AutosaveZh from "/src/components/content/Chinese/Artworks/AutosaveZh";
 import ButterfliesZh from "/src/components/content/Chinese/Artworks/ButterfliesZh";
 
-export default function MobileContent({ site, incrementLoad, setArtworksMenuOn }) {
-
-  function updateState(swiper) {
-    if (swiper.activeIndex == 1) {
-      setArtworksMenuOn(true);
-    } else {
-      setArtworksMenuOn(false);
-    }
-  }
+export default function MobileContent({ site, incrementLoad }) {
 
     return (
       
@@ -49,17 +39,12 @@ export default function MobileContent({ site, incrementLoad, setArtworksMenuOn }
 
         <Swiper {...exhibitionSwiperConfig} 
         onInit={(swiper) => {site.setExhibition(swiper);}}
-        onSlideChange={(swiper) => {site.setExhibition(swiper); updateMenu(site); updateActiveArtworkButtonOnNavigation(site); updateState(swiper); console.log(swiper)}}
+        onSlideChange={(swiper) => {site.setExhibition(swiper); updateActiveArtworkButtonOnNavigation(site);}}
         onSliderMove={(swiper) => {scrollContentToTopOnSwitchingExhibitionPage(site);}}
-        className="exhibitionSwiper"
-
-
-        >
+        className="exhibitionSwiper">
 
           <SwiperSlide className="exhibitionSlide">
-          {(site.language == "english") ? 
-
-          <Statement /> : <StatementZh /> }
+            {(site.language == "english") ? <Statement /> : <StatementZh /> }
           </SwiperSlide>
 
           <SwiperSlide className="exhibitionSlide">
@@ -144,8 +129,6 @@ function scrollContentToTopOnSwitchingArtworkPage(site) {
   
   let exhibitionSlides = document.querySelectorAll(".exhibitionSlide");
   let artworkSlides = document.querySelectorAll(".artworkSlide");
-
-  console.log(exhibitionSlides, artworkSlides);
 
   for (let i = 0; i < exhibitionSlides.length; i++) {
     if (i == site.exhibition.activeIndex) {

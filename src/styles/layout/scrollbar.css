@@ -1,9 +1,4 @@
-.swiper-scrollbar-drag {
-    background: rgb(102, 102, 102) !important;
-}
+.scrollbar {
+    position: absolute;
 
-.swiper-scrollbar-horizontal {
-    background: rgba(212, 212, 212, 0.3) !important;
-    width: 100vw !important;
 }
-

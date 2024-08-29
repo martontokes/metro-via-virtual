@@ -54,29 +54,14 @@ function artworkButtonHandler(site, index) {
 
   const artworkpage = document.querySelector(".swiper");
 
-  if (isMobile) {
-    if (menubuttons.length > 0) {
-      for (let i = 0; i < menubuttons.length; i++) {
-        menubuttons[i].classList.remove("activeButton");
+    if (artworks_buttons_inside_artworkButtonHandler_function.length > 0) {
+      for (let i = 0; i < artworks_buttons_inside_artworkButtonHandler_function.length; i++) {
+        artworks_buttons_inside_artworkButtonHandler_function[i].classList.remove("activeButton");
     }
-     menubuttons[index].classList.add("activeButton");
-    }
-  scrollContentToTopOnSwitchingArtworkPage(site);
-  site.artworks.slideTo(index, 500, false);
-
-  } else {
-
-    for (let i = 0; i < uppermenubuttons.length; i++) {
-      uppermenubuttons[i].classList.remove("activeButton");
-    }
-
-    if (menubuttons.length > 0) {
-      for (let i = 0; i < menubuttons.length; i++) {
-        menubuttons[i].classList.remove("activeButton");
-    }
-    menubuttons[index].classList.add("activeButton");
+    artworks_buttons_inside_artworkButtonHandler_function[index].classList.add("activeButton");
  
     }
+
   artworkpage.style.opacity = 0;
   setTimeout(() => {
     site.exhibition.slideTo(1, 0, false);  
@@ -91,43 +76,41 @@ function artworkButtonHandler(site, index) {
   }
 
 
-}
 
 function exhibitionButtonHandler(site, index) {
 
-  const menubuttons = document.querySelectorAll(".uppermenu");
+  const artworks_buttons_inside_exhibitionButtonHandler_function = document.querySelectorAll(".artworkMenuButton");
+  const exhibition_buttons_inside_exhibitionButtonHandler_function = document.querySelectorAll(".uppermenu");
   const artworkpage = document.querySelector(".swiper");
-  const lowermenubuttons = document.querySelectorAll(".artworkMenuButton");
 
-  for (let i = 0; i < lowermenubuttons.length; i++) {
-    lowermenubuttons[i].classList.remove("activeButton");
+  for (let i = 0; i < artworks_buttons_inside_exhibitionButtonHandler_function.length; i++) {
+    artworks_buttons_inside_exhibitionButtonHandler_function[i].classList.remove("activeButton");
+  }
+
+  for (let i = 0; i < exhibition_buttons_inside_exhibitionButtonHandler_function.length; i++) {
+    exhibition_buttons_inside_exhibitionButtonHandler_function[i].classList.remove("activeButton");
   }
 
   if (isMobile) {
-
-    for (let i = 0; i < menubuttons.length; i++) {
-      menubuttons[i].classList.remove("activeButton");
-    }
-   menubuttons[index].classList.add("activeButton");
-    scrollContentToTopOnSwitchingExhibitionPage(site);
-    site.exhibition.slideTo(index, 500, false);
-  
+    
+  } else {
+    if (index == 0) {
+      exhibition_buttons_inside_exhibitionButtonHandler_function[index].classList.add("activeButton");
     } else {
-
-      for (let i = 0; i < menubuttons.length; i++) {
-        menubuttons[i].classList.remove("activeButton");
-      }
+      exhibition_buttons_inside_exhibitionButtonHandler_function[index - 1].classList.add("activeButton");
+    }
+  }
+  
 
   
-    artworkpage.style.opacity = 0;  
+  artworkpage.style.opacity = 0;
+  setTimeout(() => {
+    site.exhibition.slideTo(index, 0, false);  
     setTimeout(() => {
-      site.exhibition.slideTo(index, 0, false);
       artworkpage.style.opacity = 1;
-    }, 1000);
+    }, 0);
+  }, 1000);
   }
-
-
-}
 
 
 function scrollContentToTopOnSwitchingArtworkPage(site) {

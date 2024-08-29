@@ -120,15 +120,22 @@ export default function MobileContent({ site, incrementLoad, setArtworksMenuOn }
 
 function updateActiveArtworkButtonOnNavigation(site) {
 
-    const menubuttons = document.querySelectorAll(".artworkMenuButton");
+ 
 
-    if (menubuttons.length > 0) {
+    if (isMobile) {
+      const artworkMenuButtons = document.querySelectorAll(".artworkMenuButton");
+      const exhibitionMenuButtons = document.querySelectorAll(".uppermenu");
+      if (artworkMenuButtons.length > 0) {
+        artworkMenuButtons[site.artworks.activeIndex].classList.add("activeButton");
+      }
+      for (let i = 0; i < exhibitionMenuButtons.length; i++) {
+        exhibitionMenuButtons[i].classList.remove("activeButton");
+      }
+    exhibitionMenuButtons[site.exhibition.activeIndex].classList.add("activeButton");
+  }
 
-
-      if (isMobile) {
-      menubuttons[site.artworks.activeIndex].classList.add("activeButton");
-    }
-    }
+  
+    
 
 }
 

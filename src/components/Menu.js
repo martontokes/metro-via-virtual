@@ -101,16 +101,23 @@ function exhibitionButtonHandler(site, index) {
     }
   }
   
+  if (isMobile) {
 
+
+      site.exhibition.slideTo(index, 500, false);  
+
+  } else {
   
-  artworkpage.style.opacity = 0;
-  setTimeout(() => {
-    site.exhibition.slideTo(index, 0, false);  
-    setTimeout(() => {
-      artworkpage.style.opacity = 1;
-    }, 0);
-  }, 1000);
+    artworkpage.style.opacity = 0;
+      setTimeout(() => {
+        site.exhibition.slideTo(index, 0, false);  
+        setTimeout(() => {
+          artworkpage.style.opacity = 1;
+        }, 0);
+      }, 1000);
+
   }
+}
 
 
 function scrollContentToTopOnSwitchingArtworkPage(site) {

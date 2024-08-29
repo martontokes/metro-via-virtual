@@ -1,7 +1,4 @@
-#artwork_page {
-    width: 30%;
-    overflow: scroll;
-}
+
 
 .exhibitionSlide {
     display: flex !important;
@@ -12,11 +9,19 @@
     background-color: #6e6e6e !important;
 }
 
+@media screen and (min-width: 768px) {
 
-#artwork_page {
-    overflow: hidden;
-    margin-left: 256px;
-    margin-top: 64px;
+    #artwork_page {
+
+        margin-left: 256px;
+        margin-top: 64px;
+    }
+
+    #artwork_page {
+        width: 30%;
+
+    }
+
 }
 
 /* Scrollbar styling for Firefox */

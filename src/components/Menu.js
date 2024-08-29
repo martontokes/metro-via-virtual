@@ -1,25 +1,23 @@
-import { useEffect } from "react";
+import { useEffect, useRef } from "react";
 import { isMobile } from "react-device-detect";
 import Header from "/src/components/Header"
 
 export default function Menu({ site, isArtworksMenuOn }) {
-
+ 
   return (
     <>
       <div id="mainMenu">
         {isMobile ? null : <><h1 id="aboutLabel" style={{fontWeight: "normal"}}>about</h1></>}
-
         <button onClick={() => exhibitionButtonHandler(site, 0)} className="uppermenu menubutton activeButton">{ (site.language == "english")  ? "statement" : "chinese" } </button>
         {isMobile ? <button onClick={() => exhibitionButtonHandler(site, 1)} className="uppermenu menubutton">artworks</button> : null}
         <button onClick={() => exhibitionButtonHandler(site, 2)} className="uppermenu menubutton">essay</button>
-        <button onClick={() => exhibitionButtonHandler(site, 3)} className="uppermenu menubutton">curator</button>
-      </div>
-
-      { !isMobile ? <ArtworksMenu site={site}/> : null}
-      <div id="headerTextContainer">
+        <button onClick={() => exhibitionButtonHandler(site, 3)} className="uppermenu menubutton">curator</button></div>
+        { isMobile ? null : <ArtworksMenu site={site}/>}
+        { isMobile ? null : <><div id="headerTextContainer">
             <h1 id="headerTitle" className="montserrat">metro via virtual</h1>
             <h2 id="headerSubtitle" className="montserrat">a virtual exhibition from Hong Kong</h2>
-          </div>
+          </div></> }
+
     </>
   );
 }
@@ -45,11 +43,13 @@ function ArtworksMenu({site}) {
 
 function artworkButtonHandler(site, index) {
 
-  const menubuttons = document.querySelectorAll(".artworkMenuButton");
-  const uppermenubuttons = document.querySelectorAll(".uppermenu");
 
-  for (let i = 0; i < menubuttons.length; i++) {
-    menubuttons[i].classList.remove("activeButton");
+    const artworks_buttons_inside_artworkButtonHandler_function = document.querySelectorAll(".artworkMenuButton");
+    const exhibition_buttons_inside_artworkButtonHandler_function = document.querySelectorAll(".uppermenu");
+
+
+  for (let i = 0; i < exhibition_buttons_inside_artworkButtonHandler_function.length ; i++) {
+    exhibition_buttons_inside_artworkButtonHandler_function[i].classList.remove("activeButton");
   }
 
   const artworkpage = document.querySelector(".swiper");
@@ -118,11 +118,7 @@ function exhibitionButtonHandler(site, index) {
         menubuttons[i].classList.remove("activeButton");
       }
 
-    if (index == 0) {
-     menubuttons[index].classList.add("activeButton");
-    } else {
-      menubuttons[index-1].classList.add("activeButton");
-    }
+  
     artworkpage.style.opacity = 0;  
     setTimeout(() => {
       site.exhibition.slideTo(index, 0, false);

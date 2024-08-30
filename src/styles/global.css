@@ -4,7 +4,9 @@
 
 
   -webkit-tap-highlight-color: rgba(0,0,0,0);
-  background-color: #fdfdfd !important;
+  background-color: rgb(255, 255, 255) !important;
+  color-scheme: light; 
+
 }
 
 

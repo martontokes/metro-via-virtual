@@ -6,20 +6,17 @@
     opacity: 1;
     transition: opacity 1s;
     overflow-y: scroll;
-}
-
-
-#artwork_page {
-    
-        scrollbar-width: none; /* Hides the scrollbar in Firefox */
-        -ms-overflow-style: none; /* Hides the scrollbar in Internet Explorer and Edge */
-    
+    width: 50px;
+    background-color: rgb(241, 241, 241);
 }
 
 #artwork_page::-webkit-scrollbar {
-    width: 0px; /* Removes the scrollbar width */
-    background: transparent; /* Ensures the scrollbar background is transparent */
-  }
+    scrollbar-color: black !important;
+}
+
+
+
+
 
 .swiper {
     transition: opacity 1s;

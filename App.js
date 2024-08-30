@@ -35,7 +35,7 @@ export default function App() {
     return (
 
       <>
-
+      
         { isWelcomeScreenOn ? <WelcomeScreen site={site} /> :
 
         <>
@@ -43,12 +43,7 @@ export default function App() {
 
         <div id="exhibition">
         <Menu site={site} isArtworksMenuOn={isArtworksMenuOn}  />
-        <MobileContent site={site} incrementLoad={incrementLoad} setArtworksMenuOn={setArtworksMenuOn}/>
-
-        
-        
-        
-
+        <MobileContent site={site} incrementLoad={incrementLoad} setArtworksMenuOn={setArtworksMenuOn}/>       
         </div>
         </>
         

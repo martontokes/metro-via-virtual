@@ -24,7 +24,6 @@ export default function Document() {
 
         <Head />
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=yes"></meta>
-        <meta name="theme-color" content="white"></meta>
         <title>metro via virtual</title>
         <Main />
         <NextScript />

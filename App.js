@@ -30,12 +30,16 @@ export default function App() {
     }
   }, [contentLoaded]);
 
+  useEffect(() => {
+    window.addEventListener('resize', setContentWindowSize)
+  })
+
 /* mod to commit */
 
     return (
 
       <>
-      
+
         { isWelcomeScreenOn ? <WelcomeScreen site={site} /> :
 
         <>
@@ -55,6 +59,9 @@ export default function App() {
 
 }
 
+
+
+
 function hideLoaderRevealSite() {
 
   document.getElementById("loaderContainer").style.opacity = 0;
@@ -63,4 +70,22 @@ function hideLoaderRevealSite() {
     document.getElementById("exhibition").style.opacity = 1;
   }, 1000);
 
+}
+
+function setContentWindowSize() {
+
+  // if (document.querySelectorAll(".fluidHeightContentWindow") != null) {
+
+  //   for (let i = 0; i < document.querySelectorAll(".fluidHeightContentWindow").length; i++) {
+
+  //     if (!isMobile) {
+  //     let computedStyleOfElementToResize = window.getComputedStyle(document.querySelectorAll(".fluidHeightContentWindow")[i]);
+  //     console.log("top margin:" + parseInt(computedStyleOfElementToResize.marginTop));
+  //     console.log("window inner:" + window.innerHeight);
+  //     console.log("result: " + (window.innerHeight - parseInt(computedStyleOfElementToResize.marginTop)) + "px");
+  //     document.querySelectorAll(".fluidHeightContentWindow")[i].style.height = (window.innerHeight - parseInt(computedStyleOfElementToResize.marginTop)) + "px";
+
+  //     }
+  //   }
+  // }
 }

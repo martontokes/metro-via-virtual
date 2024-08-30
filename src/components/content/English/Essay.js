@@ -6,7 +6,7 @@ export default function Essay() {
     return (
         <>
        <Scrollbars style={{right: "8px"}}>
-            <div id="artwork_page">
+            <div id="artwork_page" className="fluidHeightContentWindow">
                 <h3>On the Role of <br />Symbol Alienation in Art</h3>
                 <div>
                     <p>Cities are built upon people’s individual and collective memories, which are themselves shaped by various visual and auditory symbols.<br /><br />

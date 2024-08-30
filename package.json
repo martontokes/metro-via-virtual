@@ -28,7 +28,7 @@
     "react-swipeable": "^7.0.1",
     "react-youtube": "^10.1.0",
     "sass": "^1.63.6",
-    "swiper": "^11.0.5",
+    "swiper": "^11.1.11",
     "video-react": "^0.16.0"
   },
   "devDependencies": {

@@ -7,6 +7,16 @@
   background-color: rgb(255, 255, 255) !important;
   color-scheme: light; 
 
+  --fluidHeightContentWindow-height: 100dvh;
+  --dvh: 100dvh;
+
+
+}
+
+.fluidHeightContentWindow {
+
+  height: calc(var(--dvh) - 20px);
+
 }
 
 

@@ -9,7 +9,7 @@ export default function Statement({site}) {
 
         <>
 
-        <div id="artwork_page">
+        <div id="artwork_page" className="fluidHeightContentWindow">
             <Scrollbar></Scrollbar>
 
             <h3>Curatorial statement</h3>

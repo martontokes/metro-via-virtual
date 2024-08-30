@@ -33,6 +33,10 @@ import ButterfliesZh from "/src/components/content/Chinese/Artworks/ButterfliesZ
 
 export default function MobileContent({ site, incrementLoad }) {
 
+  useEffect(() => {
+    setContentWindowSize();
+  }, [])
+
     return (
       
       <>
@@ -166,4 +170,34 @@ function scrollContentToTopOnSwitchingExhibitionPage(site) {
     exhibitionSlides[i].scrollTo(0,0);
   }
 
+}
+
+function setContentWindowSize() {
+
+  let contentWindow = document.querySelector(".fluidHeightContentWindow");
+  let contentWindowComputedStyle = window.getComputedStyle(contentWindow);
+  console.log(contentWindow);
+  console.log(contentWindowComputedStyle);
+  let contentWindowMargins = parseFloat(contentWindowComputedStyle.marginTop) + parseFloat(contentWindowComputedStyle.marginBottom);
+  console.log(parseFloat(contentWindowComputedStyle.marginTop));
+  console.log(parseFloat(contentWindowComputedStyle.marginBottom));
+
+  let upperMenu = document.getElementById("mainMenu");
+  let lowerMenu = document.getElementById("artworksMenu");
+  let elementToFetchFluidSize = document.getElementById("placeHolderToFetch100dvhInPixels");
+  let upperMenuRect = upperMenu.getBoundingClientRect();
+  let lowerMenuRect = lowerMenu.getBoundingClientRect();
+  let upperMenuStyle = window.getComputedStyle(upperMenu);
+  let lowerMenuStyle = window.getComputedStyle(lowerMenu);
+  let upperMenuHeightTotal = upperMenuRect.height + (parseFloat(upperMenuStyle.marginTop) + parseFloat(upperMenuStyle.marginBottom));
+  let lowerMenuHeightTotal = lowerMenuRect.height + (parseFloat(lowerMenuStyle.marginTop) + parseFloat(lowerMenuStyle.marginBottom));
+  let fluidHeight = elementToFetchFluidSize.getBoundingClientRect();
+
+  // console.log(fluidHeight.height);
+  // console.log(upperMenuHeightTotal);
+  // console.log(lowerMenuHeightTotal);
+  
+  document.documentElement.style.setProperty('--fluidHeightContentWindowHeight', `${fluidHeight.height - (upperMenuHeightTotal + lowerMenuHeightTotal + contentWindowMargins)}px`);
+  // console.log(document.documentElement.style.getPropertyValue('--fluidHeightContentWindowHeight'));
+  console.log(fluidHeight.height - (upperMenuHeightTotal + lowerMenuHeightTotal + contentWindowMargins));
 }

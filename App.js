@@ -31,7 +31,7 @@ export default function App() {
   }, [contentLoaded]);
 
   useEffect(() => {
-    window.addEventListener('resize', setContentWindowSize)
+    window.addEventListener('resize', setContentWindowSize);
   }, [])
 
 /* mod to commit */
@@ -75,7 +75,11 @@ function hideLoaderRevealSite() {
 
 function setContentWindowSize() {
 
-  let pixelsToSubtract;
+  let contentWindow = document.querySelector(".fluidHeightContentWindow");
+  let contentWindowComputedStyle = window.getComputedStyle(contentWindow);
+  console.log(contentWindow);
+  console.log(contentWindowComputedStyle);
+  let contentWindowMargins = parseFloat(contentWindowComputedStyle.marginTop) + parseFloat(contentWindowComputedStyle.marginBottom);
   let upperMenu = document.getElementById("mainMenu");
   let lowerMenu = document.getElementById("artworksMenu");
   let elementToFetchFluidSize = document.getElementById("placeHolderToFetch100dvhInPixels");
@@ -86,13 +90,13 @@ function setContentWindowSize() {
   let upperMenuHeightTotal = upperMenuRect.height + (parseFloat(upperMenuStyle.marginTop) + parseFloat(upperMenuStyle.marginBottom));
   let lowerMenuHeightTotal = lowerMenuRect.height + (parseFloat(lowerMenuStyle.marginTop) + parseFloat(lowerMenuStyle.marginBottom));
   let fluidHeight = elementToFetchFluidSize.getBoundingClientRect();
+
+  // console.log(fluidHeight.height);
+  // console.log(upperMenuHeightTotal);
+  // console.log(lowerMenuHeightTotal);
   
-  console.log(fluidHeight.height);
-  console.log(upperMenuHeightTotal);
-  console.log(lowerMenuHeightTotal);
-  
-  document.documentElement.style.setProperty('--fluidHeightContentWindowHeight', `${fluidHeight.height - (upperMenuHeightTotal + lowerMenuHeightTotal)}px`);
-  console.log(document.documentElement.style.getPropertyValue('--fluidHeightContentWindowHeight'));
+  document.documentElement.style.setProperty('--fluidHeightContentWindowHeight', `${fluidHeight.height - (upperMenuHeightTotal + lowerMenuHeightTotal + contentWindowMargins)}px`);
+  // console.log(document.documentElement.style.getPropertyValue('--fluidHeightContentWindowHeight'));
 }
 
   // if (document.querySelectorAll(".fluidHeightContentWindow") != null) {

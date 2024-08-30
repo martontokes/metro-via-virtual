@@ -8,6 +8,7 @@
     overflow-y: scroll;
     width: 50px;
     background-color: rgb(241, 241, 241);
+    margin-bottom: 0px !important;
 }
 
 #artwork_page::-webkit-scrollbar {

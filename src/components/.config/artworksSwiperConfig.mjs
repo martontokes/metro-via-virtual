@@ -1,4 +1,5 @@
 import { Pagination, Navigation } from 'swiper/modules';
+import { isMobile } from 'react-device-detect';
 
 const artworksSwiperConfig = {
   
@@ -6,6 +7,7 @@ const artworksSwiperConfig = {
   pagination: true,
   spaceBetween: 0,
   navigation: false,
+  allowTouchMove: isMobile ? true : false,
   slidesPerView: 1,
   onSwiper: (swiper) => {
     swiper.updateAutoHeight(1);

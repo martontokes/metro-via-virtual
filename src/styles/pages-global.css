@@ -6,18 +6,17 @@
     opacity: 1;
     transition: opacity 1s;
     overflow-y: scroll;
-    width: 50px;
-    background-color: rgb(241, 241, 241);
+    background-color: transparent;
     margin-bottom: 0px !important;
+    overflow-y: scroll;
+    scrollbar-width: none;
+    width: 100% !important;
 }
 
 #artwork_page::-webkit-scrollbar {
-    scrollbar-color: black !important;
+    width: 0;               /* Hide the scrollbar */
+    height: 0;              /* Hide the scrollbar */
 }
-
-
-
-
 
 .swiper {
     transition: opacity 1s;

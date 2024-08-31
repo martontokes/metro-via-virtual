@@ -1,4 +1,5 @@
 import { Pagination } from 'swiper/modules';
+import { isMobile } from 'react-device-detect';
 
 const exhibitionSwiperConfig = {
     touchRatio: 1.2,
@@ -10,6 +11,7 @@ const exhibitionSwiperConfig = {
     passiveListeners: true,
     preventInteractionOnTransition: true,
     autoHeight: true,
+    allowTouchMove: isMobile ? true : false,
     onDragStart: () => {},
     onSliderFirstMove: (swiper) => { },
     onTouchStart: () => {},

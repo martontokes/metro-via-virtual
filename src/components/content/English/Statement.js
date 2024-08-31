@@ -1,4 +1,3 @@
-import Scrollbar from 'components/Scrollbar';
 import { isMobile } from 'react-device-detect';
 
 export default function Statement({site}) {
@@ -7,7 +6,7 @@ export default function Statement({site}) {
 
         <>
         <div className="contentContainer fluidHeightContentWindow">
-            <Scrollbar></Scrollbar>
+
 
             <h3>Curatorial statement</h3>
             <div id="curatorialContainer" className="onlyTextContentPageContainer">

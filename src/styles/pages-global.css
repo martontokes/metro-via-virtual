@@ -20,12 +20,14 @@
 
 
 .onlyTextContentPageContainer {
-    width: 30%;
+    max-width: 576px;
+
 }
 
-.swiper {
-    transition: opacity 1s;
-} 
+.contentContainer {
+    scrollbar-width: none;
+    margin: 0px 24px;
+}
 
 
 p {
@@ -137,11 +139,6 @@ margin-bottom: 16px;
 
 
 @media screen and (max-width: 320px) {
-
-    #artwork_page {
-
-    }
-
 
 
     h3 {

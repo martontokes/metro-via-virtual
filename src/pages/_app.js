@@ -18,7 +18,6 @@ import swipeInstructions from "styles/layout/swipeInstructions.css"
 
 import header from "styles/layout/header.css"
 import loaderSpinner from "styles/layout/loader-spinner.css"
-import scrollbar from "styles/layout/scrollbar.css"
 import menu from "styles/layout/menu.css"
 
 

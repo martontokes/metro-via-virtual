@@ -4,19 +4,9 @@
 
 
   -webkit-tap-highlight-color: rgba(0,0,0,0);
-  background-color: rgb(255, 255, 255) !important;
-  color-scheme: light;
-  --fluidHeightContentWindowHeight: 0px; 
+  background-color: rgb(255, 255, 255);
 
-}
 
-.fluidHeightContentWindow {
-  height: var(--fluidHeightContentWindowHeight);
-
-}
-
-#placeHolderToFetch100dvhInPixels {
-  height: 100dvh;
 }
 
 
@@ -26,23 +16,12 @@
   margin: 0px;
   color: rgb(27, 27, 27);
 
-  
 }
-
 
 button {
 
   border: none;
   background-color: transparent;
-
-
-}
-
-body, #__next {
-
-  transition: opacity 2s;
-  overflow-y: hidden !important;
-
 
 }
 
@@ -53,3 +32,4 @@ body, #__next {
   margin: 0px 0px;
 
 }
+

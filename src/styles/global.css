@@ -18,10 +18,9 @@
     height: 100dvh;
    }
 
-html, body, #__next, .swiper, .swiper-wrapper, #exhibition {
-  overflow-y: hidden;
+html {
+  scrollbar-width: none;
 }
-
 
 * {
 

@@ -2,3 +2,6 @@
   transition: opacity 1s;
 }
 
+.swiper-wrapper {
+  height: 4000px !important;
+}

@@ -18,6 +18,10 @@
     height: 0;              /* Hide the scrollbar */
 }
 
+.onlyTextContentPageContainer {
+    width: 30%;
+}
+
 .swiper {
     transition: opacity 1s;
 } 

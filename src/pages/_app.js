@@ -25,12 +25,13 @@ import menu from "styles/layout/menu.css"
 const notosanshk = Noto_Sans_HK({subsets: ["latin"], weight: ['100', '200', '300', '400', '500', '600', '700']});
 const montserrat = Montserrat({subsets: ["latin"], weight: ['100', '200', '300', '400', '500', '600', '700']});
 
-export default function App({ Component, pageProps }) {
+export default function App({ Component, pageProps }) { 
  
   return (
 
     <>
-
+    
+      <div id="placeHolderToFetch100dvhInPixels"></div>      
       <style jsx global>
       
         {

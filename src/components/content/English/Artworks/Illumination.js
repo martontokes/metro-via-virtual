@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 
 export default function Illumination({incrementLoad}) {
 
+
     useEffect(() => {
 
         window.addEventListener("resize", () => {
@@ -11,17 +12,20 @@ export default function Illumination({incrementLoad}) {
             }
         });
         
-    // Start slideshow on mounting
-    const intervalId = setInterval(illuminationSlideshow, 2000);
-    return () => clearInterval(intervalId);
+        // Start slideshow on mounting
+        const intervalId = setInterval(illuminationSlideshow, 2000);
+        return () => clearInterval(intervalId);
 
     }, []);
+
 
     return (
 
         <>
 
-            <div id="artwork_page">
+            <div className="contentContainer">
+
+
                 <h3>Illumination (2021)</h3>
                 <div className="artistsBox">
                     <h4>Kat Suryna</h4>
@@ -32,15 +36,19 @@ export default function Illumination({incrementLoad}) {
             <br />  
             <p> Lit by warm natural light, the benign face of Buddha is the image Hong Kong aims to achieve via the many Buddha statues in the city.<br /><br />In contrast, inspired by the faces of people on the streets as they stare in concentration at their phones, the demonic look of Buddha lit by cold screen light mirrors an unflattering persona we often encounter/perform online through anonymous identity.<br /><br />The animation is made in collaboration with Sandu Cojocari.<br /><br />
             Kat Suryna is an international figurative artist with a background in academic philosophy.<br /><br />She follows the tradition of Russian academic drawing and painting, in which she was formally instructed.<br /><br />Her work has been exhibited in Estonia, Hungary, Austria, and Hong Kong. Her art focuses on the human body, organic patterns in nature, and architectural narratives.</p><br /><br />
-            
+           
+
             </div>
+
             <div id="buddhacontainer">
-<img className="buddha" id="buddha1" src="/5.png" onLoad={() => {incrementLoad(n => n + 1)}}></img>
-<img className="buddha" id="buddha2" src="/4.png" onLoad={() => {incrementLoad(n => n + 1)}}></img>
-<img className="buddha" id="buddha3" src="/3.png" onLoad={() => {incrementLoad(n => n + 1)}}></img>
-<img className="buddha" id="buddha4" src="/2.png" onLoad={() => {incrementLoad(n => n + 1)}}></img>
-<img className="buddha" id="buddha5" src="/1.png" onLoad={() => {incrementLoad(n => n + 1)}}></img>
-</div>
+
+                <img className="buddha" id="buddha1" src="/5.png" onLoad={() => {incrementLoad(n => n + 1)}}></img>
+                <img className="buddha" id="buddha2" src="/4.png" onLoad={() => {incrementLoad(n => n + 1)}}></img>
+                <img className="buddha" id="buddha3" src="/3.png" onLoad={() => {incrementLoad(n => n + 1)}}></img>
+                <img className="buddha" id="buddha4" src="/2.png" onLoad={() => {incrementLoad(n => n + 1)}}></img>
+                <img className="buddha" id="buddha5" src="/1.png" onLoad={() => {incrementLoad(n => n + 1)}}></img>
+                
+            </div>
         </>
     )
 }         

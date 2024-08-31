@@ -6,7 +6,7 @@ export default function Autosave({incrementLoad}) {
 
         <>
 
-          <div id="artwork_page" className="pageWithLoader">
+          <div className="contentContainer">
             
             <h3>Autosave: Redoubt (2018)</h3>
             <div className="artistsBox">

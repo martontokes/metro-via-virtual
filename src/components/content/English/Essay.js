@@ -1,12 +1,11 @@
 import { isMobile } from "react-device-detect";
-import { Scrollbars } from 'react-custom-scrollbars-2';
 
 export default function Essay() {
     
     return (
         <>
-       <Scrollbars style={{right: "8px"}}>
-            <div id="artwork_page" className="fluidHeightContentWindow onlyTextContentPageContainer">
+
+            <div className="contentContainer fluidHeightContentWindow onlyTextContentPageContainer">
                 <h3>On the Role of <br />Symbol Alienation in Art</h3>
                 <div>
                     <p>Cities are built upon people’s individual and collective memories, which are themselves shaped by various visual and auditory symbols.<br /><br />
@@ -54,7 +53,7 @@ export default function Essay() {
                     April 26, 2022</p><br /><br /><br />
                 </div>
             </div>
-            </Scrollbars>
+
         </>
     );
 }

@@ -30,8 +30,10 @@ export default function App({ Component, pageProps }) {
   return (
 
     <>
-    
-      <div id="placeHolderToFetch100dvhInPixels"></div>      
+
+
+
+      
       <style jsx global>
       
         {

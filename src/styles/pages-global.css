@@ -1,22 +1,23 @@
-
-
-#artwork_page {
-
-    margin: 24px 40px;
-    opacity: 1;
-    transition: opacity 1s;
-    overflow-y: scroll;
-    background-color: transparent;
-    margin-bottom: 0px !important;
-    overflow-y: scroll;
-    scrollbar-width: none;
-    width: 100% !important;
+#headerTextContainer {
+    position: absolute;
+    right: 32px;
+    top: 4px;
+    text-align: right;
 }
 
-#artwork_page::-webkit-scrollbar {
-    width: 0;               /* Hide the scrollbar */
-    height: 0;              /* Hide the scrollbar */
+#headerTitle {
+    color: #757575;
+    font-size: 17.71px !important;
+    padding-bottom: 4px;
+
 }
+
+#headerSubtitle {
+    color: #757575;
+    font-size: 12.3px !important;
+    padding-bottom: 4px;
+}
+
 
 .onlyTextContentPageContainer {
     width: 30%;
@@ -26,34 +27,14 @@
     transition: opacity 1s;
 } 
 
-.inactiveArrow {
-    opacity: 0 !important;
-}
-
-.artworkArrowButton {
-    min-height: 60px;
-    min-width: 48px;
-}
-
-#confidentialContainer {
-    margin: 24px 40px;
-}
-
-.artworkDescription {
-    margin: 24px 40px;
-}
-
 
 p {
     font-weight: 400;
     line-height: 1.9;
     font-size: 14.94px;
-
 }
 
 audio {
-
-
 }
 
 a {
@@ -151,24 +132,6 @@ margin-bottom: 16px;
     max-height: 56px;
 }
 
-#headerTextContainer {
-    position: absolute;
-    right: 32px;
-    top: 4px;
-    text-align: right;
-}
-
-#headerTitle {
-    color: #757575;
-    font-size: 17.71px !important;
-    padding-bottom: 4px;
-}
-
-#headerSubtitle {
-    color: #757575;
-    font-size: 12.3px !important;
-    padding-bottom: 4px;
-}
 
 
 

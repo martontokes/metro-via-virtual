@@ -3,13 +3,10 @@ import { isMobile } from 'react-device-detect';
 
 export default function Statement({site}) {
 
-    
-
     return (
 
         <>
-
-        <div id="artwork_page" className="fluidHeightContentWindow">
+        <div className="contentContainer fluidHeightContentWindow">
             <Scrollbar></Scrollbar>
 
             <h3>Curatorial statement</h3>

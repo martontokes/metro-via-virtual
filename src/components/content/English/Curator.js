@@ -1,14 +1,10 @@
-import { Scrollbars } from 'react-custom-scrollbars-2';
-
 export default function Curator() {
 
   return (
 
     <>
-
-        <Scrollbars style={{right: "8px"}}>
-          <div id="artwork_page">
-            <div className="onlyTextContentPageContainer">
+         <>
+            <div className="contentContainer onlyTextContentPageContainer">
             <h3>About the Curator</h3>
             <p>Zeng Hong is an academic, curator and visual artist.<br />
             <a className="curatorEmail" style={{marginTop: '24px', fontSize: "14.76px"}} href="mailto:hong.zeng@yale.edu">hong.zeng@yale.edu</a>
@@ -20,9 +16,7 @@ export default function Curator() {
             She previously taught classes in film and visual art at the School of Creative Media, City University of Hong Kong, and the Academy of Visual Arts, Hong Kong Baptist University. <br /><br />
             </p>
             </div>
-        </div>
-      </Scrollbars>
-
+        </>
     </>
       
   )

@@ -10,7 +10,7 @@ export default function Butterflies({}) {
       
       <>
 
-          <div id="artwork_page">
+<div className="contentContainer">
             <h3>Butterflies on the Wheel (2020)</h3>
             <div className="artistsBox">
               <h4>Elaine Wong</h4>

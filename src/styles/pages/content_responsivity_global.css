@@ -17,38 +17,8 @@
 
 @media screen and (min-width: 768px) {
 
-    #artwork_page {
-
-        margin-left: 256px;
-        margin-top: 64px;
-    }
-
-    #artwork_page {
-        width: 30%;
-
-    }
-
 }
 
-
-#artwork_page::-webkit-scrollbar {
-    width: 12px;
-}
-
-#artwork_page::-webkit-scrollbar-track {
-    background: rgb(255, 255, 255);
-    border-radius: 10px;
-}
-
-#artwork_page::-webkit-scrollbar-thumb {
-    background-color: grey;
-
-
-}
-
-#artwork_page::-webkit-scrollbar-thumb:hover {
-    background-color: darkgrey;
-} 
 
 p {
     font-size: 17.71px;
@@ -62,7 +32,7 @@ p {
     display: flex;
     align-items: center;
     margin-right: 26px;
-    font-weight: 500 !important;
+    font-weight: 600 !important;
   }
   
   #aboutLabel {
@@ -70,7 +40,7 @@ p {
     display: flex;
     align-items: center;
     margin-right: 32px;
-    font-weight: 500 !important;
+    font-weight: 600 !important;
   }
 
   #curatorialContainer {

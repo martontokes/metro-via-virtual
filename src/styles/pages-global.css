@@ -1,5 +1,5 @@
 .contentContainer {
-    margin: 0px 24px; /* Merged from two separate definitions */
+
     opacity: 1;
     transition: opacity 1s;
     overflow-y: scroll; /* Removed duplicate property */

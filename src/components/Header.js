@@ -1,4 +1,5 @@
 import React from "react";
+import { isMobile } from "react-device-detect";
 
 export default function Header({ site }) {
 
@@ -8,6 +9,7 @@ export default function Header({ site }) {
     <>
 
       {site.language === 'english' ? (
+
 
         <>
           <div id="headerTextContainer">

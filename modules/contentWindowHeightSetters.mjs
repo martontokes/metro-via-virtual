@@ -1,5 +1,7 @@
 export function setContentWindowSize() {
 
+  if (document.getElementById("mainMenu") != null) {
+
   let contentWindow = document.querySelector(".fluidHeightContentWindow");
   let contentWindowComputedStyle = window.getComputedStyle(contentWindow);
   let contentWindowMargins = parseFloat(contentWindowComputedStyle.marginTop) + parseFloat(contentWindowComputedStyle.marginBottom);
@@ -15,9 +17,13 @@ export function setContentWindowSize() {
   let fluidHeight = elementToFetchFluidSize.getBoundingClientRect();
   document.documentElement.style.setProperty('--fluidHeightContentWindowHeight', `${fluidHeight.height - (upperMenuHeightTotal + lowerMenuHeightTotal + contentWindowMargins)}px`);
 
+  }
+
 }
 
 export function setContentWindowSizeOnMobile() {
+
+  if (document.getElementById("mainMenu") != null) {
 
   let contentWindow = document.querySelector(".fluidHeightContentWindow");
   let contentWindowComputedStyle = window.getComputedStyle(contentWindow);
@@ -29,5 +35,7 @@ export function setContentWindowSizeOnMobile() {
   let upperMenuHeightTotal = upperMenuRect.height + (parseFloat(upperMenuStyle.marginTop) + parseFloat(upperMenuStyle.marginBottom));
   let fluidHeight = elementToFetchFluidSize.getBoundingClientRect();
   document.documentElement.style.setProperty('--fluidHeightContentWindowHeight', `${fluidHeight.height - (upperMenuHeightTotal + contentWindowMargins)}px`);
+
+  }
 
 }

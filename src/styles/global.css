@@ -20,6 +20,7 @@
 
 html {
   scrollbar-width: none;
+  overflow-y: clip;
 }
 
 * {
@@ -44,9 +45,3 @@ button {
   margin: 0px 0px;
 
 }
-
-body, #__next, #exhibition {
-  height: 100dvh !important;
-
-}
-

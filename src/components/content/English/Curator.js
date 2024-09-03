@@ -4,7 +4,7 @@ export default function Curator() {
 
     <>
          <>
-            <div className="contentContainer onlyTextContentPageContainer">
+            <div className="contentContainer onlyTextContentPageContainer fluidHeightContentWindow">
             <h3>About the Curator</h3>
             <p>Zeng Hong is an academic, curator and visual artist.<br />
             <a className="curatorEmail" style={{marginTop: '24px', fontSize: "14.76px"}} href="mailto:hong.zeng@yale.edu">hong.zeng@yale.edu</a>

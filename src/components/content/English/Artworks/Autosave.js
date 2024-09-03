@@ -6,7 +6,7 @@ export default function Autosave({incrementLoad}) {
 
         <>
 
-          <div className="contentContainer">
+          <div className="contentContainer fluidHeightContentWindow">
             
             <h3>Autosave: Redoubt (2018)</h3>
             <div className="artistsBox">

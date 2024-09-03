@@ -33,6 +33,8 @@ import ConfidentialZh from "/src/components/content/Chinese/Artworks/Confidentia
 import AutosaveZh from "/src/components/content/Chinese/Artworks/AutosaveZh";
 import ButterfliesZh from "/src/components/content/Chinese/Artworks/ButterfliesZh";
 
+import SwipeInstructions from "./SwipeInstructions";
+
 export default function MobileContent({ site, incrementLoad }) {
 
   useEffect(() => {
@@ -48,6 +50,8 @@ export default function MobileContent({ site, incrementLoad }) {
         onSlideChange={(swiper) => {site.setExhibition(swiper); updateActiveArtworkButtonOnNavigation(site);}}
         onSliderMove={(swiper) => {scrollContentToTopOnSwitchingExhibitionPage(site);}}
         className="exhibitionSwiper">
+
+
 
           <SwiperSlide className="exhibitionSlide">
             {(site.language == "english") ? <Statement /> : <StatementZh /> }

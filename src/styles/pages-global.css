@@ -2,21 +2,22 @@
 
     opacity: 1;
     transition: opacity 1s;
-    overflow-y: scroll; /* Removed duplicate property */
+    overflow-y: scroll;
     background-color: transparent;
     margin-bottom: 0px !important;
     scrollbar-width: none;
     width: 100% !important;
+    margin-left: 24px;
 
 }
 
 .contentContainer::-webkit-scrollbar {
-    width: 0;  /* Hide the scrollbar */
-    height: 0; /* Hide the scrollbar */
+    width: 0;
+    height: 0;
 }
 
 .onlyTextContentPageContainer {
-    max-width: 576px;
+    max-width: 400px;
 }
 
 p {

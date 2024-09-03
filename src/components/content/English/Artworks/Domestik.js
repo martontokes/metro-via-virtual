@@ -9,7 +9,7 @@ export default function Domestik({incrementLoad}) {
 
     <>
 
-       <div className="contentContainer">
+       <div className="contentContainer fluidHeightContentWindow">
         <h3>Domestik / Publik (2020)</h3>
         <div className="artistsBox">
           <h4>Riar Rizaldi</h4>

@@ -23,7 +23,7 @@ export default function Illumination({incrementLoad}) {
 
         <>
 
-            <div className="contentContainer">
+            <div className="contentContainer fluidHeightContentWindow">
 
 
                 <h3>Illumination (2021)</h3>

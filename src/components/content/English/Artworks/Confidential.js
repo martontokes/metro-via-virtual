@@ -6,7 +6,7 @@ export default function Confidential({incrementLoad}) {
 
     <>
 
-      <div className="contentContainer">
+      <div className="contentContainer fluidHeightContentWindow">
         <h3>Confidential Records: <br />Dual Metropolitans (2016 - 2018)</h3>
         <div className="artistsBox">
           <h4>Vvzela Kook</h4>

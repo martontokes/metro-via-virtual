@@ -14,7 +14,7 @@ export default function Autosave({incrementLoad}) {
             <div className="artistItem"><h4>Alexis Mailles</h4><a href="https://www.alexismailles.com" target="_blank">www.alexismailles.com</a></div>
             <div className="artistItem"><h4>Peter Nelson</h4><a href="https://www.peteracnelson.com" target="_blank">www.peteracnelson.com</a></div>
             </div>
-            </div>
+   
             <Player incrementLoad={incrementLoad}>
               <source style={{width: "100vw"}} src="/AutosaveVideos/01.mp4"></source>
              </Player>
@@ -35,7 +35,7 @@ export default function Autosave({incrementLoad}) {
              <Player incrementLoad={incrementLoad}>
               <source src="/AutosaveVideos/04.mp4"></source>
              </Player>
-          
+             </div>
 
         </>
 

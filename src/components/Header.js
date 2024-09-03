@@ -1,8 +1,6 @@
 import React from "react";
-import { isMobile } from "react-device-detect";
 
 export default function Header({ site }) {
-
 
   return (
 

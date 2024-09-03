@@ -45,3 +45,8 @@ button {
 
 }
 
+body, #__next, #exhibition {
+  height: 100dvh !important;
+
+}
+

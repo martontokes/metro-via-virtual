@@ -13,7 +13,7 @@
 #headerTextContainer {
   position: absolute;
   right: 32px;
-  top: 4px;
+  top: 24px;
   text-align: right;
 }
 
@@ -28,4 +28,14 @@
   color: #757575;
   font-size: 12.3px !important;
   padding-bottom: 4px;
+}
+
+@media screen and (max-width: 592px) {
+  #headerTextContainer {
+    display: none;
+  }
+
+  #mainMenu {
+    height: inherit; /* tend */
+  }
 }

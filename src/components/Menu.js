@@ -13,10 +13,10 @@ export default function Menu({ site, isArtworksMenuOn }) {
         <button onClick={() => exhibitionButtonHandler(site, 2)} className="uppermenu menubutton">essay</button>
         <button onClick={() => exhibitionButtonHandler(site, 3)} className="uppermenu menubutton">curator</button></div>
         { isMobile ? null : <ArtworksMenu site={site}/>}
-        { isMobile ? null : <><div id="headerTextContainer">
+        <><div id="headerTextContainer">
             <h1 id="headerTitle" className="montserrat">metro via virtual</h1>
             <h2 id="headerSubtitle" className="montserrat">a virtual exhibition from Hong Kong</h2>
-          </div></> }
+          </div></>
 
     </>
   );

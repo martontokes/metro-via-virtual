@@ -18,10 +18,6 @@ export default function Document() {
 <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 <script src="https://www.youtube.com/iframe_api"></script>
 
-
-
-
-
         <Head />
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=yes"></meta>
         <title>metro via virtual</title>

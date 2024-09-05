@@ -1,7 +1,3 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
 :root {
   --fluidHeightContentWindowHeight: 0px;
 
@@ -17,15 +13,16 @@
    }
 
 html {
-  scrollbar-width: none;
+
   overflow-y: clip;
+
 }
 
 * {
 
   padding: 0px;
   margin: 0px;
-
+  scrollbar-width: thin;
 
 }
 

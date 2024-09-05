@@ -1,0 +1,53 @@
+@media (prefers-color-scheme: light) {
+
+      * {
+        color: rgb(27, 27, 27);
+      }
+
+      :root {
+        -webkit-tap-highlight-color: transparent;
+        background-color: rgb(255, 255, 255);
+      }  
+
+      #menubutton {
+        color: #878787;
+      }
+
+      .activeButton {
+        color: #161616;
+      }
+
+      #loader {
+        border-top: 2px solid #0c0c0c;
+        border-right: 2px solid transparent;
+      }
+
+}
+
+
+
+@media (prefers-color-scheme: dark) {
+
+        * {
+          color: rgb(255, 255, 255);
+        }
+
+        :root {
+          -webkit-tap-highlight-color: transparent;
+          background-color: rgb(31, 31, 31);
+        }  
+
+        #menubutton {
+          color: #a7a7a7;
+        }
+
+        .activeButton {
+          color: #ffffff;
+        }
+
+        #loader {
+          border-top: 2px solid #e2e2e2;
+          border-right: 2px solid transparent;
+        }
+
+}

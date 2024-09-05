@@ -1,24 +1,16 @@
 .menubutton {
-    color: #878787;
+
     font-weight: 500 !important;
     font-size: 12.3px;
   }
   
   .menubutton:hover {
-    color: #161616;
+
     font-weight: 500 !important;
   
   }
   
-  .menubutton:active {
-    color: #000000;
-    font-weight: 500 !important;
-  
-  }
-  
-  .activeButton {
-    color: #161616;
-  }
+
   
   #mainMenu {
     display: flex;

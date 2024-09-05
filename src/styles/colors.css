@@ -7,6 +7,8 @@
       :root {
         -webkit-tap-highlight-color: transparent;
         background-color: rgb(255, 255, 255);
+        --buttonText: #181818;
+        --buttonBorder: #141414;
       }  
 
       #menubutton {
@@ -22,6 +24,8 @@
         border-right: 2px solid transparent;
       }
 
+      
+
 }
 
 
@@ -35,14 +39,22 @@
         :root {
           -webkit-tap-highlight-color: transparent;
           background-color: rgb(31, 31, 31);
+          --buttonText: rgb(255, 255, 255);
+          --buttonBorder: rgb(255, 255, 255);
         }  
 
-        #menubutton {
-          color: #a7a7a7;
+        .menubutton {
+          color: #999999;
+        }
+
+
+
+        .menubutton:hover {
+          color: #e2e2e2;
         }
 
         .activeButton {
-          color: #ffffff;
+          color: #ffffff !important;
         }
 
         #loader {

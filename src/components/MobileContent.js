@@ -37,6 +37,8 @@ import SwipeInstructions from "./SwipeInstructions";
 
 export default function MobileContent({ site, incrementLoad }) {
 
+  const [soundCloudPlaying, setSoundCloudPlaying] = useState(true);
+
   useEffect(() => {
     isMobile ? setContentWindowSizeOnMobile() : setContentWindowSize();
   }, []);
@@ -61,7 +63,7 @@ export default function MobileContent({ site, incrementLoad }) {
   
             <Swiper {...artworksSwiperConfig} 
             onInit={(swiper) => {site.setArtworks(swiper);}}
-            onSlideChange={(swiper) => {site.setArtworks(swiper); updateActiveArtworkButtonOnNavigation(site); }} 
+            onSlideChange={(swiper) => {site.setArtworks(swiper); updateActiveArtworkButtonOnNavigation(site); setSoundCloudPlaying(false)}} 
             onSliderMove={(swiper) => {scrollContentToTopOnSwitchingArtworkPage(site)}}
             className="artworksSwiper"
             modules={[Scrollbar]}
@@ -71,7 +73,7 @@ export default function MobileContent({ site, incrementLoad }) {
               
                 <>
 
-                  <SwiperSlide className="artworkSlide"><Domestik incrementLoad={incrementLoad} /></SwiperSlide>
+                  <SwiperSlide className="artworkSlide"><Domestik incrementLoad={incrementLoad} soundCloudPlaying={soundCloudPlaying} /></SwiperSlide>
                   <SwiperSlide className="artworkSlide"><Illumination incrementLoad={incrementLoad} /></SwiperSlide>
                   <SwiperSlide className="artworkSlide"><Confidential incrementLoad={incrementLoad} /></SwiperSlide>
                   <SwiperSlide className="artworkSlide"><Autosave incrementLoad={incrementLoad} /></SwiperSlide>

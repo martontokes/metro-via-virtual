@@ -1,3 +1,12 @@
+#autosaveWebsiteLinkButton {
+    width: 100%;
+    border-radius: 2000px;
+    border: 2px solid grey;
+    height: 48px;
+    margin: 24px 0px;
+    font-weight: 500;
+}
+
 .autosaveVid {
     width: 100%;
 }

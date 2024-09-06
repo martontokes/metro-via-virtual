@@ -57,7 +57,7 @@ export default function Autosave({ incrementLoad, isAutoSaveVideoPlaying, setIsA
             www.peteracnelson.com
           </a>
         </div>
-        <button onClick={() => {window.open('https://www.peteracnelson.com/autosave-redoubt', '_blank', 'noopener,noreferrer');}}>Visit Autosave:Redoubt website</button>
+        <button id="autosaveWebsiteLinkButton" onClick={() => {window.open('https://www.peteracnelson.com/autosave-redoubt', '_blank', 'noopener,noreferrer');}}>Visit Autosave: Redoubt website</button>
       </div>
 
     <video id="video1" src="/AutosaveVideos/01.mp4" disablePictureInPicture={true} controls style={{width: "100%"}}></video>

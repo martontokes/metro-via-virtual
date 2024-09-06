@@ -7,7 +7,8 @@ export default function Curator() {
             <div className="contentContainer onlyTextContentPageContainer fluidHeightContentWindow">
             <h3>About the Curator</h3>
             <p>Zeng Hong is an academic, curator and visual artist.<br />
-            <a className="curatorEmail" style={{marginTop: '24px', fontSize: "14.76px"}} href="mailto:hong.zeng@yale.edu">hong.zeng@yale.edu</a>
+            <div id="placeholderBeforeEmail" style={{marginTop: "16px"}}></div>
+            <a className="curatorEmail" style={{fontSize: "14.76px"}} href="mailto:hong.zeng@yale.edu">hong.zeng@yale.edu</a>
             <br></br><br></br>
             She is the Yale-China Arts Fellow in 2020, funded by the Council on East Asian Studies at Yale University.<br /><br />
             She received an M.A. in Cinema Studies and a Ph.D. in Visual Art Studies. <br /><br />Her research  interests lie in contemporary art in Hong Kong and the Pearl River Delta region in China, as well as gender politics in film. <br /><br />

@@ -9,7 +9,7 @@ export default function Statement({site}) {
 
 
 <h3>Curatorial statement</h3>
-<div id="curatorialContainer" className="onlyTextContentPageContainer">
+
     <p id="curatorial">
     Shih Shu-ching, in writing her Hong Kong trilogy, came across a specimen of eurema hecabe, a small pierid butterfly species commonly found in Hong Kong.<br /><br />
     Shih* used eurema hecabe as an analogy of the city, writing that this butterfly 'contains a decisive force to challenge its fate, albeit covered by its delicate, fragile appearance.'<br /><br />
@@ -23,7 +23,6 @@ export default function Statement({site}) {
     * Shih Shu-ching: "City of the Queen: A Novel of Colonial Hong Kong"<br />1997&nbsp; |&nbsp; Hung-fan Bookstore
     <br /><br /><br />
     </p>
-</div>
 </div>
 
         </>

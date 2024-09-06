@@ -1,8 +1,6 @@
 @media (prefers-color-scheme: light) {
 
-      * {
-        color: rgb(27, 27, 27);
-      }
+
 
       :root {
         -webkit-tap-highlight-color: transparent;
@@ -11,12 +9,16 @@
         --buttonBorder: #141414;
       }  
 
-      #menubutton {
-        color: #878787;
+      .menubutton {
+        color: #707070;
+      }
+
+      .menubutton:hover {
+        color: #474747;
       }
 
       .activeButton {
-        color: #161616;
+        color: #161616 !important;
       }
 
       #loader {
@@ -32,9 +34,7 @@
 
 @media (prefers-color-scheme: dark) {
 
-        * {
-          color: rgb(255, 255, 255);
-        }
+
 
         :root {
           -webkit-tap-highlight-color: transparent;

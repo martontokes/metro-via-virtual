@@ -5,3 +5,8 @@
 .swiper-wrapper {
 
 }
+
+.swiper-slide {
+  display: flex !important;
+  justify-content: center !important;
+}

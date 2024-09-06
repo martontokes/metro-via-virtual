@@ -68,7 +68,9 @@ export default function MobileContent({ site, incrementLoad }) {
               site.setArtworks(swiper); 
               updateActiveArtworkButtonOnNavigation(site); 
               setSoundCloudPlaying(false); 
-              setIsAutoSaveVideoPlaying(false)}} 
+              setIsAutoSaveVideoPlaying(false);
+              
+            }} 
             onSliderMove={(swiper) => {scrollContentToTopOnSwitchingArtworkPage(site)}}
             className="artworksSwiper"
             modules={[Scrollbar]}

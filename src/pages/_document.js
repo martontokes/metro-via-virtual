@@ -13,6 +13,7 @@ export default function Document() {
       <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
       <script src="https://www.youtube.com/iframe_api"></script>
       <script src="https://w.soundcloud.com/player/api.js"></script>
+      <script src="https://player.vimeo.com/api/player.js"></script>
 
       <Head />
 

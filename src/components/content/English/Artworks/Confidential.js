@@ -2,6 +2,7 @@ import { useEffect } from "react"
 
 export default function Confidential({incrementLoad}) {
 
+
   return (
 
     <>
@@ -18,14 +19,14 @@ export default function Confidential({incrementLoad}) {
         <br /><br />Vvzela Kook is a new media artist who mainly works in audiovisual mediums, including performance, theater, generative art and drawing.<br /><br />Kook’s works combine technology with her artistic practice to reproduce and convert urban cityscapes into an integrated virtual experience, guiding the audience on a cybernetic journey.<br /><br />Kook has participated and shown her works in Kathmandu Triennial, MoCA Taipei, Microwave International Media Festival (Hong Kong), PuSh Performing Art Festival (Vancouver), and Mill6 Foundation (Hong Kong).</p>
 
         </div>  
-        {(true) ? <iframe id="confidentialiframe"
+        <iframe id="confidentialiframe"
           src="https://player.vimeo.com/video/297653544?h=4ccbbb86fe"
           width={"100%"}
           onLoad={() => {incrementLoad(n => n + 1);}}
           frameBorder={0}
           webkitallowfullscreen
           allowfullscreen
-          allowFullScreen={true}/> : null }
+          allowFullScreen={true}/>
           <p>You may need to visit Vimeo to watch the video on fullpage on some devices.</p>
         </div>
    

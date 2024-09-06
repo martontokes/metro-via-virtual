@@ -25,17 +25,14 @@ export default function Autosave({ incrementLoad, isAutoSaveVideoPlaying, setIsA
     if (!isAutoSaveVideoPlaying) {
       handleVideoState();
     }
-    
   }, [isAutoSaveVideoPlaying]);
 
-    function handleVideoState() {
+  function handleVideoState() {
       console.log("handle function runs");
       let videos = document.querySelectorAll("video");
       for (let i = 0; i < videos.length; i++) {
         videos[i].pause();
       }
-
-
   }
 
   return (

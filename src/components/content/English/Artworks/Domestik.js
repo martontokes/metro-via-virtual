@@ -1,9 +1,10 @@
 import { useEffect, useState, useRef } from "react";
 import ReactPlayer from "react-player";
 
-export default function Domestik({ incrementLoad, soundCloudPlaying }) {
+export default function Domestik({ incrementLoad, soundCloudPlaying, setSoundCloudPlaying }) {
 
   return (
+
     <div className="contentContainer fluidHeightContentWindow">
       <h3>Domestik / Publik (2020)</h3>
       <div className="artistsBox">
@@ -25,6 +26,8 @@ export default function Domestik({ incrementLoad, soundCloudPlaying }) {
        
       <ReactPlayer
 
+        onStart={() => {setSoundCloudPlaying(true)}}
+        onPause={() => {setSoundCloudPlaying(false)}}
         playing={soundCloudPlaying}
         width="100%"
         style={{ maxHeight: "160px", margin: "24px 0px" }}

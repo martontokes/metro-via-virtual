@@ -1,8 +1,39 @@
 import { Player } from "video-react"
+import { useEffect, useRef } from "react";
 
-export default function Autosave({incrementLoad}) {
+export default function Autosave({incrementLoad, autoSaveVideosPlaying}) {
 
-    return (
+  useEffect(() => {
+    stopAllVideos();
+  }, [autoSaveVideosPlaying])
+
+  const playerRef1 = useRef(null);
+  const playerRef2 = useRef(null);
+  const playerRef3 = useRef(null);
+  const playerRef4 = useRef(null);
+
+  const stopAllVideos = () => {
+    if (playerRef1.current) {
+      playerRef1.current.pause();  // Pause video 1
+      playerRef1.current.seek(0);  // Seek to the start
+    }
+    if (playerRef2.current) {
+      playerRef2.current.pause();  // Pause video 2
+      playerRef2.current.seek(0);  // Seek to the start
+    }
+    if (playerRef3.current) {
+      playerRef3.current.pause();  // Pause video 3
+      playerRef3.current.seek(0);  // Seek to the start
+    }
+    if (playerRef4.current) {
+      playerRef4.current.pause();  // Pause video 4
+      playerRef4.current.seek(0);  // Seek to the start
+    }
+  };
+
+
+
+  return (
 
         <>
 
@@ -15,7 +46,7 @@ export default function Autosave({incrementLoad}) {
             <div className="artistItem"><h4>Peter Nelson</h4><a href="https://www.peteracnelson.com" target="_blank">www.peteracnelson.com</a></div>
             </div>
    
-            <Player incrementLoad={incrementLoad}>
+            <Player ref={playerRef1} incrementLoad={incrementLoad}>
               <source style={{width: "100vw"}} src="/AutosaveVideos/01.mp4"></source>
              </Player>
         
@@ -26,13 +57,13 @@ export default function Autosave({incrementLoad}) {
             <br /><br /> Alexis Mailles produces hybrid installations that border the frontiers of Arte Povera and cyberpunk styles by using digital and analogue techniques. He has exhibited worldwide, including the M21 Museum (Shanghai), the 18th Street Art Center (Los Angeles), the Digital Art Center (Taipei), and Espace C.O.N.S.O.L.E (Paris). 
             <br /><br /> Peter Nelson is a visual artist and academic working at the intersection of landscape theory and computer games. Originally trained in painting and drawing, Nelson currently produces exhibitions across a number of media, from painting and drawing, to animation, 3D printed sculpture and interactive game-based systems. He has held numerous group and solo exhibitions, including projects with HanArt TZ Gallery (Hong Kong), The National Palace Museum (Taiwan), The Sichuan Fine Art Academy Museum (Chongqing) and the K11 Art Foundation (Hong Kong). He is an Assistant Professor at Hong Kong Baptist University.</p>
             </div>
-            <Player incrementLoad={incrementLoad}>
+            <Player ref={playerRef2} incrementLoad={incrementLoad}>
               <source src="/AutosaveVideos/02.mp4"></source>
              </Player>
-             <Player incrementLoad={incrementLoad}>
+             <Player ref={playerRef3} incrementLoad={incrementLoad}>
               <source src="/AutosaveVideos/03.mp4"></source>
              </Player>
-             <Player incrementLoad={incrementLoad}>
+             <Player ref={playerRef4} incrementLoad={incrementLoad}>
               <source src="/AutosaveVideos/04.mp4"></source>
              </Player>
              </div>

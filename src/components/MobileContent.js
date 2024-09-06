@@ -37,7 +37,8 @@ import SwipeInstructions from "./SwipeInstructions";
 
 export default function MobileContent({ site, incrementLoad }) {
 
-  const [soundCloudPlaying, setSoundCloudPlaying] = useState(true);
+  const [soundCloudPlaying, setSoundCloudPlaying] = useState(false);
+  const [autoSaveVideosPlaying, setAutoSaveVideosPlaying] = useState(true);
 
   useEffect(() => {
     isMobile ? setContentWindowSizeOnMobile() : setContentWindowSize();
@@ -63,20 +64,24 @@ export default function MobileContent({ site, incrementLoad }) {
   
             <Swiper {...artworksSwiperConfig} 
             onInit={(swiper) => {site.setArtworks(swiper);}}
-            onSlideChange={(swiper) => {site.setArtworks(swiper); updateActiveArtworkButtonOnNavigation(site); setSoundCloudPlaying(false)}} 
+            onSlideChange={(swiper) => {
+              site.setArtworks(swiper); 
+              updateActiveArtworkButtonOnNavigation(site); 
+              setSoundCloudPlaying(false); 
+              setAutoSaveVideosPlaying(false)}} 
             onSliderMove={(swiper) => {scrollContentToTopOnSwitchingArtworkPage(site)}}
             className="artworksSwiper"
             modules={[Scrollbar]}
             scrollbar={true}>  
-              {/* <ArtworkArrowButtons site={site} /> */}
+
               {(site.language == "english") ? 
               
                 <>
 
-                  <SwiperSlide className="artworkSlide"><Domestik incrementLoad={incrementLoad} soundCloudPlaying={soundCloudPlaying} /></SwiperSlide>
+                  <SwiperSlide className="artworkSlide"><Domestik incrementLoad={incrementLoad} soundCloudPlaying={soundCloudPlaying} setSoundCloudPlaying={setSoundCloudPlaying}/></SwiperSlide>
                   <SwiperSlide className="artworkSlide"><Illumination incrementLoad={incrementLoad} /></SwiperSlide>
                   <SwiperSlide className="artworkSlide"><Confidential incrementLoad={incrementLoad} /></SwiperSlide>
-                  <SwiperSlide className="artworkSlide"><Autosave incrementLoad={incrementLoad} /></SwiperSlide>
+                  <SwiperSlide className="artworkSlide"><Autosave incrementLoad={incrementLoad} autoSaveVideosPlaying={autoSaveVideosPlaying} /></SwiperSlide>
                   <SwiperSlide className="artworkSlide"><Butterflies /></SwiperSlide>
                   <Scrollbar />
 

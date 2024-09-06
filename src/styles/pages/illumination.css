@@ -7,19 +7,18 @@
 
     display: flex;
     justify-content: center;
-    margin-top: 16px;
-    height: 75vh;
+
+
 }
 
 .buddha {
 
-    position: absolute;
     transition: opacity 5s;
 
 }
 
 img {
 
-    max-height: calc(100dvh - 115px) !important;
+
 
 }

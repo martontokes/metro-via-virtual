@@ -1,7 +1,7 @@
 .menubutton {
 
     font-weight: 500 !important;
-    font-size: 12.3px;
+    font-size: 14.05px !important;
   }
   
   .menubutton:hover {
@@ -18,6 +18,7 @@
     height: 64px;
     margin: 0px 24px;
     max-width: 320px;
+    margin-top: 16px !important;
   }
   
   #mainMenu button {

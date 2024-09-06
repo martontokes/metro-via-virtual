@@ -37,9 +37,6 @@ export default function Illumination({incrementLoad}) {
             <p> Lit by warm natural light, the benign face of Buddha is the image Hong Kong aims to achieve via the many Buddha statues in the city.<br /><br />In contrast, inspired by the faces of people on the streets as they stare in concentration at their phones, the demonic look of Buddha lit by cold screen light mirrors an unflattering persona we often encounter/perform online through anonymous identity.<br /><br />The animation is made in collaboration with Sandu Cojocari.<br /><br />
             Kat Suryna is an international figurative artist with a background in academic philosophy.<br /><br />She follows the tradition of Russian academic drawing and painting, in which she was formally instructed.<br /><br />Her work has been exhibited in Estonia, Hungary, Austria, and Hong Kong. Her art focuses on the human body, organic patterns in nature, and architectural narratives.</p><br /><br />
            
-
-            </div>
-
             <div id="buddhacontainer">
 
                 <img className="buddha" id="buddha1" src="/5.png" onLoad={() => {incrementLoad(n => n + 1)}}></img>
@@ -49,6 +46,9 @@ export default function Illumination({incrementLoad}) {
                 <img className="buddha" id="buddha5" src="/1.png" onLoad={() => {incrementLoad(n => n + 1)}}></img>
                 
             </div>
+
+            </div>
+
         </>
     )
 }         

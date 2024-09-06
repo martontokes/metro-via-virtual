@@ -403,6 +403,8 @@
         line-height: 1.5;
         transform: translateY(-50%);
         font-size: 16px;
+        user-select: none;
+        pointer-events: none;
     }
 </style>
 
@@ -491,7 +493,7 @@
 
         var userManualText = document.createElement("p");
         userManualText.style.opacity = 0;
-        userManualText.innerHTML = "Click or tap, and drag the screen to look around the room.<br>Scroll, or pinch to zoom.<br> Turn on your speakers to experience the audio."
+        userManualText.innerHTML = "This artwork has an audiotrack. Drag the image to look around the room, scroll or pinch to zoom into details."
         var manualContainer = document.createElement("div");
         manualContainer.setAttribute("id", "manualContainerId");
         document.body.appendChild(manualContainer);
@@ -499,7 +501,7 @@
 
         setTimeout(() => {
             fadeIn(userManualText, 3000);
-            setTimeout(() => { fadeOut(userManualText, 3000); }, 10000);
+            setTimeout(() => { fadeOut(userManualText, 5000); }, 10000);
         }, 1000);
     }
 }

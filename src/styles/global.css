@@ -13,9 +13,9 @@
     height: 100dvh;
    }
 
-html {
-
-  overflow-y: clip;
+html, #__next, body {
+  height: 100dvh;
+  overflow-y: hidden;
 
 }
 

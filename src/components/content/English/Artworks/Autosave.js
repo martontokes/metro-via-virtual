@@ -62,7 +62,7 @@ export default function Autosave({ incrementLoad, isAutoSaveVideoPlaying, setIsA
     <video id="video1" src="/AutosaveVideos/01.mp4" disablePictureInPicture={true} controls style={{width: "100%"}}></video>
 
       <div className="artworkDescription">
-        <p style={{ fontStyle: "italic", fontSize: "12.3px" }}>
+        <p style={{ fontStyle: "italic", fontSize: "12.3px", marginTop: "8px" }}>
           More videos at the bottom
         </p>
         <br />

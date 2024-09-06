@@ -7,6 +7,14 @@
         background-color: rgb(255, 255, 255);
         --buttonText: #181818;
         --buttonBorder: #141414;
+        --swiper-scrollbar-bottom: 0px;
+        --swiper-scrollbar-bg-color: #dfdcdc;
+        --swiper-scrollbar-drag-bg-color: rgb(44, 44, 44);
+        --swiper-scrollbar-sides-offset: 1%;
+        --swiper-scrollbar-right: 24px !important;
+
+        --swiper-navigation-sides-offset: 0px !important;
+        
       }  
 
       .menubutton {
@@ -34,6 +42,10 @@
 
 @media (prefers-color-scheme: dark) {
 
+        * {
+          color: white;
+        }
+
 
 
         :root {
@@ -41,6 +53,9 @@
           background-color: rgb(31, 31, 31);
           --buttonText: rgb(255, 255, 255);
           --buttonBorder: rgb(255, 255, 255);
+          --swiper-scrollbar-bg-color: rgb(94, 94, 94);
+          --swiper-scrollbar-drag-bg-color: rgb(219, 219, 219);
+          --swiper-scrollbar-bottom: 0px;
         }  
 
         .menubutton {

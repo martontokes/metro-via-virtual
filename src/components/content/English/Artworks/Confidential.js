@@ -1,7 +1,11 @@
 import { useEffect } from "react"
 
-export default function Confidential({incrementLoad}) {
+export default function Confidential({incrementLoad, vimeoPlayer}) {
 
+  useEffect(() => {
+    const iframe = document.getElementById('confidentialiframe');
+    vimeoPlayer.current = new Vimeo.Player(iframe);
+  }, []);
 
   return (
 

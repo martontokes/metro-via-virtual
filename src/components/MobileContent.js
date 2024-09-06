@@ -4,7 +4,7 @@ import artworksSwiperConfig from "./.config/artworksSwiperConfig.mjs"
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Pagination, Navigation, Scrollbar } from 'swiper/modules';
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 
 import { isMobile } from "react-device-detect";
 
@@ -39,6 +39,7 @@ export default function MobileContent({ site, incrementLoad }) {
 
   const [soundCloudPlaying, setSoundCloudPlaying] = useState(false);
   const [isAutoSaveVideoPlaying, setIsAutoSaveVideoPlaying] = useState(false);
+  const vimeoPlayer = useRef(null);
 
   useEffect(() => {
     isMobile ? setContentWindowSizeOnMobile() : setContentWindowSize();
@@ -69,7 +70,7 @@ export default function MobileContent({ site, incrementLoad }) {
               updateActiveArtworkButtonOnNavigation(site); 
               setSoundCloudPlaying(false); 
               setIsAutoSaveVideoPlaying(false);
-              
+              vimeoPlayer.current.pause();
             }} 
             onSliderMove={(swiper) => {scrollContentToTopOnSwitchingArtworkPage(site)}}
             className="artworksSwiper"
@@ -82,7 +83,7 @@ export default function MobileContent({ site, incrementLoad }) {
 
                   <SwiperSlide className="artworkSlide"><Domestik incrementLoad={incrementLoad} soundCloudPlaying={soundCloudPlaying} setSoundCloudPlaying={setSoundCloudPlaying}/></SwiperSlide>
                   <SwiperSlide className="artworkSlide"><Illumination incrementLoad={incrementLoad} /></SwiperSlide>
-                  <SwiperSlide className="artworkSlide"><Confidential incrementLoad={incrementLoad} /></SwiperSlide>
+                  <SwiperSlide className="artworkSlide"><Confidential incrementLoad={incrementLoad} vimeoPlayer={vimeoPlayer} /></SwiperSlide>
                   <SwiperSlide className="artworkSlide"><Autosave incrementLoad={incrementLoad} isAutoSaveVideoPlaying={isAutoSaveVideoPlaying} setIsAutoSaveVideoPlaying={setIsAutoSaveVideoPlaying} /></SwiperSlide>
                   <SwiperSlide className="artworkSlide"><Butterflies /></SwiperSlide>
                   <Scrollbar />

@@ -50,7 +50,7 @@ export default function App() {
           <div id="exhibition">
           <Menu site={site} isArtworksMenuOn={isArtworksMenuOn}  />
           <MobileContent site={site} incrementLoad={incrementLoad} setArtworksMenuOn={setArtworksMenuOn}/> 
-          <div id="placeHolderToFetch100dvhInPixels"></div>  
+          <div id="placeHolderToFetch100dvhInPixels"></div>
           </div>
           </>
         
